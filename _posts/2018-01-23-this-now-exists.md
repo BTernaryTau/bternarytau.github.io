@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "This Now Exists"
+title: "This now exists"
 date: 2018-01-23
 ---
 
