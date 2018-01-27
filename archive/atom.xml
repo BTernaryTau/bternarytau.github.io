@@ -4,11 +4,11 @@ layout: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-	<title>BTernaryTau's Blog</title>
-	<link href="http://bternarytau.github.io/blog/atom.xml" rel="self"/>
-	<link href="http://bternarytau.github.io/blog"/>
+	<title>Technically Exists</title>
+	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
+	<link href="http://bternarytau.github.io/archive"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://bternarytau.github.io/blog</id>
+	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
 	</author>
