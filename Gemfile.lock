@@ -235,6 +235,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-paginate
+  jekyll-seo-tag
   wdm (>= 0.1.0)
 
 BUNDLED WITH
