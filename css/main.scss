@@ -15,11 +15,14 @@ nav {
 			display: inline;
 			margin-right: 20px;
 		}
+		a {
+			color: #000;
+		}
 	}
 }
 a {
 	text-decoration: none;
-	color: #999;
+	color: #00b;
 	&:hover {
 		text-decoration: underline;
 	}
@@ -31,6 +34,9 @@ h1 {
 h2 {
 	font-size: 2.5em;
 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	a {
+		color: #000;
+	}
 }
 p {
 	font-size: 1.25em;
