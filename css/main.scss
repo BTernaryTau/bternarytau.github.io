@@ -8,6 +8,7 @@ body {
 	max-width: 800px;
 	margin: auto;
 	padding: 16px;
+	font-size: 100%;
 }
 @media only screen and (min-width: 500px) {
 	body {
@@ -39,7 +40,7 @@ a {
 	}
 }
 h1 {
-	font-size: 3em;
+	font-size: 3.5em;
 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 h2 {
