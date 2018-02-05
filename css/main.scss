@@ -5,8 +5,16 @@ html {
 	background: #f7f7f7;
 }
 body {
-	margin: 60px auto;
-	width: 60%;
+	max-width: 800px;
+	margin: auto;
+	padding: 16px;
+}
+@media only screen and (min-width: 500px) {
+	body {
+		padding-top: 24px;
+		padding-right: 24px;
+		padding-left: 24px;
+	}
 }
 nav {
 	ul {
