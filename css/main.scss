@@ -9,9 +9,7 @@ body {
 	margin: auto;
 	padding: 16px;
 	font-size: 100%;
-}
-@media only screen and (min-width: 500px) {
-	body {
+	@media only screen and (min-width: 500px) {
 		padding-top: 24px;
 		padding-right: 24px;
 		padding-left: 24px;
@@ -22,7 +20,11 @@ nav {
 		font-family:'Helvetica', 'Arial', 'Sans-Serif';
 		padding: 0px;
 		list-style: none;
+		font-size: 2em;
 		font-weight: bold;
+		@media only screen and (min-width: 500px) {
+			font-size: 1.25em;
+		}
 		li {
 			display: inline;
 			margin-right: 20px;
