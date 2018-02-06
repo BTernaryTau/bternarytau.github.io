@@ -51,6 +51,13 @@ p {
 	line-height: 1.4em;
 	color: #333;
 }
+div {
+	&.pagination {
+		font-size: 1.25em;
+		line-height: 1.4em;
+		color: #333;
+	}
+}
 footer {
 	border-top: 1px solid #aaaaaa;
 	font-size: .8em;
