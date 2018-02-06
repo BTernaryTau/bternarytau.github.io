@@ -8,3 +8,4 @@ plugins:
     - jekyll-paginate
     - jekyll-sitemap
     - jekyll-seo-tag
+host: 0.0.0.0

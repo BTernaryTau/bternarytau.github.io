@@ -7,24 +7,18 @@ html {
 body {
 	max-width: 800px;
 	margin: auto;
-	padding: 16px;
-	font-size: 100%;
-	@media only screen and (min-width: 500px) {
-		padding-top: 24px;
-		padding-right: 24px;
-		padding-left: 24px;
-	}
+	padding-top: 24px;
+	padding-right: 24px;
+	padding-left: 24px;
+	padding-bottom: 16px;
 }
 nav {
 	ul {
 		font-family:'Helvetica', 'Arial', 'Sans-Serif';
 		padding: 0px;
 		list-style: none;
-		font-size: 2em;
+		font-size: 1.25em;
 		font-weight: bold;
-		@media only screen and (min-width: 500px) {
-			font-size: 1.25em;
-		}
 		li {
 			display: inline;
 			margin-right: 20px;
@@ -42,7 +36,7 @@ a {
 	}
 }
 h1 {
-	font-size: 3.5em;
+	font-size: 3em;
 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 h2 {

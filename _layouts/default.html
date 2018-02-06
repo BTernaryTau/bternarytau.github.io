@@ -3,8 +3,9 @@
 		<head>
 			{% include gtag.html %}
 			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/css/min-500px.css">
 			{% seo %}
 		</head>
 		<body>
