@@ -1,0 +1,10 @@
+{
+	"lang": "en",
+	"name": "Technically Exists",
+	"short_name": "Tech. Exists",
+	"theme_color": "#f7f7f7",
+	"background_color": "#f7f7f7",
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "natural"
+}
