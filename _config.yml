@@ -9,11 +9,4 @@ plugins:
     - jekyll-paginate
     - jekyll-sitemap
     - jekyll-seo-tag
-    - jekyll-pwa-plugin
-pwa:
-    sw_filename: service-worker.js
-    dest_js_directory: assets/js
-    cache_name: technically-exists-cache
-    precache_recent_posts_num: 5
-    precache_glob_directory: /
 host: 0.0.0.0
