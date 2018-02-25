@@ -12,6 +12,12 @@ var urlsToCache = [
 	{% for post in site.posts %}
 		'{{ post.url }}',
 	{% endfor %}
+	
+	{% for file in site.static_files %}
+		{% if file.extname == '.ico' or file.extname == '.png' or file.extname == '.svg' or file.extname == '.xml' %}
+			'{{ file.path }}',
+		{% endif %}
+	{% endfor %}
 ];
 
 self.addEventListener('install', function(event) {
