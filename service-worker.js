@@ -3,6 +3,9 @@ layout: null
 ---
 
 
+// Update the service worker every time Jekyll processes the site
+const version = '{{site.time | date: '%Y%m%d%H%M%S'}}';
+
 var CACHE_NAME = 'technically-exists-cache-v2';
 var urlsToCache = [
 	{% for page in site.html_pages %}
