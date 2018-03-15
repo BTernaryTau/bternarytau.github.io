@@ -8,6 +8,9 @@ const version = '{{site.time | date: '%Y%m%d%H%M%S'}}';
 
 var CACHE_NAME = 'technically-exists-cache-v2';
 var urlsToCache = [
+	'/assets/css/max-499px.css',
+	'/assets/css/min-500px.css',
+	
 	{% for page in site.html_pages %}
 		'{{ page.url }}',
 	{% endfor %}
