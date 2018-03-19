@@ -52,15 +52,25 @@ p {
 	color: #333;
 }
 div {
-	&.pagination {
+	&.pagination-prev {
+		margin-bottom: 20px;
 		font-size: 1.25em;
 		line-height: 1.4em;
 		color: #333;
+		float: left;
+	}
+	&.pagination-next {
+		margin-bottom: 20px;
+		font-size: 1.25em;
+		line-height: 1.4em;
+		color: #333;
+		float: right;
 	}
 }
 footer {
 	border-top: 1px solid #aaaaaa;
 	font-size: .8em;
+	clear: both;
 	ul {
 		font-family:'Helvetica', 'Arial', 'Sans-Serif';
 		padding: 0px;
