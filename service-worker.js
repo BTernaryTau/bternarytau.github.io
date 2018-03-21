@@ -15,7 +15,7 @@ var urlsToCache = [
 		'{{ page.url }}',
 	{% endfor %}
 
-	{% for post in site.posts %}
+	{% for post in site.posts limit:5 %}
 		'{{ post.url }}',
 	{% endfor %}
 	
