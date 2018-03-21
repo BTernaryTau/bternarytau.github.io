@@ -44,8 +44,8 @@ h2 {
 	}
 }
 p {
-	font-size: 1.25em;
-	line-height: 1.4em;
+	font-size: 1.1em;
+	line-height: 1.6em;
 	color: #333;
 }
 div {
@@ -84,7 +84,8 @@ footer {
 ul {
 	&.posts {
 		padding: 0;
-		font-size: 1.25em;
+		font-size: 1.1em;
+		line-height: 1.6em;
 		li {
 			list-style: none;
 		}
@@ -103,7 +104,7 @@ hr {
 ol {
 	padding-left: 20px;
 	padding-right: 20px;
-	font-size: 1.25em;
-	line-height: 1.4em;
+	font-size: 1.1em;
+	line-height: 1.6em;
 	color: #333;
 }
