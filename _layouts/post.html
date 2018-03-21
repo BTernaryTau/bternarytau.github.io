@@ -3,7 +3,7 @@ layout: default
 ---
 <h1>{{ site.title }}</h1>
 <h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<p class="meta">{{ page.date | date: "%Y-%m-%d" }}</p>
 
 <div class="content">
 	{{ content }}
