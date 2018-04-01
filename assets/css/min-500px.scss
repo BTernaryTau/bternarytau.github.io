@@ -2,6 +2,7 @@
 ---
 
 html {
+	font-family: 'Comic Sans MS', 'Sans-Serif';
 	background: #f7f7f7;
 }
 body {
@@ -14,7 +15,6 @@ body {
 }
 nav {
 	ul {
-		font-family:'Helvetica', 'Arial', 'Sans-Serif';
 		padding: 0px;
 		list-style: none;
 		font-size: 1.25em;
@@ -37,11 +37,9 @@ a {
 }
 h1 {
 	font-size: 3em;
-	font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 h2 {
 	font-size: 2.5em;
-	font-family:'Helvetica', 'Arial', 'Sans-Serif';
 	a {
 		color: #000;
 	}
@@ -69,10 +67,9 @@ div {
 }
 footer {
 	border-top: 1px solid #aaaaaa;
-	font-size: .8em;
+	font-size: 1em;
 	clear: both;
 	ul {
-		font-family:'Helvetica', 'Arial', 'Sans-Serif';
 		padding: 0px;
 		list-style: none;
 		font-weight: bold;
@@ -84,7 +81,7 @@ footer {
 }
 ul {
 	&.posts { 
-		margin: 20px auto 40px; 
+		margin: 20px auto 40px;
 		font-size: 1.5em;
 		li {
 			list-style: none;
