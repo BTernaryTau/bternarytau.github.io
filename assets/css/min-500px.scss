@@ -2,7 +2,6 @@
 ---
 
 html {
-	font-family: 'Comic Sans MS', 'Sans-Serif';
 	background: #f7f7f7;
 }
 body {
@@ -17,6 +16,7 @@ nav {
 	ul {
 		padding: 0px;
 		list-style: none;
+		font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 		font-size: 1.25em;
 		font-weight: bold;
 		li {
@@ -36,9 +36,11 @@ a {
 	}
 }
 h1 {
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 	font-size: 3em;
 }
 h2 {
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 	font-size: 2.5em;
 	a {
 		color: #000;
@@ -67,11 +69,12 @@ div {
 }
 footer {
 	border-top: 1px solid #aaaaaa;
-	font-size: 1em;
+	font-size: .8em;
 	clear: both;
 	ul {
 		padding: 0px;
 		list-style: none;
+		font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 		font-weight: bold;
 		li {
 			display: inline;
@@ -80,7 +83,7 @@ footer {
 	}
 }
 ul {
-	&.posts { 
+	&.posts {
 		margin: 20px auto 40px;
 		font-size: 1.5em;
 		li {
