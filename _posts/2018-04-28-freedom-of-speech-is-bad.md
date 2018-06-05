@@ -11,6 +11,8 @@ The groundwork for this argument (though certainly not the argument itself) is l
 > 
 > Well, we have about a zillion think tanks researching new and better forms of propaganda. And we have constitutionally protected freedom of speech. And we have the Internet. So we’re kind of screwed.
 
+<!--break-->
+
 The obvious way to solve the problem in the analogy is to remove the right to exist and contaminate the water supply that the bioweapon labs currently possess. The other apparent option, eliminating the mass transit system, is both less effective, since the pathogens will merely spread at a lower rate, and more costly, since the mass transit system is otherwise a very useful innovation.
 
 The implications of this are troubling. The problems with eliminating the mass transit system appear analogous to problems with eliminating the Internet. Eliminating freedom of speech also seems like it would be more effective, so the only part of the analogy that remains to be upheld is the lower cost.

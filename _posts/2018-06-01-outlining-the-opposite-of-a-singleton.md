@@ -11,6 +11,8 @@ For me, the obvious place to start is Scott Alexander's [Meditations On Moloch](
 
 This type of situation is known as a [coordination problem](https://conceptually.org/concepts/coordination-problems/), something I discussed previously in the context of [boycotting video games]({{ site.baseurl }}{% post_url 2018-01-26-video-game-boycotts %}). If those in the competition could choose to cooperate, they could easily coordinate to avoid sacrificing any other values. But as long as they are competing, once one of them chooses to sacrifice something for a short-term advantage, the rest must do the same or be eliminated.
 
+<!--break-->
+
 Note that in less intense competitions with fewer participants, there's a greater chance that no one will take the first step, allowing values that could be traded away to remain. Total coordination failure would involve a large number of entities competing, enough that any opportunity to trade away a value is taken almost immediately.
 
 As enlightening as I find this post to be, it does not identify the opposite of a singleton. Moloch is the force that might lead to this opposite manifesting, but it is not the opposite itself. In order to find that, we will have to look elsewhere.

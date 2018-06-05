@@ -9,6 +9,8 @@ An inevitable threat is defined as a threat that eliminates an agency regardless
 
 A universal inevitable threat is then defined as an inevitable threat that applies to all possible agencies. A notable property of such a threat is that it cannot be brought about by an agency, as this would imply that the agency had a course of action that would result in the threat not occurring and therefore that the threat was not inevitable relative to that agency. This concept is relevant because if a universal inevitable threat exists, then no agency is able to prevent all threats to itself, including a singleton. Furthermore, several plausible candidates for a universal inevitable threat can be identified.
 
+<!--break-->
+
 The first possibility is simply [the end of the universe](https://en.wikipedia.org/wiki/Ultimate_fate_of_the_universe). Exactly how the universe will end has yet to be determined, but most hypotheses posit scenarios that appear to be universal inevitable threats. One example is the heat death of the universe, which would result in a state of maximum entropy in which no information processing can take place. Since information processing seems to be essential for agencies to operate, this scenario would count as a universal inevitable threat.
 
 Another potential end of the universe is the Big Rip scenario. In this case, the universe's increasing expansion rips everything apart into elementary particles and radiation. Unless an agency can somehow develop a way to survive the infinite expansion rate that is eventually reached, all agencies are eliminated, making this a universal inevitable threat.

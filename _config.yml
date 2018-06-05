@@ -1,6 +1,7 @@
 name: BTernaryTau
 title: Technically Exists
 markdown: kramdown
+excerpt_separator: "<!--break-->"
 permalink: /:year/:month/:day/:title
 paginate: 5
 paginate_path: "/page:num/"

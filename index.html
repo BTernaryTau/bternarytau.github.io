@@ -10,7 +10,12 @@ title: Technically Exists
 		<span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
 	</p>
 	<div class="content">
-		{{ post.content }}
+		{{ post.excerpt }}
+		{% assign excerpt_words = post.excerpt | number_of_words %}
+		{% assign content_words = post.content | number_of_words %}
+		{% if excerpt_words != content_words %}
+			<p><a href="{{site.baseurl}}{{ post.url }}">Read more</a></p>
+		{% endif %}
 	</div>
 {% endfor %}
 
