@@ -19,6 +19,7 @@ nav {
 		font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 		font-size: 1.25em;
 		font-weight: bold;
+		line-height: 1.15em;
 		li {
 			display: inline;
 			margin-right: 20px;
@@ -46,6 +47,10 @@ h2 {
 		color: #000;
 	}
 }
+h3 {
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+	font-size: 1.5em;
+}
 p {
 	font-size: 1.25em;
 	line-height: 1.4em;
@@ -69,7 +74,7 @@ div {
 }
 footer {
 	border-top: 1px solid #aaaaaa;
-	font-size: .8em;
+	font-size: .64em;
 	clear: both;
 	ul {
 		padding: 0px;
@@ -83,9 +88,16 @@ footer {
 	}
 }
 ul {
+	font-size: 1.25em;
+	line-height: 1.4em;
+	color: #333;
+	ul {
+		font-size: 1em;
+	}
 	&.posts {
 		margin: 20px auto 40px;
 		font-size: 1.5em;
+		line-height: 1.15em;
 		li {
 			list-style: none;
 		}
