@@ -24,6 +24,23 @@ The alignment problem is the problem of aligning an AI's goals with the values o
 * Yudkowsky also has [a shorter post](https://www.facebook.com/yudkowsky/posts/10154083549589228) that covers the necessity of alignment, the difficulty of alignment, and why the alignment problem is not self-solving.
 * [Of Myths And Moonshine](https://www.edge.org/conversation/the-myth-of-ai#26015) by Stuart Russell articulates the case for emphasizing the alignment problem in AI research.
 
+### Orthogonality thesis
+
+The orthogonality thesis states that, barring a few edge cases, any level of intelligence can be combined with any terminal goal. This precludes scenarios where, for example, sufficiently smart superintelligences will automatically replace any arbitrary goals they were initially given with a goal of behaving morally.
+
+* Bostrom lays out the orthogonality thesis in his paper [The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents](https://nickbostrom.com/superintelligentwill.pdf).
+* Arbital has an [Orthogonality Thesis](https://arbital.com/p/orthogonality/) page that covers arguments for and implications of the orthogonality thesis.
+* [The Orthogonality Thesis, Intelligence, and Stupidity](https://www.youtube.com/watch?v=hEUO6pjwFOo) is a video by Robert Miles that explains the orthogonality thesis using Hume's guillotine.
+
+### Instrumental convergence thesis
+
+The instrumental convergence thesis states that there are instrumental goals that will be useful to agents with a wide variety of terminal goals. Self-preservation, resource acquisition, and self-improvement are all examples of convergent instrumental goals.
+
+* [The Basic AI Drives](https://selfawaresystems.com/2007/11/30/paper-on-the-basic-ai-drives/) by Stephen Omohundro lays out the reasoning behind why a wide range of terminal goals would lead to similar instrumental goals, establishing the groundwork for the instrumental convergence thesis.
+* Bostrom's [The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents](https://nickbostrom.com/superintelligentwill.pdf) formulates the instrumental convergence thesis alongside the orthogonality thesis.
+* Arbital's [Instrumental convergence](https://arbital.com/p/instrumental_convergence/) page gives a fairly technical introduction to the claims made by the instrumental convergence thesis.
+* Miles explains why convergent instrumental goals arise and how this allows powerful agents' behaviors to be predicted in the video [Why Would AI Want to do Bad Things? Instrumental Convergence](https://www.youtube.com/watch?v=ZeecOKBus3Q).
+
 ### Timelines
 
 When will superintelligence be created? The answer to this question is important because it determines how long there is to prepare for its arrival. As such, it is worth looking to predictions of when various AI milestones will be reached.
