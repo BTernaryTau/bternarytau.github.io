@@ -24,6 +24,21 @@ The alignment problem is the problem of aligning an AI's goals with the values o
 * Yudkowsky also has [a shorter post](https://www.facebook.com/yudkowsky/posts/10154083549589228) that covers the necessity of alignment, the difficulty of alignment, and why the alignment problem is not self-solving.
 * [Of Myths And Moonshine](https://www.edge.org/conversation/the-myth-of-ai#26015) by Stuart Russell articulates the case for emphasizing the alignment problem in AI research.
 
+### Intelligence explosion
+
+An intelligence explosion is a hypothetical scenario in which a self-improving intelligence is able to improve itself more and more rapidly thanks to the very improvements it makes. The feasibility of this scenario has great implications for how superintelligence may arise.
+
+* MIRI's [Intelligence Explosion FAQ](https://intelligence.org/files/IE-FAQ.pdf) answers questions regarding the intelligence explosion concept, superintelligence, and other related ideas.
+* [Intelligence Explosion: Evidence and Import](https://intelligence.org/files/IE-EI.pdf) by Luke Muehlhauser and Anna Salamon argues that it is feasible for human-level AI to be developed before 2100 and for an intelligence explosion to follow shortly after.
+
+### Slow takeoff
+
+A slow takeoff, sometimes called a soft takeoff, is a scenario in which a self-improving intelligence improves itself slowly enough for humans to intervene during the process. This is the opposite of the fast or hard takeoff experienced in the intelligence explosion scenario.
+
+* Victoria Krakovna's [Risks from general artificial intelligence without an intelligence explosion](https://vkrakovna.wordpress.com/2015/11/29/ai-risk-without-an-intelligence-explosion/) lists reasons why an AI improvement scenario lacking an intelligence explosion still comes with many risks.
+* [Decisive Strategic Advantage without a Hard Takeoff](https://kajsotala.fi/2016/04/decisive-strategic-advantage-without-a-hard-takeoff/) by Kaj Sotala explores the possibility of an AI acquiring control of the world absent an intelligence explosion.
+* [Existential risk from AI without an intelligence explosion](http://alexmennen.com/index.php/2017/05/25/existential-risk-from-ai-without-an-intelligence-explosion/) by Alex Mennen covers reasons an AI might gain a decisive strategic advantage prior to undergoing an intelligence explosion and how such scenarios differ from the reverse situation.
+
 ### Orthogonality thesis
 
 The orthogonality thesis states that, barring a few edge cases, any level of intelligence can be combined with any terminal goal. This precludes scenarios where, for example, sufficiently smart superintelligences will automatically replace any arbitrary goals they were initially given with a goal of behaving morally.
