@@ -128,6 +128,16 @@ sup, sub {
   position: relative;
   top: -0.4em;
 }
-sub { 
-  top: 0.4em; 
+sub {
+  top: 0.4em;
+}
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  font-size: 1.25em;
+  border: 1px solid black;
+  padding: 10px;
 }
