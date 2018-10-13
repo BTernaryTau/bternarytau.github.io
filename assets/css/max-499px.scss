@@ -70,6 +70,18 @@ div {
 		color: #333;
 		float: right;
 	}
+	&.footnotes {
+		border-top: 1px solid #aaaaaa;
+		font-size: 0.9em;
+		ol {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			padding-left: 20px;
+			p {
+				font-size: 1em;
+			}
+		}
+	}
 }
 footer {
 	border-top: 1px solid #aaaaaa;

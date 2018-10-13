@@ -71,6 +71,18 @@ div {
 		color: #333;
 		float: right;
 	}
+	&.footnotes {
+		border-top: 1px solid #aaaaaa;
+		font-size: 0.9em;
+		ol {
+			margin-top: 24px;
+			margin-bottom: 24px;
+			padding-left: 24px;
+			p {
+				font-size: 1em;
+			}
+		}
+	}
 }
 footer {
 	border-top: 1px solid #aaaaaa;
