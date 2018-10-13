@@ -6,6 +6,9 @@
 			<link rel="manifest" href="/manifest.json">
 			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
 			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			{% if page.hide_footnotes %}
+				<link rel="stylesheet" href="/assets/css/hide-footnotes.css">
+			{% endif %}
 			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
 			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
 			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
