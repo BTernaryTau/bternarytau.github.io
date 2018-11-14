@@ -1,34 +1,167 @@
----
-layout: default
-title: Technically Exists
-hide_footnotes: true
----
-<h1>{{ site.title }}</h1>
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>Technically Exists</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+				<link rel="stylesheet" href="/assets/css/hide-footnotes.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Technically Exists</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Technically Exists" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Technically Exists" />
+<link rel="next" href="/page2/" />
+<script type="application/ld+json">
+{"name":"Technically Exists","@type":"WebSite","url":"/","headline":"Technically Exists","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1>Technically Exists</h1>
 <!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+	<h2><a href="/2018/10/14/star-voting-in-an-interstate-compact">STAR voting in an interstate compact</a></h2>
 	<p class="author">
-		<span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+		<span class="date">2018-10-14</span>
 	</p>
 	<div class="content">
-		{{ post.excerpt }}
-		{% assign excerpt_words = post.excerpt | number_of_words %}
-		{% assign content_words = post.content | number_of_words %}
-		{% if excerpt_words != content_words %}
-			<p><a href="{{site.baseurl}}{{ post.url }}">Read more</a></p>
-		{% endif %}
+		<p>Jameson Quinn <a href="https://wiki.electorama.com/wiki/3-2-1_voting#For_US_presidential_elections">lays out a proposal</a> for an interstate compact that links the result of the US presidential election to the national popular vote, similar to the <a href="https://www.nationalpopularvote.com/">National Popular Vote Interstate Compact</a>. However, unlike the NPVIC, this compact is designed to support not just <a href="https://en.wikipedia.org/wiki/Plurality_voting">plurality voting</a>, but other voting methods as well. Specifically, <a href="https://en.wikipedia.org/wiki/Approval_voting">approval</a>, <a href="https://en.wikipedia.org/wiki/Score_voting">score</a>, and <a href="https://wiki.electorama.com/wiki/3-2-1_voting">3-2-1</a> are all compatible.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> Two notable methods are missing from this list: <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">instant-runoff voting</a>, supported by <a href="https://www.fairvote.org/">FairVote</a> (though under the name ranked choice voting), and <a href="https://en.wikipedia.org/wiki/STAR_voting">STAR voting</a>, supported by <a href="https://www.equal.vote/">The Equal Vote Coalition</a>.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>It also works with <a href="https://en.wikipedia.org/wiki/Borda_count">borda count</a>, but because borda is (at least arguably) worse than plurality, I have chosen to omit it. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+		
+		
+		
+			<p><a href="/2018/10/14/star-voting-in-an-interstate-compact">Read more</a></p>
+		
 	</div>
-{% endfor %}
+
+	<h2><a href="/2018/07/21/should-you-pursue-common-or-rare-achievements">Should you pursue common or rare achievements?</a></h2>
+	<p class="author">
+		<span class="date">2018-07-21</span>
+	</p>
+	<div class="content">
+		<p>Recently I’ve been considering what video game achievements are most worth aiming for. Specifically, the question is whether I should go after common achievements or rare achievements. I’d been targeting rare achievements, but it occurred to me that I might be better off going after common ones instead.</p>
+
+<p>One reason to pursue common achievements is that they’re generally lower-hanging fruit. All else equal, the easier an achievement is, the more people will have it. Thus, if you simply want to maximize the number of achievements you have, going after more common achievements seems like the way to go. Occasionally a rare achievement may seem just as easy, but that shouldn’t be your main focus, only a possibility that you pursue as it comes up.</p>
+
+
+		
+		
+		
+			<p><a href="/2018/07/21/should-you-pursue-common-or-rare-achievements">Read more</a></p>
+		
+	</div>
+
+	<h2><a href="/2018/07/01/why-discuss-superintelligence">Why discuss superintelligence?</a></h2>
+	<p class="author">
+		<span class="date">2018-07-01</span>
+	</p>
+	<div class="content">
+		<p>My site now contains a miscellaneous section with exactly one page, the <a href="/miscellaneous/superintelligence-reference-page">Superintelligence reference page</a>. I’ve <a href="/2018/03/02/how-intelligent-are-we">briefly brought up superintelligence</a> in the past, but I’ve never discussed it in detail. However, given that others have already written so much about it, I feel like it makes more sense to collect the resources I think do a good job of explaining it. Therefore, if you have no idea what superintelligence is or why you should care about it, I’d recommend starting with some of the links in the <a href="/miscellaneous/superintelligence-reference-page#introductions">Introductions section</a> before reading on.</p>
+
+
+		
+		
+		
+			<p><a href="/2018/07/01/why-discuss-superintelligence">Read more</a></p>
+		
+	</div>
+
+	<h2><a href="/2018/06/04/my-thoughts-on-microsoft-acquiring-github">My thoughts on Microsoft acquiring GitHub</a></h2>
+	<p class="author">
+		<span class="date">2018-06-04</span>
+	</p>
+	<div class="content">
+		<p>Today it was announced that <a href="https://www.theverge.com/2018/6/4/17422788/microsoft-github-acquisition-official-deal">Microsoft is acquiring GitHub</a>. The responses to this event have been mixed, with some people expressing optimism and others fear. I have two lines of thought regarding this subject.</p>
+
+<p>First of all, I don’t expect Microsoft to ruin GitHub. I agree with those who believe that <a href="https://dev.to/resir014/the-microsoft-thing-cb">Microsoft genuinely cares</a> about open source. So long as software is a complement to Microsoft’s products, Microsoft is <a href="https://www.gwern.net/Complement">incentivized to support open source software</a>. I was worried when I discovered that <a href="https://www.geekwire.com/2016/this-is-the-new-microsoft-windows-slips-to-no-3-as-company-shifts-to-the-cloud/">Microsoft’s revenue from Windows is dropping</a> since operating systems are an obvious complement of software, but luckily Microsoft seems to be pivoting to cloud services, another complement of software. Therefore, I expect that Microsoft will at least avoid damaging GitHub in any way since it stands to gain from open source.</p>
+
+<p>What does worry me is the larger pattern that this acquisition is a part of. Microsoft has made <a href="https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Microsoft#Key_acquisitions">a lot of acquisitions</a> in the past, and it’s far from the only company to do so. This pattern, along with some other factors, has resulted in a <a href="https://srconstantin.wordpress.com/2018/05/31/monopoly-a-manifesto-and-fact-post/">major increase in market power</a>, which means there’s a lot less competition among companies. This leads to a variety of problems, including <a href="http://rooseveltinstitute.org/how-widespread-labor-monopsony-some-new-results-suggest-its-pervasive/">lower wages</a>, <a href="https://www.bloomberg.com/view/articles/2017-09-01/america-s-superstar-companies-are-a-drag-on-growth">less economic growth</a>, and the phenomenon known as <a href="https://slatestarcodex.com/2017/02/09/considerations-on-cost-disease/">cost disease</a>, among many others. So while I don’t think there’s anything wrong with this acquisition specifically, in context it is part of an extremely harmful pattern that needs to be ended.</p>
+
+		
+		
+		
+	</div>
+
+	<h2><a href="/2018/06/01/outlining-the-opposite-of-a-singleton">Outlining the opposite of a singleton</a></h2>
+	<p class="author">
+		<span class="date">2018-06-01</span>
+	</p>
+	<div class="content">
+		<p>In <a href="/2018/02/09/singletons-and-universal-inevitable-threats">one of my previous posts</a>, I discussed the concept of a singleton as defined by Nick Bostrom. Now I’d like to consider what the rough opposite of a singleton would look like, based on what has been written by others on the subject.</p>
+
+<p>For me, the obvious place to start is Scott Alexander’s <a href="https://slatestarcodex.com/2014/07/30/meditations-on-moloch/">Meditations On Moloch</a>. In it, Moloch is introduced as that which causes the following:</p>
+
+<blockquote>
+  <p>In some competition optimizing for X, the opportunity arises to throw some other value under the bus for improved X. Those who take it prosper. Those who don’t take it die out. Eventually, everyone’s relative status is about the same as before, but everyone’s absolute status is worse than before.</p>
+</blockquote>
+
+<p>This type of situation is known as a <a href="https://conceptually.org/concepts/coordination-problems/">coordination problem</a>, something I discussed previously in the context of <a href="/2018/01/26/video-game-boycotts">boycotting video games</a>. If those in the competition could choose to cooperate, they could easily coordinate to avoid sacrificing any other values. But as long as they are competing, once one of them chooses to sacrifice something for a short-term advantage, the rest must do the same or be eliminated.</p>
+
+
+		
+		
+		
+			<p><a href="/2018/06/01/outlining-the-opposite-of-a-singleton">Read more</a></p>
+		
+	</div>
+
 
 <!-- Pagination links -->
-{% if paginator.previous_page %}
-<div class="pagination-prev">
-	<a href="{{ paginator.previous_page_path }}" class="previous">←Previous</a>
-</div>
-{% endif %}
 
-{% if paginator.next_page %}
+
+
 <div class="pagination-next">
-	<a href="{{ paginator.next_page_path }}" class="next">Next→</a>
+	<a href="/page2/" class="next">Next→</a>
 </div>
-{% endif %}
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>

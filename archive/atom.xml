@@ -1,26 +1,586 @@
----
-layout: null
----
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<updated>2018-11-14T22:13:52+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
 	</author>
 
-	{% for post in site.posts %}
+	
 		<entry>
-			<title>{{ post.title }}</title>
-			<link href="http://bternarytau.github.io{{ post.url }}"/>
-			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>http://bternarytau.github.io{{ post.id }}</id>
-			<content type="html">{{ post.content | xml_escape }}</content>
+			<title>STAR voting in an interstate compact</title>
+			<link href="http://bternarytau.github.io/2018/10/14/star-voting-in-an-interstate-compact"/>
+			<updated>2018-10-14T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/10/14/star-voting-in-an-interstate-compact</id>
+			<content type="html">&lt;p&gt;Jameson Quinn &lt;a href=&quot;https://wiki.electorama.com/wiki/3-2-1_voting#For_US_presidential_elections&quot;&gt;lays out a proposal&lt;/a&gt; for an interstate compact that links the result of the US presidential election to the national popular vote, similar to the &lt;a href=&quot;https://www.nationalpopularvote.com/&quot;&gt;National Popular Vote Interstate Compact&lt;/a&gt;. However, unlike the NPVIC, this compact is designed to support not just &lt;a href=&quot;https://en.wikipedia.org/wiki/Plurality_voting&quot;&gt;plurality voting&lt;/a&gt;, but other voting methods as well. Specifically, &lt;a href=&quot;https://en.wikipedia.org/wiki/Approval_voting&quot;&gt;approval&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Score_voting&quot;&gt;score&lt;/a&gt;, and &lt;a href=&quot;https://wiki.electorama.com/wiki/3-2-1_voting&quot;&gt;3-2-1&lt;/a&gt; are all compatible.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Two notable methods are missing from this list: &lt;a href=&quot;https://en.wikipedia.org/wiki/Instant-runoff_voting&quot;&gt;instant-runoff voting&lt;/a&gt;, supported by &lt;a href=&quot;https://www.fairvote.org/&quot;&gt;FairVote&lt;/a&gt; (though under the name ranked choice voting), and &lt;a href=&quot;https://en.wikipedia.org/wiki/STAR_voting&quot;&gt;STAR voting&lt;/a&gt;, supported by &lt;a href=&quot;https://www.equal.vote/&quot;&gt;The Equal Vote Coalition&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;For reasons I won’t go into here, I am more interested in STAR. Thus, I chose to work on extending the proposal to work with it. Since STAR and 3-2-1 are both rated runoff methods, I decided that it made sense to start with the procedure for 3-2-1 and modify it to fit STAR. The procedure I came up with is simply an addition to step 3 of the proposal, and works as follows:&lt;/p&gt;
+
+&lt;p&gt;Step 3: Possibly looking at the raw totals of other states, each state publishes its final totals. For a state using STAR, two finalists are first found by converting the raw totals into scores from 0 to 1 and selecting the two candidates with the highest average scores. Raw totals are converted as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plurality – the candidate voted for receives 1 point, and all others receive 0&lt;/li&gt;
+  &lt;li&gt;Approval – approved candidates receive 1 point, and all others receive 0&lt;/li&gt;
+  &lt;li&gt;Score – the minimum score is subtracted from all scores, which are then divided by the new maximum score&lt;/li&gt;
+  &lt;li&gt;STAR – same process as score&lt;/li&gt;
+  &lt;li&gt;3-2-1 – “good” ratings are 1 point, “OK” ratings are 0.5 points, and “bad” ratings are 0 points&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once the finalists are selected, final local totals are generated for each candidate. For each STAR ballot, 1 point is awarded to the highest-rated finalist (or both if tied) as well as any higher-rated candidates. Other candidates rated the same or lower (including the lower-rated finalist, if there is one) receive 0 points.&lt;/p&gt;
+
+&lt;p&gt;While step 3 was the only one to require any alterations, it was the longest step by far even before the STAR-specific instructions are added. It’s also the step that’s hardest to get right. Quinn gave a list of 4 criteria that the final local totals and the procedure that generates them should meet:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Each individual local ballot contributes between 0 and 1 points to each candidate’s final local tally.&lt;/li&gt;
+  &lt;li&gt;A ballot will always contribute 1 point to its most-preferred candidate and 0 points to its least-preferred candidate.&lt;/li&gt;
+  &lt;li&gt;A ballot will never contribute more points to a less-preferred candidate than to a more-preferred one.&lt;/li&gt;
+  &lt;li&gt;If all states used the same final local tally procedure, the winner would be the STAR winner.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first criterion is obviously met since every candidate receives exactly 0 points or 1 point. The second criterion is met so long as it does not require all most-preferred and least-preferred candidates to receive the same number of points in the event of ties. The third criterion is met because all candidates receiving a score above that of the highest-rated finalist earn 1 point, and all candidates receiving a score below that of the highest-rated finalist earn 0 points. Unfortunately, the fourth criterion is not met by this procedure, as shown by this counterexample:&lt;/p&gt;
+
+&lt;div style=&quot;overflow-x:auto;&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Number of Voters&lt;/th&gt;
+        &lt;th&gt;Candidate A&lt;/th&gt;
+        &lt;th&gt;Candidate B&lt;/th&gt;
+        &lt;th&gt;Candidate C&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Candidate A receives 22 points, Candidate B receives 23 points, and Candidate C receives 16 points, so A and B are the finalists. A is favored over B on 5 ballots while B is favored over A on 6 ballots, so B is the winner under STAR. However, the procedure I specified assigns 6 points to A, 7 points to B, and 8 points to C, so C ends up being the winner.&lt;/p&gt;
+
+&lt;p&gt;One thing that makes this example weird is that half the voters only rated candidates 0, 1, or 2, and thus only employed half of the available range of scores. Unfortunately, assuming all voters use the full range of their ballot does not prevent this problem:&lt;/p&gt;
+
+&lt;div style=&quot;overflow-x:auto;&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Number of Voters&lt;/th&gt;
+        &lt;th&gt;Candidate A&lt;/th&gt;
+        &lt;th&gt;Candidate B&lt;/th&gt;
+        &lt;th&gt;Candidate C&lt;/th&gt;
+        &lt;th&gt;Candidate D&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;7&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;8&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In this example, every voter rates at least one candidate 0 and at least one candidate 5. Candidate A receives 62 points, Candidate B receives 63 points, Candidate C receives 56 points, and Candidate D receives 55 points, so A and B are still the finalists. A is favored over B on 13 ballots while B is favored over A on 14 ballots, so B is the STAR winner. My procedure assigns 14 points to A, 15 points to B, 16 points to C, and 15 points to D, so under it C is the winner.&lt;/p&gt;
+
+&lt;p&gt;Under what circumstances does this procedure deviate from simple STAR voting? Well, the first step will select the same finalists since the ratings are altered in a way that preserves the relative differences between their sums, then added and compared as in STAR. For the second step, STAR effectively awards points to the finalists in the same way that my procedure does.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; However, unlike my procedure, STAR never awards any points to non-finalists.&lt;/p&gt;
+
+&lt;p&gt;Since finalists are awarded points in the same way, the finalist that loses under STAR will never win under this procedure. However, a non-finalist might win if they are higher-rated than both finalists on over half the ballots. This is because every ballot assigns a point to at least one finalist, so at least one finalist will earn points from half the ballots or more. Thus, to beat this finalist, the non-finalist will have to be rated higher than both finalists on over half the ballots, since this is the only way the non-finalist can earn points from over half the ballots. This implies that failure to choose the STAR winner is rare, since this situation should not arise often.&lt;/p&gt;
+
+&lt;p&gt;We can derive a couple interesting properties from this information. First of all, a non-finalist winner will necessarily beat both finalists in pairwise matchups. Since a finalist winner necessarily beats the other finalist in a pairwise matchup, this means that my procedure never elects the Condorcet loser. It also means that for 3 candidate elections, the winner under my procedure will always be either the STAR winner or the Condorcet winner. This does not hold for 4 or more candidates; in the second example I gave, D is the Condorcet winner, not C.&lt;/p&gt;
+
+&lt;p&gt;Of course, all of this assumes that every state is using this procedure, which implies that all states have chosen to use STAR voting. In that case, it should be easy to amend the interstate compact to simply calculate the national STAR vote if that is desirable. What’s more relevant is what happens when this procedure is used alongside the procedures for other voting methods, which is what the first three criteria cover. Thus, I chose to prioritize meeting them over the last criterion.&lt;/p&gt;
+
+&lt;p&gt;Overall, I feel this is reasonable for a first version of an extension of Quinn’s proposal to STAR voting. Given the assessment I was able to provide, I see no reason why this procedure would behave badly. It converts STAR ballots to scores of 0 or 1 in a way similar to how 3-2-1 ballots are converted, and while it can’t guarantee the STAR result within the states that use it, it can only fail to give the STAR result when another candidate is rated higher than the two finalists on over half the ballots, an event which should be rare.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;It also works with &lt;a href=&quot;https://en.wikipedia.org/wiki/Borda_count&quot;&gt;borda count&lt;/a&gt;, but because borda is (at least arguably) worse than plurality, I have chosen to omit it. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Since Quinn was applying the criteria to the tally procedure for 3-2-1 voting, this originally said “the 3-2-1 winner”. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;It’s probably more accurate to say that STAR awards 0 points to both finalists for ballots where they are tied, but saying it awards 1 point to both like my procedure does will never change the outcome, so I ignore this for simplicity. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
 		</entry>
-	{% endfor %}
+	
+		<entry>
+			<title>Should you pursue common or rare achievements?</title>
+			<link href="http://bternarytau.github.io/2018/07/21/should-you-pursue-common-or-rare-achievements"/>
+			<updated>2018-07-21T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/07/21/should-you-pursue-common-or-rare-achievements</id>
+			<content type="html">&lt;p&gt;Recently I’ve been considering what video game achievements are most worth aiming for. Specifically, the question is whether I should go after common achievements or rare achievements. I’d been targeting rare achievements, but it occurred to me that I might be better off going after common ones instead.&lt;/p&gt;
+
+&lt;p&gt;One reason to pursue common achievements is that they’re generally lower-hanging fruit. All else equal, the easier an achievement is, the more people will have it. Thus, if you simply want to maximize the number of achievements you have, going after more common achievements seems like the way to go. Occasionally a rare achievement may seem just as easy, but that shouldn’t be your main focus, only a possibility that you pursue as it comes up.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;Another factor to consider is the potential embarrassment of not having a particular achievement. Lacking a common achievement could be very embarrassing. After all, if an achievement is held by 80% of the player base, then how come you don’t have it? On the other hand, lacking a rare achievement is much more understandable. Unless you’re a huge achievement hunter, no one will be surprised that you’re missing an achievement that less than 1% of all players have. Being embarrassed over not having an achievement does seem like a rather unlikely scenario, but it’s always possible that a friend may want to compare achievements or something, so it is a factor worth considering.&lt;/p&gt;
+
+&lt;p&gt;While common achievements may be better when someone is looking through all your achievements, rare achievements are nice when you can direct attention to a specific set of achievements. Steam is a major video game platform that allows you to do just that, offering both a general achievement showcase option and a rarest achievement showcase option for player profiles. Rare achievements will generally be more impressive than common ones, so if you’re looking to show off what you’ve achieved, focusing on rare achievements seems like the way to go.&lt;/p&gt;
+
+&lt;p&gt;If you’re unconcerned with what others think, you may still want to target rare achievements because of the satisfaction you feel upon achieving them. This will obviously vary from person to person, but it’s likely that common achievements don’t feel as special to complete since so many other people have already acquired them. It’s generally much more satisfying to accomplish something that few others have. Therefore, if others’ opinions of your completed achievements don’t bother you but you do care about the satisfaction of obtaining rare achievements, focusing on those rare achievements appears to be a good idea.&lt;/p&gt;
+
+&lt;p&gt;After considering these arguments, I decided that going after rare achievements was still the best decision for me. I don’t think I care about quantity too much, and I don’t expect to be embarrassed about missing common achievements. In contrast, I can choose to show off the rare achievements I have, and acquiring them is a rewarding activity for me. While I don’t expect this to be the best option for everyone, I am reasonably confident that I have made the right decision.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Why discuss superintelligence?</title>
+			<link href="http://bternarytau.github.io/2018/07/01/why-discuss-superintelligence"/>
+			<updated>2018-07-01T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/07/01/why-discuss-superintelligence</id>
+			<content type="html">&lt;p&gt;My site now contains a miscellaneous section with exactly one page, the &lt;a href=&quot;/miscellaneous/superintelligence-reference-page&quot;&gt;Superintelligence reference page&lt;/a&gt;. I’ve &lt;a href=&quot;/2018/03/02/how-intelligent-are-we&quot;&gt;briefly brought up superintelligence&lt;/a&gt; in the past, but I’ve never discussed it in detail. However, given that others have already written so much about it, I feel like it makes more sense to collect the resources I think do a good job of explaining it. Therefore, if you have no idea what superintelligence is or why you should care about it, I’d recommend starting with some of the links in the &lt;a href=&quot;/miscellaneous/superintelligence-reference-page#introductions&quot;&gt;Introductions section&lt;/a&gt; before reading on.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;You back? Good. At this point, you might be wondering why I’ve singled out this topic as one worth prioritizing. The answer to that question is that superintelligence is an existential risk. &lt;a href=&quot;http://www.existential-risk.org/concept.pdf&quot;&gt;Using a conservative estimate&lt;/a&gt;, it is possible for humanity to create 10&lt;sup&gt;34&lt;/sup&gt; fulfilling years of human life throughout the remainder of the universe’s existence. Thus, ensuring humanity remains capable of doing so is extremely important. This and other concerns &lt;a href=&quot;http://www.existential-risk.org/concept.pdf&quot;&gt;justify treating existential risk prevention as a global priority&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Because superintelligence is an existential risk, ensuring that it is &lt;a href=&quot;/miscellaneous/superintelligence-reference-page#alignment-problem&quot;&gt;aligned with human values&lt;/a&gt; is a very important problem. Some organizations even consider it to potentially be &lt;a href=&quot;https://80000hours.org/articles/cause-selection/&quot;&gt;the most important global problem&lt;/a&gt; that humanity has identified thus far. At the same time, media coverage of this issue and AI in general has been increasing, and a lot of it is not very good. Therefore, it seems important to have resources available on the subject.&lt;/p&gt;
+
+&lt;p&gt;As of this post, the reference page has only three sections, but I plan to expand upon it in the future. Topics that I plan to add include the orthogonality and instrumental convergence theses, the intelligence explosion concept, and scenarios without an intelligence explosion. There’s a lot of room to grow the page, and I think doing so is definitely worthwhile.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>My thoughts on Microsoft acquiring GitHub</title>
+			<link href="http://bternarytau.github.io/2018/06/04/my-thoughts-on-microsoft-acquiring-github"/>
+			<updated>2018-06-04T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/06/04/my-thoughts-on-microsoft-acquiring-github</id>
+			<content type="html">&lt;p&gt;Today it was announced that &lt;a href=&quot;https://www.theverge.com/2018/6/4/17422788/microsoft-github-acquisition-official-deal&quot;&gt;Microsoft is acquiring GitHub&lt;/a&gt;. The responses to this event have been mixed, with some people expressing optimism and others fear. I have two lines of thought regarding this subject.&lt;/p&gt;
+
+&lt;p&gt;First of all, I don’t expect Microsoft to ruin GitHub. I agree with those who believe that &lt;a href=&quot;https://dev.to/resir014/the-microsoft-thing-cb&quot;&gt;Microsoft genuinely cares&lt;/a&gt; about open source. So long as software is a complement to Microsoft’s products, Microsoft is &lt;a href=&quot;https://www.gwern.net/Complement&quot;&gt;incentivized to support open source software&lt;/a&gt;. I was worried when I discovered that &lt;a href=&quot;https://www.geekwire.com/2016/this-is-the-new-microsoft-windows-slips-to-no-3-as-company-shifts-to-the-cloud/&quot;&gt;Microsoft’s revenue from Windows is dropping&lt;/a&gt; since operating systems are an obvious complement of software, but luckily Microsoft seems to be pivoting to cloud services, another complement of software. Therefore, I expect that Microsoft will at least avoid damaging GitHub in any way since it stands to gain from open source.&lt;/p&gt;
+
+&lt;p&gt;What does worry me is the larger pattern that this acquisition is a part of. Microsoft has made &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Microsoft#Key_acquisitions&quot;&gt;a lot of acquisitions&lt;/a&gt; in the past, and it’s far from the only company to do so. This pattern, along with some other factors, has resulted in a &lt;a href=&quot;https://srconstantin.wordpress.com/2018/05/31/monopoly-a-manifesto-and-fact-post/&quot;&gt;major increase in market power&lt;/a&gt;, which means there’s a lot less competition among companies. This leads to a variety of problems, including &lt;a href=&quot;http://rooseveltinstitute.org/how-widespread-labor-monopsony-some-new-results-suggest-its-pervasive/&quot;&gt;lower wages&lt;/a&gt;, &lt;a href=&quot;https://www.bloomberg.com/view/articles/2017-09-01/america-s-superstar-companies-are-a-drag-on-growth&quot;&gt;less economic growth&lt;/a&gt;, and the phenomenon known as &lt;a href=&quot;https://slatestarcodex.com/2017/02/09/considerations-on-cost-disease/&quot;&gt;cost disease&lt;/a&gt;, among many others. So while I don’t think there’s anything wrong with this acquisition specifically, in context it is part of an extremely harmful pattern that needs to be ended.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Outlining the opposite of a singleton</title>
+			<link href="http://bternarytau.github.io/2018/06/01/outlining-the-opposite-of-a-singleton"/>
+			<updated>2018-06-01T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/06/01/outlining-the-opposite-of-a-singleton</id>
+			<content type="html">&lt;p&gt;In &lt;a href=&quot;/2018/02/09/singletons-and-universal-inevitable-threats&quot;&gt;one of my previous posts&lt;/a&gt;, I discussed the concept of a singleton as defined by Nick Bostrom. Now I’d like to consider what the rough opposite of a singleton would look like, based on what has been written by others on the subject.&lt;/p&gt;
+
+&lt;p&gt;For me, the obvious place to start is Scott Alexander’s &lt;a href=&quot;https://slatestarcodex.com/2014/07/30/meditations-on-moloch/&quot;&gt;Meditations On Moloch&lt;/a&gt;. In it, Moloch is introduced as that which causes the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In some competition optimizing for X, the opportunity arises to throw some other value under the bus for improved X. Those who take it prosper. Those who don’t take it die out. Eventually, everyone’s relative status is about the same as before, but everyone’s absolute status is worse than before.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This type of situation is known as a &lt;a href=&quot;https://conceptually.org/concepts/coordination-problems/&quot;&gt;coordination problem&lt;/a&gt;, something I discussed previously in the context of &lt;a href=&quot;/2018/01/26/video-game-boycotts&quot;&gt;boycotting video games&lt;/a&gt;. If those in the competition could choose to cooperate, they could easily coordinate to avoid sacrificing any other values. But as long as they are competing, once one of them chooses to sacrifice something for a short-term advantage, the rest must do the same or be eliminated.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;Note that in less intense competitions with fewer participants, there’s a greater chance that no one will take the first step, allowing values that could be traded away to remain. Total coordination failure would involve a large number of entities competing, enough that any opportunity to trade away a value is taken almost immediately.&lt;/p&gt;
+
+&lt;p&gt;As enlightening as I find this post to be, it does not identify the opposite of a singleton. Moloch is the force that might lead to this opposite manifesting, but it is not the opposite itself. In order to find that, we will have to look elsewhere.&lt;/p&gt;
+
+&lt;p&gt;Where should we look? Well, we know that if the opposite ever manifests, it will be because of Moloch. Thus, a “competition optimizing for X” will be involved. But what X are we looking for? It needs to be something fundamental, something that isn’t destroyed even if civilization is eliminated and the world is nothing but chaos. And what is more fundamental for agents in a competition than existence itself? It’s not like you can even participate in a competition if you don’t exist in the first place. The answer, it would seem, is survival.&lt;/p&gt;
+
+&lt;p&gt;But it’s not quite that simple. Take evolution, for example. Survival is actually not its most important component; reproduction is. Now if one holds reproduction as their terminal goal, survival does happen to be a key instrumental goal. However, it is safe to say that evolution is a competition optimizing for reproduction. After all, if evolution were a competition optimizing for survival, then it would be weird to find that most species could die of old age. In contrast, all species are capable of reproducing, so reproduction fits the bill much better.&lt;/p&gt;
+
+&lt;p&gt;This leads us to our next major source, &lt;a href=&quot;https://qualiacomputing.com/2016/08/20/wireheading_done_right/&quot;&gt;Wireheading Done Right: Stay Positive Without Going Insane&lt;/a&gt;. Most of this post is actually not relevant to our discussion, but this paragraph is an exception:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I will define a &lt;em&gt;pure replicator&lt;/em&gt;, in the context of agents and minds, to be an intelligence that is indifferent towards the valence of its conscious states and those of others. A pure replicator invests all of its energy and resources into surviving and reproducing, even at the cost of continuous suffering to themselves or others. Its main evolutionary advantage is that it does not need to spend any resources making the world a better place.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The given definition, while useful in its original context, is oddly focused on what a pure replicator doesn’t do. The sentence that follows is much more important to us. A pure replicator focuses solely on surviving and reproducing. Keeping in mind that survival is merely an instrumental goal, I will redefine a pure replicator as an agent that optimizes for its own reproduction.&lt;/p&gt;
+
+&lt;p&gt;Now that we have this concept, we can finally get around to naming and defining the opposite of a singleton. I have chosen to name this concept a &lt;em&gt;replicator world&lt;/em&gt;. I define a replicator world as a world order in which all highest-level agencies are pure replicators.&lt;/p&gt;
+
+&lt;p&gt;Let’s break this new definition down. First of all, a replicator world is a world order just as a singleton is. Both are incompatible with all other world orders, as world orders extend throughout their domain and do not leave room for anything else.&lt;/p&gt;
+
+&lt;p&gt;Next, we need to know what a highest-level agency is. Agencies are able to combine with each other to form a new agency, which is considered to be one level higher than the agencies forming it. For example, cells can be thought of as agencies that come together to form higher-level agencies called multicellular organisms. A highest-level agency is an agency that is not part of any higher-level agency. In the case of a singleton, the singleton itself is the only highest-level agency, and all other agencies are a part of it. In the case of a replicator world, there are many different highest-level agencies.&lt;/p&gt;
+
+&lt;p&gt;Finally, all those highest-level agencies have to be pure replicators. It’s important that this condition be restricted to agencies at the highest level because pure replicators are bad at forming higher-level agencies thanks to the free-rider problem. When agencies form a higher-level agency, they do so because they expect to benefit from it. However, if an individual agency chooses not to contribute to the effort, it will still receive the vast majority of the benefits from the higher-level agency despite experiencing a much lower cost. There are &lt;a href=&quot;https://www.ribbonfarm.com/2016/02/11/minimum-viable-superorganism/&quot;&gt;solutions to this problem&lt;/a&gt;, but they tend to involve other values that a pure replicator will immediately trade away for an increased ability to reproduce. Thus, highest-level agencies that are pure replicators will likely consist of agencies that aren’t pure replicators. For example, an organism that functions as a pure replicator may be composed of non-cancerous cells that do not function as pure replicators. This justifies restricting the condition of being a pure replicator to highest-level agencies.&lt;/p&gt;
+
+&lt;p&gt;One feature of replicator worlds is that, shortly after their creation, they will always be roughly at their &lt;a href=&quot;https://en.wikipedia.org/wiki/Carrying_capacity&quot;&gt;carrying capacity&lt;/a&gt;. This occurs because agencies optimizing for reproduction will initially use up excess resources at an exponential rate as their population grows. While the &lt;a href=&quot;https://www.khanacademy.org/science/biology/ecology/population-growth-and-regulation/a/exponential-logistic-growth&quot;&gt;logistic model&lt;/a&gt; suggests that growth will slow down again as the population approaches the carrying capacity, by the time growth has been substantially slowed the population will already be roughly at the carrying capacity.&lt;/p&gt;
+
+&lt;p&gt;This in turn implies that agencies in replicator worlds will have access to almost no resources beyond those necessary for survival, as carrying capacity is the population size in which all resources are used simply for survival. While it is almost certain that replicator worlds will expand to gain access to additional resources, any time pure replicators come upon excess resources they will immediately begin reproducing until there are enough offspring that all resources are used solely for survival, restoring the population to carrying capacity. This will likely occur fast enough that no agency will have access to a significant amount of excess resources at any point in their existence.&lt;/p&gt;
+
+&lt;p&gt;From this, it can be deduced that replicator worlds experience little to no technological development. All agencies have to choose between exploration and exploitation, a dilemma known as the &lt;a href=&quot;https://conceptually.org/concepts/explore-or-exploit/&quot;&gt;explore-exploit tradeoff&lt;/a&gt;. However, agencies in replicator worlds are strongly incentivized to exploit any resources they have rather than use them for exploration. Most of the time they will only be able to survive if they exploit all their resources to that end. Even at times when they have excess resources, however, pure replicators will want to use them for reproduction. While exploration could yield results that help a pure replicator by, for example, increasing how efficiently it can use resources, this sort of discovery takes time, time an agency in a replicator world will likely not have. Other agencies are seeking out resources as well, and once the excess resources are gone the easiest resources to obtain may be the ones being used for exploration.&lt;/p&gt;
+
+&lt;p&gt;If exploration is this unrewarding, agencies will likely sacrifice the ability to explore at all. If doing so gives agencies even a slight advantage in resource usage, this move could very well make sense in such an intensive competition. Interestingly, such a modification would be the last one an agency makes, as modifications are inherently a form of exploration.&lt;/p&gt;
+
+&lt;p&gt;Another feature of replicator worlds is a lack of coordination at the highest level. This should be expected, as a singleton has everything coordinated by one agency. Several major implications result from this. One is that no governments or other organizations comprised of highest-level agencies will exist. Organizations are dependent on coordination between their members, but this will not be possible in a replicator world. In fact, since an organization would actually count as a higher-level agency, it is by definition impossible for an organization to be formed from highest-level agencies. Thus, there are only two possible ways that something like a government could exist in a replicator world: either it must be a pure replicator, or it must be a lower-level agency within a pure replicator.&lt;/p&gt;
+
+&lt;p&gt;Another implication is the lack of an economy or any looser means of coordination among highest-level agencies. While these forms of coordination may not be tight enough to form higher-level agencies and therefore do not suffer from a definition issue, they are nonetheless dependent on a process that cannot happen between pure replicators. As such, they can only possibly appear in a replicator world if they can exist within a pure replicator.&lt;/p&gt;
+
+&lt;p&gt;I believe that this outline of a replicator world effectively captures what I would intuitively expect the opposite of a singleton to look like. However, this by no means implies that it is correct. I expect to at the very least significantly alter my conception of this concept as I think about it more. However, I am quite happy with this as a first attempt to tackle understanding this area.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Freedom of speech is good</title>
+			<link href="http://bternarytau.github.io/2018/05/20/freedom-of-speech-is-good"/>
+			<updated>2018-05-20T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/05/20/freedom-of-speech-is-good</id>
+			<content type="html">&lt;p&gt;In my &lt;a href=&quot;/2018/04/28/freedom-of-speech-is-bad&quot;&gt;previous post&lt;/a&gt;, I laid out what I consider to be the strongest argument against freedom of speech. Now I will cover what I believe to be the flaw in that argument.&lt;/p&gt;
+
+&lt;p&gt;In that argument’s analogy, ideological propaganda produced by think tanks is equated with pathogens produced by bioweapon labs. But this comparison misses something. Multiple pathogens will all weaken a host more than just one of them would, but multiple ideologies will contradict and weaken each other, influencing people less. This gives freedom of speech an advantage that “freedom to distribute pathogens” lacks.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;When freedom of speech is eliminated, it is generally done so by one group that chooses to allow its own speech but bans that of other groups it opposes. Thus, one set of think tanks continues to distribute their ideology, but the others are no longer able to do so. This allows the favored ideology to have a greater impact on people than the spread of all ideologies would’ve. If one bioweapon lab banned all the others from distributing their pathogens, it would be an improvement; this does not hold true for think tanks and ideologies.&lt;/p&gt;
+
+&lt;p&gt;This doesn’t imply that freedom of speech and the marketplace of ideas automatically lead to the truth, but it does suggest that they are components of a system that does. Without freedom of speech, it’s much easier to entrench false ideas within society. Creating a marketplace of ideas at least puts some pressure on ideas to be truthful. However, some additional mechanism is necessary to ensure that more truthful ideas are believed and spread more. Otherwise, the marketplace of ideas, which directly optimizes for ideas that are believed and spread, ceases to indirectly optimize for truth.&lt;/p&gt;
+
+&lt;p&gt;I don’t know what such a mechanism would look like, but developing one seems like it could become more important as the power of propaganda increases. In the meantime, defending freedom of speech ought to help. It won’t solve the problem, but at the very least it should slow down the rate at which the situation deteriorates.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Freedom of speech is bad</title>
+			<link href="http://bternarytau.github.io/2018/04/28/freedom-of-speech-is-bad"/>
+			<updated>2018-04-28T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/04/28/freedom-of-speech-is-bad</id>
+			<content type="html">&lt;p&gt;I consider freedom of speech to be one of the most important foundations of today’s society. However, in this post I’d like to present what I believe is the strongest argument against free speech, then follow it up with the reason I think said argument is wrong in a later post.&lt;/p&gt;
+
+&lt;p&gt;The groundwork for this argument (though certainly not the argument itself) is laid out in detail in Scott Alexander’s &lt;a href=&quot;https://slatestarcodex.com/2014/07/30/meditations-on-moloch/&quot;&gt;Meditations On Moloch&lt;/a&gt;, which I recommend you read first. The most relevant part is as follows:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The point is – imagine a country full of bioweapon labs, where people toil day and night to invent new infectious agents. The existence of these labs, and their right to throw whatever they develop in the water supply is protected by law. And the country is also linked by the world’s most perfect mass transit system that every single person uses every day, so that any new pathogen can spread to the entire country instantaneously. You’d expect things to start going bad for that city pretty quickly.&lt;/p&gt;
+
+  &lt;p&gt;Well, we have about a zillion think tanks researching new and better forms of propaganda. And we have constitutionally protected freedom of speech. And we have the Internet. So we’re kind of screwed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;The obvious way to solve the problem in the analogy is to remove the right to exist and contaminate the water supply that the bioweapon labs currently possess. The other apparent option, eliminating the mass transit system, is both less effective, since the pathogens will merely spread at a lower rate, and more costly, since the mass transit system is otherwise a very useful innovation.&lt;/p&gt;
+
+&lt;p&gt;The implications of this are troubling. The problems with eliminating the mass transit system appear analogous to problems with eliminating the Internet. Eliminating freedom of speech also seems like it would be more effective, so the only part of the analogy that remains to be upheld is the lower cost.&lt;/p&gt;
+
+&lt;p&gt;This is the point where the marketplace of ideas will be brought up to justify keeping freedom of speech. Allowing ideas to compete so that the truth may come out on top makes freedom of speech very beneficial, and thus much more costly to remove than the analogous rights of the bioweapon labs. Unfortunately, another point made by Scott Alexander suggests that this is a weak argument:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Memes optimize for making people want to accept them and pass them on – so like capitalism and democracy, they’re optimizing for a  &lt;em&gt;proxy&lt;/em&gt;  of making us happy, but that proxy can easily get uncoupled from the original goal.&lt;/p&gt;
+
+  &lt;p&gt;Chain letters, urban legends, propaganda, and viral marketing are all examples of memes that don’t satisfy our explicit values (true and useful) but are sufficiently memetically virulent that they spread anyway.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So the marketplace of ideas is not actually as valuable as it may seem. After all, think tanks wouldn’t be that large of a threat if it were; their ideas would simply be outcompeted by the truth. This implies that the cost of eliminating free speech is not that high, and thus that doing so is the correct solution.&lt;/p&gt;
+
+&lt;p&gt;Next post will be an explanation of where I think this argument breaks down.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Comic Sans is a great font</title>
+			<link href="http://bternarytau.github.io/2018/04/01/comic-sans-is-a-great-font"/>
+			<updated>2018-04-01T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/04/01/comic-sans-is-a-great-font</id>
+			<content type="html">&lt;p&gt;Everyone loves to hate on Comic Sans. Even those who know nothing about typography will spend the time to go on long rants about how awful it is. But the truth of the matter is entirely different from what common knowledge suggests. In reality, Comic Sans is a great font.&lt;/p&gt;
+
+&lt;p&gt;What makes Comic Sans so great? For one thing, it’s an easily recognizable font. It was originally released as one of five fonts supplied by Windows 95. This allowed it to spread very quickly as many personal computer users employed it in their printouts. The intense hatred that many hold for it only renders it even more recognizable. For them, Comic Sans is the enemy, and an inability to identify your enemy leads to a swift defeat. Thus, the Comic Sans haters cannot help but fuel its recognizability.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;Comic Sans is also often preferred by those with dyslexia. While it is not a specialized font and therefore does not perfectly fulfill this role, it does a much better job than practically any font the Comic Sans haters will hold up. Very few fonts can match the legibility and letter spacing that Comic Sans brings to the table. It does contain mirrored letters which allow specialized fonts to surpass it, but giving those up trades away consistency, which can be very distracting for other readers. Comic Sans does an excellent job of balancing other concerns with accessibility for dyslexic readers.&lt;/p&gt;
+
+&lt;p&gt;One common complaint against Comic Sans is that it is an informal font often used in formal contexts. As long as the uninformed make use of it in documents in which the informal tone it sets is inappropriate, its very existence is detrimental, or so the argument goes. However, this fails to take into account the concept of &lt;a href=&quot;https://conceptually.org/concepts/signalling-and-countersignalling/&quot;&gt;countersignaling&lt;/a&gt;. Countersignaling is when you communicate that you strongly possess a property by not making it more conspicuous. For example, those who are newly rich will likely flaunt their wealth to make it clear that they are no longer part of the middle class, but those who are already known to be rich will worry about differentiating themselves from the newly rich, and will accomplish this by &lt;em&gt;not&lt;/em&gt; flaunting their wealth. This only works because they are not afraid of being mistaken for a member of the lower or middle classes. That’s the reason countersignaling even works: you must be so confident in the trait you are countersignaling that you are willing to avoid emphasizing it because you know others will pick up on it anyway.&lt;/p&gt;
+
+&lt;p&gt;In the case of Comic Sans, many formal documents are very obviously formal regardless of the font. For instance, a doctor’s diagnosis is unlikely to be mistaken for something informal, and thus it is possible to get away with countersignaling. In fact, in basically every case in which you can tell that an informal tone is inappropriate, countersignaling is a viable strategy. So if you really want to emphasize your formality in such an instance, don’t use some standard formal font. Use Comic Sans.&lt;/p&gt;
+
+&lt;p&gt;But if Comic Sans is such as great font, why does everyone seem to hate it? The answer to that question lies in the history of graphic design and the rise of the internet. Early personal computers dramatically reduced the cost of high quality print design, and colleges began to produce a much larger number of graphic design graduates. However, personal computers also put the power of graphic design into the hands of everyone who owned them. While most people were slower to figure out they had this power than the graphic design students were, they did eventually learn. This was only the first step in the reduction of graphic designers’ power.&lt;/p&gt;
+
+&lt;p&gt;The second, far more dramatic step was the growth of web design. As print design began to die off, designers had to learn to code just to retain relevance. This made them understandably bitter, and they took their anger out on those performing graphic design without a degree. And what font did these amateurs with personal computers happen to be using? That’s right: Comic Sans. This made the font an obvious means of defining &lt;a href=&quot;https://en.wikipedia.org/wiki/Ingroups_and_outgroups&quot;&gt;an ingroup and an outgroup&lt;/a&gt;. If you liked Comic Sans and used it a lot, you were a useless pretender who lacked even the most basic design knowledge. But if you hated Comic Sans, then you were a sensible designer who understood how things actually worked. Thus, hating Comic Sans was associated with understanding graphic design, and anyone who wanted to not look like an idiot learned to avoid it.&lt;/p&gt;
+
+&lt;p&gt;Well, I say enough is enough. It’s time to take Comic Sans back from the elitist graphic designers who use it as a symbol of their superiority. If you have a website, switch it over to Comic Sans. If you design documents, start writing them in Comic Sans. In every situation in which you get to choose the font, choose Comic Sans. Together we can retake this wonderful font from those who have abused it for so long!&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>How to win The Game</title>
+			<link href="http://bternarytau.github.io/2018/03/14/how-to-win-the-game"/>
+			<updated>2018-03-14T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/03/14/how-to-win-the-game</id>
+			<content type="html">&lt;p&gt;For anyone who has no idea what the title is referring to, &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Game_(mind_game)&quot;&gt;The Game&lt;/a&gt; is a mental game with three simple rules.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You are playing The Game.&lt;/li&gt;
+  &lt;li&gt;Every time you think about The Game, you lose.&lt;/li&gt;
+  &lt;li&gt;Loss of The Game must be announced.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These rules lead to a meme that propagates itself without generally providing value to the minds it inhabits. Everyone is either not thinking about The Game, in which case it has no effect on them, or thinking about The Game, in which case they are losing it. However, it is possible for some people to get utility out of this.&lt;/p&gt;
+
+&lt;p&gt;By spreading this meme to other minds, those that enjoy watching others lose can benefit from what is otherwise a detrimental meme. However, this is a negative-sum game, so it is still harmful to the group as a whole. This means that while it is possible for a few trolls to benefit, it would still be best if The Game didn’t exist. Unfortunately, it is intentionally designed such that it cannot be ended. Winning is simply impossible.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;All that means is we need to get a little creative. If something you want to accomplish is impossible, your next goal should be to try to merely approximate that thing. For example, literally defying gravity is, to the best of our knowledge, impossible. There is no way to just ignore it. However, this does not prevent airplanes and rockets from working. While they do not literally defy gravity, they do a good job of approximating what defying gravity would look like. Likewise, we want to approximate how winning The Game would appear.&lt;/p&gt;
+
+&lt;p&gt;In order to do so, we first need to establish what that approximation is like. Our goal is to end a negative-sum game. Thus, an important property we’re looking for is that The Game no longer reduces total utility. If we can accomplish this, then we will have approximated winning The Game well enough for our purposes. The problem is that we cannot just modify The Game to have the desired properties. This means our only option is to create something new. If we want to prevent total utility from being reduced, we’ll have to increase total utility, which will require the creation of a positive-sum game. Furthermore, this positive-sum game should provide utility whenever The Game reduces it so as to better approximate The Game’s nonexistence.&lt;/p&gt;
+
+&lt;p&gt;I now present my solution to this task: The Meta-Game.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You are playing The Meta-Game.&lt;/li&gt;
+  &lt;li&gt;Every time you think about The Game, you win The Meta-Game.&lt;/li&gt;
+  &lt;li&gt;Winning The Meta-Game must be announced.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first rule ensures that The Meta-Game applies to everyone The Game applies to. The second rule directly combats the negative-sum nature of The Game by making The Meta-Game a positive-sum game that awards players on the exact condition that causes them to lose The Game. The third rule helps The Meta-Game spread in the same way The Game spreads.&lt;/p&gt;
+
+&lt;p&gt;You might notice a problem here. Sure, players win The Meta-Game at the same time they lose The Game, but does the win really cancel out the loss? After all, doesn’t the utility gained or lost depend on how much you actually care about The Game vs. The Meta-Game and winning vs. losing? While this could be a problem in some cases, I think it can be reduced to a nonissue for most people. Remember that The Game is usually brought up by those who enjoy making others lose it. Most people will probably enjoy foiling the trolls’ plans quite a bit, so they should at least break even on utility, if not gain some.&lt;/p&gt;
+
+&lt;p&gt;Even this reasoning is not quite perfect, though, as it is actually circular. You have to defeat the troll in order to gain the utility that allows you to defeat the troll. This can be solved by having the troll be gradually defeated over multiple wins. Initially, they are only defeated a little bit thanks to the utility gained simply by winning a game. The next time The Game is lost, utility is gained both from winning a game and from knowing that the troll will be partially defeated, as they were last time. The third time, even more utility is gained thanks to the increased success at defeating the troll the previous time. This process continues indefinitely, and the utility gained from every time The Meta-Game is won will converge to the amount we previously arrived at circularly. (It is reasonable to assume convergence here since divergence would imply that winning The Meta-Game enough times would allow an arbitrarily large amount of utility to be gained upon every further win.)&lt;/p&gt;
+
+&lt;p&gt;If you followed all that and agreed with it, then congratulations, because you have just won The Game and therefore become invulnerable to it. Please be sure to use your newfound powers responsibly and spread The Meta-Game anywhere The Game has taken root. If you didn’t follow that or you disagree with my reasoning, I welcome you to leave a comment asking questions or arguing against this.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Arguing over definitions</title>
+			<link href="http://bternarytau.github.io/2018/03/08/arguing-over-definitions"/>
+			<updated>2018-03-08T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/03/08/arguing-over-definitions</id>
+			<content type="html">&lt;p&gt;I recently got into an argument involving topics like whether water was wet and whether hotdogs were sandwiches. What all the topics had in common was that they were not arguments over facts but rather arguments over definitions. This means there is nothing in observable reality that can be pointed to in order to resolve them. What’s worse is that many arguments will fall into this category by default.&lt;/p&gt;
+
+&lt;p&gt;The problem is that until all relevant definitions are agreed upon, an argument will often not be about facts. As long as one definition isn’t agreed upon, the participants can make two different statements using the same exact words, which is terrible for communication. If “a hotdog is a sandwich” is interpreted by one person as “a hotdog is meat on bread” and by another person as “a hotdog is meat between two pieces of bread”, they may both think the other person is crazy. If they realize that the dispute is really over definitions, they may still believe that it is unreasonable to use any definition besides the one they use.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;Is there a way to resolve this type of dispute? I would argue that it makes the most sense to debate how practical the definitions are. This includes how observable they are and how useful they are. For example, it’s pretty simple to observe if a hotdog has meat on bread. However, it may be a little harder to tell how many pieces of bread there are, such as when the bun is either split in two or almost split in two. These states are similar enough that observing the difference can take extra effort, penalizing definitions that distinguish between them.&lt;/p&gt;
+
+&lt;p&gt;However, what matters more than how difficult the required observations are is how useful those observations are. If distinguishing between one piece of bread and two pieces of bread is important, then it hardly matters if doing so takes a little more effort. However, barring something like cultural significance, this distinction does not seem useful, so the observation difficulty wins out (at least in my opinion). On the other hand, if someone attempted to define the word dignity as a category consisting of rocks, rockets, and cats, their definition would probably be judged as inferior to the standard definition. While it is easier to observe those things than it is to observe an abstract concept like dignity, the standard definition is simply much more useful and thus wins out.&lt;/p&gt;
+
+&lt;p&gt;The problem with this approach to resolving definition arguments is that it merely attempts to transform them into factual arguments. If the definitions relevant to determining which definition is more practical are also not agreed upon, you end up with a case of infinite recursion. At the end of the day, language is a fundamentally imprecise tool for communication. It’s very useful and works quite well, but it’s not perfect. As of now, though, it’s the best thing we’ve got.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>How intelligent are we?</title>
+			<link href="http://bternarytau.github.io/2018/03/02/how-intelligent-are-we"/>
+			<updated>2018-03-02T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/03/02/how-intelligent-are-we</id>
+			<content type="html">&lt;p&gt;Humans are generally thought of as the most intelligent beings to exist, as we have discovered nothing that appears to be more intelligent than us. But how intelligent are we compared to the theoretically attainable maximum? I believe that we are far less intelligent than is physically possible. This is because we possess roughly the minimum level of intelligence necessary to create a technological civilization.&lt;/p&gt;
+
+&lt;p&gt;To understand why this is so, we must look at how we came to have this level of intelligence in the first place. Over a period of about 50 million years, the brains of rat-like creatures evolved into the brains of chimps. This was a complex process that involved major structural changes. However, going from chimp brains to human brains only took about 5 million years and required only minor changes to brain structure, suggesting a faster but more gradual process that was unlikely to end at the exact time civilization started. So if one were to ask the question of why we &lt;em&gt;stopped&lt;/em&gt; at our current level of intelligence, I would argue that we haven’t necessarily. Instead, we’re at this level because it allowed us to begin building civilization, a process that occurs on a much faster timescale than evolution.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;The Agricultural Revolution occurred roughly 12,000 years ago. Since then, humanity has done all sorts of crazy things involved in building civilization, including &lt;a href=&quot;https://lukemuehlhauser.com/there-was-only-one-industrial-revolution/&quot;&gt;at least one&lt;/a&gt; other major technological revolution, while evolution has only had time to make the most minor of changes. Thus, while there may still be room for evolutionary pressures to improve primate intelligence in the same way it’s been improving for the past 5 million years, the 12,000 years over which civilization has existed are simply too small for noticeable progress to occur. If a lower level of intelligence enabled the creation of civilization, then it would’ve moved too fast for us to be able to observe it in its current state with our current level of intelligence. Thus, whatever level of intelligence we observe ourselves to have from within a civilization is roughly the minimum level of intelligence capable of giving rise to that civilization.&lt;/p&gt;
+
+&lt;p&gt;This in turn suggests that there could be much more room for our intelligence to grow. It seems unlikely that the minimum level of intelligence that enables civilization would also be the maximum level of intelligence enabled by the laws of physics. Thus, I propose that humans are likely well below the theoretical maximum intelligence level.&lt;/p&gt;
+
+&lt;p&gt;Whether we are close to maximum intelligence is important for several topics. Brain-machine interfaces are much more important if there is significant room for them to augment our intelligence. Superintelligence is a greater concern the further we are from maximum intelligence. A distant maximum intelligence also leaves room for technologies like genetic engineering to possibly enhance human intelligence in the near-term. If these are all possible, then we would be wise to prepare for them ahead of time.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Singletons and universal inevitable threats</title>
+			<link href="http://bternarytau.github.io/2018/02/09/singletons-and-universal-inevitable-threats"/>
+			<updated>2018-02-09T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/02/09/singletons-and-universal-inevitable-threats</id>
+			<content type="html">&lt;p&gt;One concept I find particularly fascinating is that of the &lt;a href=&quot;https://nickbostrom.com/fut/singleton.html&quot;&gt;singleton&lt;/a&gt;. As defined by Nick Bostrom, a singleton is “a world order in which there is a single decision-making agency at the highest level”. He states that such an agency would have “the ability to prevent any threats (internal or external) to its own existence and supremacy”. However, it is not at all obvious to me that this is true. To crystallize my intuition I would like to introduce my own concept: the universal inevitable threat.&lt;/p&gt;
+
+&lt;p&gt;An inevitable threat is defined as a threat that eliminates an agency regardless of the actions that agency takes. This leaves open the possibility of delaying the threat for a finite period of time, but beyond that, the agency may only choose how to spend the time it has prior to the threat’s realization. It can neither eliminate the threat nor hold it off indefinitely.&lt;/p&gt;
+
+&lt;p&gt;A universal inevitable threat is then defined as an inevitable threat that applies to all possible agencies. A notable property of such a threat is that it cannot be brought about by an agency, as this would imply that the agency had a course of action that would result in the threat not occurring and therefore that the threat was not inevitable relative to that agency. This concept is relevant because if a universal inevitable threat exists, then no agency is able to prevent all threats to itself, including a singleton. Furthermore, several plausible candidates for a universal inevitable threat can be identified.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;The first possibility is simply &lt;a href=&quot;https://en.wikipedia.org/wiki/Ultimate_fate_of_the_universe&quot;&gt;the end of the universe&lt;/a&gt;. Exactly how the universe will end has yet to be determined, but most hypotheses posit scenarios that appear to be universal inevitable threats. One example is the heat death of the universe, which would result in a state of maximum entropy in which no information processing can take place. Since information processing seems to be essential for agencies to operate, this scenario would count as a universal inevitable threat.&lt;/p&gt;
+
+&lt;p&gt;Another potential end of the universe is the Big Rip scenario. In this case, the universe’s increasing expansion rips everything apart into elementary particles and radiation. Unless an agency can somehow develop a way to survive the infinite expansion rate that is eventually reached, all agencies are eliminated, making this a universal inevitable threat.&lt;/p&gt;
+
+&lt;p&gt;The Big Crunch is yet another possible end state of the universe. This possibility involves the universe collapsing into a dimensionless singularity. A related scenario is the Big Bounce, which follows the Big Crunch with another Big Bang to create a cycle. Unless some agency can survive a singularity of infinite density, both cases are universal inevitable threats.&lt;/p&gt;
+
+&lt;p&gt;Another category of universal inevitable threat candidates is resource depletion scenarios. Some scenarios for the end of the universe can actually be framed as falling under this category. For example, heat death can be viewed as the universe running out of negentropy. However, it is possible that some other resource is both essential for agencies to function and depleted prior to the end of the universe. The depletion of such a resource would be a universal inevitable threat.&lt;/p&gt;
+
+&lt;p&gt;The final category of candidates for universal inevitable threats is that of naturally occurring physics disasters. An example of this would be false vacuum decay. If the universe is currently part of a metastable vacuum, it could be disrupted, creating a bubble of lower-energy vacuum that expands at the speed of light. This could fundamentally alter the universe in such a way as to destroy any agencies in existence prior to the event. 
+False vacuum decay and any similar physics disasters that occur naturally would likely be universal inevitable threats.&lt;/p&gt;
+
+&lt;p&gt;While it is not yet possible to confirm the existence of a universal inevitable threat, there does seem to be a significant probability of one existing. In particular, the end of the universe is very likely to be one. If one exists, it would prove that no agency is able to prevent all threats to itself, and thus that singletons do not possess this power, as seems probable to me.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Colonizing Mars does not mean abandoning Earth</title>
+			<link href="http://bternarytau.github.io/2018/02/04/colonizing-mars-does-not-mean-abandoning-earth"/>
+			<updated>2018-02-04T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/02/04/colonizing-mars-does-not-mean-abandoning-earth</id>
+			<content type="html">&lt;p&gt;Colonizing Mars is often talked about in the context of preventing the extinction of humanity. This has led to the unfortunate misconception that colonization results in the abandonment of Earth. I’d like to take the time to explain why this doesn’t happen.&lt;/p&gt;
+
+&lt;p&gt;Before we explore just why Earth wouldn’t be abandoned, it will be useful to review the extinction risk argument for colonizing another planet. The argument starts by noting that out of all species to ever live on Earth, &lt;a href=&quot;http://www.pbs.org/wgbh/evolution/extinction/massext/index.html&quot;&gt;99.9% have gone extinct&lt;/a&gt;. It then goes on to point out how most of these extinctions occurred in planet-wide events called mass extinctions. Thus, establishing a species on another planet would be a good way to increase its chances of survival. If a cataclysmic event wipes the species off one planet, it is simply a matter of waiting for the dust to settle before reintroducing them from the other planet.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;One detail of this plan is extremely important: so long as no such event has occurred, it is essential that the species be well-established on &lt;em&gt;both&lt;/em&gt; planets. Once the species is wiped off one planet, it becomes as vulnerable as it used to be until its presence on that planet is restored. Abandoning the species’ home planet in favor of a newly colonized one thus completely fails to increase the species’ survival rate.&lt;/p&gt;
+
+&lt;p&gt;The misconception stems from the idea that once Mars is colonized, Earth will become unnecessary to the survival of the human race. Since the end of humanity on Earth no longer means the end of humanity, we are free to abandon it whenever we want. But this ignores that the whole purpose of colonizing Mars was to have two planets instead of one. Mars may be essential to the plan, but so is Earth.&lt;/p&gt;
+
+&lt;p&gt;But won’t having Mars as a backup mean we put less effort and resources toward preventing a catastrophe on Earth? No, because there will still be plenty of people living on Earth, and their lives will be as valuable as ever. Humanity will be wiped off the face of the Earth only if no way exists to prevent it.&lt;/p&gt;
+
+&lt;p&gt;However, if Mars is colonized, then Earth can actually be re-inhabited, given enough time. Therefore, colonizing Mars is actually the opposite of abandoning Earth; it is a means by which to remain on Earth. That is why many people see it not as the abandonment of our home, but as an important step to take for protecting both it and humanity.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Can boycotts be solved?</title>
+			<link href="http://bternarytau.github.io/2018/02/01/can-boycotts-be-solved"/>
+			<updated>2018-02-01T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/02/01/can-boycotts-be-solved</id>
+			<content type="html">&lt;p&gt;In my &lt;a href=&quot;/2018/01/26/video-game-boycotts&quot;&gt;last post&lt;/a&gt;, I talked about why individuals’ incentives will prevent video game boycotts from succeeding. Now I’d like to discuss potential solutions (or at least vague outlines for potential solutions) to this problem.&lt;/p&gt;
+
+&lt;p&gt;The first idea that comes to mind is looking at historical successes. Two successful boycotts that I’m aware of are the Continental Association and the Montgomery bus boycott. For those who don’t know, the Continental Association was a boycott of British goods by the American colonies prior to the American Revolutionary War, and the Montgomery bus boycott was a protest against the segregated bus system in Montgomery, Alabama during the American Civil Rights Movement. In looking at these examples, I hope to identify both parts of a coordination mechanism: an agreement and an enforcement mechanism.&lt;/p&gt;
+
+&lt;p&gt;The Continental Association’s agreement is easy to find. The Association’s articles stated that colonists would refuse to import British goods and American merchants would avoid price gouging to ease the resulting burden. Likewise, the articles provide several enforcement mechanisms. Those violating the agreement were to be publicly ostracized and condemned. Committees of inspection were set up to monitor businesses. Colonies had to cease all dealings with any colony that did not comply. Additionally, violence was employed to force compliance on some occasions. These mechanisms were successful enough for all but one colony to comply up until the war began.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;The Montgomery bus boycott also has a simple agreement. The buses would not be ridden until the city agreed to switch to a compromise between the current rules and desegregation. The enforcement mechanism is less obvious, but given the strength of the black community and its churches, it’s reasonable to assume it was social pressure. Community members often helped each other out, and losing that support could be devastating, so if the community said you should join the boycott, you probably joined the boycott. Similarly to before, this was enough for the boycott to last until the United States Supreme Court ruled segregation on public transportation illegal.&lt;/p&gt;
+
+&lt;p&gt;Coming back to video game boycotts, the agreement seems easy to create. Refuse to purchase the game until the game’s publisher stops whatever prompted the boycott. The difficult part is the enforcement mechanism. The Continental Association’s methods don’t seem particularly helpful. Committees of inspection could be ignored, no obvious analog to colonies exists, and violence is a poor solution for most problems. That leaves social mechanisms, the strategy that was also employed for the Montgomery bus boycott. This is probably the most plausible option, but it’s still pretty bad. The &lt;a href=&quot;https://www.learning-theories.com/online-disinhibition-effect-suler.html&quot;&gt;online disinhibition effect&lt;/a&gt; weakens social restrictions, reducing the chances that an online community will be able to pressure its members into coordination. Therefore, I think it would be wiser to look at other options.&lt;/p&gt;
+
+&lt;p&gt;The most powerful coordination mechanism ever created by civilization is probably government. In a government with legislative and executive branches, the legislative branch sets the agreements while the executive branch enforces them. Thus, one way to solve our problem is to get a law passed that bans the targeted activity. Then everyone is forced to “boycott” offending games by means of their nonexistence.&lt;/p&gt;
+
+&lt;p&gt;Of course, this idea is not without its problems. First of all, you need to grab the attention of your legislators while thousands of other causes also vie for their attention. Next, you need to convince them that supporting your law is in their best interests, even though there will almost certainly be objections and proposals for changes that no one will agree on. Additionally, you need to actually have a law for them to support. If you can’t specify the activity that needs banned well enough, your law will either be ineffective or ban actions that should be allowed. This brings up another problem, which is that your law restricts the freedom of others. If some people don’t mind a game with the opposed features and your law prevents it from being made, your actions may become rather questionable.&lt;/p&gt;
+
+&lt;p&gt;Perhaps we need to think outside the box more. In &lt;a href=&quot;https://equilibriabook.com&quot;&gt;&lt;em&gt;Inadequate Equilibria&lt;/em&gt;&lt;/a&gt;, Eliezer Yudkowsky mentions the idea of a timed-collective-action-threshold-conditional-commitment, essentially a generalized version of Kickstarter, as a means to coordinate action. In our case, the idea would be to have potential boycotters agree to the boycott if and only if a certain number of other people also agree to it. The problem is that there remains a need for an enforcement mechanism. In Kickstarter’s case, backers pay when they make the agreement and their money is returned if the project fails to meet its funding threshold. Thus, backers don’t have the option to not pay, but must instead trust the company to not keep the money for a failed project. A similar solution might work for boycotting video games, though there are multiple challenges to overcome.&lt;/p&gt;
+
+&lt;p&gt;First off, participants need to have not already bought the game. If those who have purchased the game are allowed to appear to participate, then we will once again end up in a situation where no one is incentivized to actually participate. For the same reason, participants must be incentivized to avoid purchasing the game in the middle of the boycott. We also want to ensure that all participants are actually interested in buying the game being boycotted so the publisher is incentivized to meet the boycott’s demands.&lt;/p&gt;
+
+&lt;p&gt;Taking this into account, here is my rough proposal for a Kickstarter-like boycott company. A boycott agreement would have participants deposit enough money to buy the game being boycotted. After a set time, if a set number of people has not been reached, the deposit is returned and no obligations remain. However, if the set number of people is reached prior to the set time, the boycott begins. At this point, any participant who buys the game will lose their deposit. Those who don’t buy the game will have one of two things happen to their deposit. If the boycott is judged successful, their deposit is used to purchase the game for them. However, if a set duration passes without the boycott being judged successful, the deposits are returned. Alternatively, they could be put towards purchasing a similar game by a rival publisher.&lt;/p&gt;
+
+&lt;p&gt;Why use something like this structure? The deposit is important because it serves as the enforcement mechanism. If you fail to remain in the boycott, you lose money. A successful boycott leads to the deposit buying the game for two reasons. First of all, it provides an incentive not to buy the game prior to the end of the boycott even if you could do so without being detected (such as by using an alternate account), since you’ll end up getting two copies of the game if it succeeds. It also helps discourage people who don’t care about the game from participating, which is important if they are otherwise incentivized to.&lt;/p&gt;
+
+&lt;p&gt;The reason such people might be incentivized to participate is that the deposits of anyone who buys the game during the boycott might be redistributed to those who didn’t buy it. This would create an opportunity for profit that might be exploited. Other ways to prevent this include forcing deposits to be put toward another game upon a failed boycott or letting the company running the boycott keep the forfeited deposits as extra profit. The first option has the advantage of reducing the chance that participants buy the game after the boycott is over, which makes the boycott more credible to the publisher. However, it may discourage people from participating since their control over the money they deposit is vastly reduced. Letting the boycott company keep the deposits has the drawback of incentivizing the company to have some people buy the game during the boycott.&lt;/p&gt;
+
+&lt;p&gt;There are still plenty of problems with this design, and I’m sure that, if it is not entirely useless, it would at the very least need to undergo several rounds of improvement to actually be viable. But it would be very interesting if a company loosely resembling this proposal arose one day. In the meantime, there is one last idea I’d like to take a look at.&lt;/p&gt;
+
+&lt;p&gt;Instead of using a boycott, we could instead treat the desired action as a public good that players would like the publisher to create. Normally public goods are provided by the government, but we’ve already considered a way the government could help, so let’s look at a more unique option.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wiki.lesswrong.com/wiki/Prediction_market&quot;&gt;Prediction markets&lt;/a&gt; are a special type of stock market involving assets that pay out only if a certain event happens. They are usually discussed in the context of their ability to aggregate information about currently unresolved facts. However, Paul Sztorc has &lt;a href=&quot;http://bitcoinhivemind.com/papers/3_PM_Applications.pdf&quot;&gt;proposed&lt;/a&gt; that a decentralized prediction market could be used to fund public goods. In our case, the “public good” is an end to whatever we wanted to boycott. To fund it, a special prediction market would be created, and players who wish to help fund the good would buy the state predicting that the good will not be created. If enough funds are raised, the company will choose to purchase a state predicting the creation of the good and discontinue the activity in order to claim the funds.&lt;/p&gt;
+
+&lt;p&gt;This strategy also has its share of problems. For one thing, a decentralized prediction market has to exist in order to implement this idea. Even if this condition is met, there’s still the issue of incentives to become a free rider instead of contributing to the funding of the public good. There’s also the question of whether it’s right for players to have to pay extra in order for publishers to listen to them.&lt;/p&gt;
+
+&lt;p&gt;There are a multitude of ways in which the weaknesses of boycotts could be overcome. While the ideas presented here are unrefined, I think there may be potential within them. That said, I have no plans to refine them myself, so it’s probable that nothing will ever come of them. However, I will not be surprised if someone eventually comes up with something.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Video game boycotts</title>
+			<link href="http://bternarytau.github.io/2018/01/26/video-game-boycotts"/>
+			<updated>2018-01-26T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/01/26/video-game-boycotts</id>
+			<content type="html">&lt;p&gt;Recently, many people have been upset by the direction some video games have been taking in regard to certain ideas like loot boxes. One proposed solution is to boycott the offending games. However, there is a fundamental problem with boycotting that makes this very difficult to pull off.&lt;/p&gt;
+
+&lt;p&gt;Participating in a boycott is generally not worth it to an individual. A good way to observe this is to use &lt;a href=&quot;https://www.thoughtco.com/introduction-to-marginal-analysis-1147610&quot;&gt;marginal analysis&lt;/a&gt;. The marginal cost of participating in a boycott is pretty easy to identify, since it’s simply being unable to purchase and play the game targeted by the boycott. However, identifying the marginal benefit is a bit more complicated.&lt;/p&gt;
+
+&lt;p&gt;One way to think of the marginal benefit is to assume that there is a single threshold at which it becomes more profitable for the game developer to give in to the boycott than to continue on with whatever activity is being boycotted. Below this threshold, the revenue lost to the boycotters is less than that gained by continuing the boycotted activity. At and above this threshold, continuing the activity will cost the firm more than it earns them. Thus, the firm will cease the activity if and only if the boycott meets the threshold.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;What does this mean for boycotting’s marginal benefit? Well, there’s exactly one person who will bump the number of boycotters up to the threshold. The marginal benefit for this individual is the success of the boycott in changing the company’s behavior. However, for everyone else the marginal benefit of participating in the boycott is nothing. After all, they have no effect on whether or not the company continues the activity. Since the marginal cost is greater than the marginal benefit for at least all but one individual, including everyone who joins the boycott early on (well before the threshold is reached), no one is actually incentivized to participate unless exactly one specific large number of disincentivized people are already participating.&lt;/p&gt;
+
+&lt;p&gt;One detail this model fails to account for is uncertainty regarding the location of the threshold. Unless the boycotters can figure out how much the company is profiting from the boycotted activity, they aren’t able to determine which person will reach the threshold. Thus, instead of giving definitive marginal benefits for each person, we can instead model individuals as having a marginal benefit based on the subjective probability that they will reach an unknown threshold.&lt;/p&gt;
+
+&lt;p&gt;Let’s say that, without a boycott, a game would be purchased by 10 million people. For the sake of simplicity, we’ll assume that every additional person has an equal chance to reach the threshold. We’ll also assume that there is no chance of reaching the threshold with zero participants, and that all 10 million people participating guarantees that the threshold will be reached. This means that every person increases the probability of a successful boycott by .00001%. Since the &lt;a href=&quot;https://conceptually.org/concepts/expected-value/&quot;&gt;expected value&lt;/a&gt; of the marginal benefit is equal to the probability of the threshold being reached multiplied by the value of reaching the threshold, we find that a person must value purchasing and playing the game less than .00001% as much as they value the boycott succeeding in order to be incentivized to participate. In other words, unless they want to end the boycotted activity 10 million times as badly as they want to buy and play the game, they will not join the boycott. In fact, that number will always be equal to the number of potential players, so a game that is bought by only 1 million people still requires the players to want the boycott to succeed 1 million times as much as they want to buy and play the game.&lt;/p&gt;
+
+&lt;p&gt;Why is it such a big deal that boycotts normally fail? Sure, it’s upsetting that the company won’t stop doing whatever the players hate, but some trade-off has to be made, and getting the game seems to be worth more to them than stopping the company. The problem becomes apparent when you consider what would happen if the players were able to perfectly coordinate as a single group. In this case, the group’s marginal cost and marginal benefit for participating in a boycott are equal to the total cost and total benefit of the boycott. The marginal cost is still being unable to purchase and play the game, but the marginal benefit is now a guaranteed successful boycott. Thus, every player in the group wants the group to boycott the game, assuming the players are willing to wait a short period prior to the boycott’s success to purchase the game in return for actually getting that success.&lt;/p&gt;
+
+&lt;p&gt;Why is this result different from when we consider the players acting individually? Because the additional cost for each player joining the boycott is only born by that player while the additional benefit is shared among every player, the fraction of the total benefit the player receives is too small to incentivize them to participate. However, if participating meant they received that sliver of benefit plus a sliver of benefit from every other player, and not participating meant they received no benefit at all, then their marginal benefit is increased to the point where they will participate. Without the players coordinating as a group, the second condition cannot be met thanks to players receiving the benefit from boycotters even if they do not participate themselves.&lt;/p&gt;
+
+&lt;p&gt;This situation is an example of what is known as a &lt;a href=&quot;https://conceptually.org/concepts/coordination-problems/&quot;&gt;coordination problem&lt;/a&gt;. Without coordination, each player will take an action that makes them better off but leaves everyone else worse off, leading to the group as a whole being worse off as well. However, if the players are able to coordinate, than they can take an action that leaves themselves worse off but makes everyone else better off, leading to all members of the group being better off.&lt;/p&gt;
+
+&lt;p&gt;Currently, players are unable to coordinate effectively, leading to situations in which supposed boycotters are actually playing the game they wish for everyone to boycott. This is the optimal strategy for individuals since it allows the players to gain the benefits of continuing to play the game while also giving them some additional benefit from anyone foolish enough to actually do as they say and boycott the game. But from the perspective of the group, it’s a terrible outcome that both causes the boycott to fail and encourages deception.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/MLZ0bMu.png&quot; alt=&quot;A photo showing members of a boycott group playing the game they want boycotted&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;i&gt;Not exactly the most effective group&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;Are there ways to resolve this problem? Possibly, but I don’t think there are any easy solutions. Coordinating large groups is a very complex task, and I’m not sure how much insight I really have regarding this issue. Nonetheless, I will likely propose potential solutions in another post.&lt;/p&gt;
+
+</content>
+		</entry>
+	
+		<entry>
+			<title>This now exists</title>
+			<link href="http://bternarytau.github.io/2018/01/23/this-now-exists"/>
+			<updated>2018-01-23T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/01/23/this-now-exists</id>
+			<content type="html">&lt;p&gt;Well, I guess this site exists now. I wonder if it will die before anyone else sees it.&lt;/p&gt;
+</content>
+		</entry>
+	
 
 </feed>

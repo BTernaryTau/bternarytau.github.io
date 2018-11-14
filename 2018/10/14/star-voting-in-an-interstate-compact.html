@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>STAR voting in an interstate compact</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>STAR voting in an interstate compact | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="STAR voting in an interstate compact" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Jameson Quinn lays out a proposal for an interstate compact that links the result of the US presidential election to the national popular vote, similar to the National Popular Vote Interstate Compact. However, unlike the NPVIC, this compact is designed to support not just plurality voting, but other voting methods as well. Specifically, approval, score, and 3-2-1 are all compatible.1 Two notable methods are missing from this list: instant-runoff voting, supported by FairVote (though under the name ranked choice voting), and STAR voting, supported by The Equal Vote Coalition. It also works with borda count, but because borda is (at least arguably) worse than plurality, I have chosen to omit it. &#8617;" />
+<meta property="og:description" content="Jameson Quinn lays out a proposal for an interstate compact that links the result of the US presidential election to the national popular vote, similar to the National Popular Vote Interstate Compact. However, unlike the NPVIC, this compact is designed to support not just plurality voting, but other voting methods as well. Specifically, approval, score, and 3-2-1 are all compatible.1 Two notable methods are missing from this list: instant-runoff voting, supported by FairVote (though under the name ranked choice voting), and STAR voting, supported by The Equal Vote Coalition. It also works with borda count, but because borda is (at least arguably) worse than plurality, I have chosen to omit it. &#8617;" />
+<meta property="og:site_name" content="Technically Exists" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-14T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"Jameson Quinn lays out a proposal for an interstate compact that links the result of the US presidential election to the national popular vote, similar to the National Popular Vote Interstate Compact. However, unlike the NPVIC, this compact is designed to support not just plurality voting, but other voting methods as well. Specifically, approval, score, and 3-2-1 are all compatible.1 Two notable methods are missing from this list: instant-runoff voting, supported by FairVote (though under the name ranked choice voting), and STAR voting, supported by The Equal Vote Coalition. It also works with borda count, but because borda is (at least arguably) worse than plurality, I have chosen to omit it. &#8617;","@type":"BlogPosting","url":"/2018/10/14/star-voting-in-an-interstate-compact","headline":"STAR voting in an interstate compact","dateModified":"2018-10-14T00:00:00+00:00","datePublished":"2018-10-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/10/14/star-voting-in-an-interstate-compact"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1>Technically Exists</h1>
+<h2>STAR voting in an interstate compact</h2>
+<p class="meta">2018-10-14</p>
+
+<div class="content">
+	<p>Jameson Quinn <a href="https://wiki.electorama.com/wiki/3-2-1_voting#For_US_presidential_elections">lays out a proposal</a> for an interstate compact that links the result of the US presidential election to the national popular vote, similar to the <a href="https://www.nationalpopularvote.com/">National Popular Vote Interstate Compact</a>. However, unlike the NPVIC, this compact is designed to support not just <a href="https://en.wikipedia.org/wiki/Plurality_voting">plurality voting</a>, but other voting methods as well. Specifically, <a href="https://en.wikipedia.org/wiki/Approval_voting">approval</a>, <a href="https://en.wikipedia.org/wiki/Score_voting">score</a>, and <a href="https://wiki.electorama.com/wiki/3-2-1_voting">3-2-1</a> are all compatible.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> Two notable methods are missing from this list: <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">instant-runoff voting</a>, supported by <a href="https://www.fairvote.org/">FairVote</a> (though under the name ranked choice voting), and <a href="https://en.wikipedia.org/wiki/STAR_voting">STAR voting</a>, supported by <a href="https://www.equal.vote/">The Equal Vote Coalition</a>.</p>
+
+<!--break-->
+
+<p>For reasons I won’t go into here, I am more interested in STAR. Thus, I chose to work on extending the proposal to work with it. Since STAR and 3-2-1 are both rated runoff methods, I decided that it made sense to start with the procedure for 3-2-1 and modify it to fit STAR. The procedure I came up with is simply an addition to step 3 of the proposal, and works as follows:</p>
+
+<p>Step 3: Possibly looking at the raw totals of other states, each state publishes its final totals. For a state using STAR, two finalists are first found by converting the raw totals into scores from 0 to 1 and selecting the two candidates with the highest average scores. Raw totals are converted as follows:</p>
+
+<ul>
+  <li>Plurality – the candidate voted for receives 1 point, and all others receive 0</li>
+  <li>Approval – approved candidates receive 1 point, and all others receive 0</li>
+  <li>Score – the minimum score is subtracted from all scores, which are then divided by the new maximum score</li>
+  <li>STAR – same process as score</li>
+  <li>3-2-1 – “good” ratings are 1 point, “OK” ratings are 0.5 points, and “bad” ratings are 0 points</li>
+</ul>
+
+<p>Once the finalists are selected, final local totals are generated for each candidate. For each STAR ballot, 1 point is awarded to the highest-rated finalist (or both if tied) as well as any higher-rated candidates. Other candidates rated the same or lower (including the lower-rated finalist, if there is one) receive 0 points.</p>
+
+<p>While step 3 was the only one to require any alterations, it was the longest step by far even before the STAR-specific instructions are added. It’s also the step that’s hardest to get right. Quinn gave a list of 4 criteria that the final local totals and the procedure that generates them should meet:</p>
+
+<ul>
+  <li>Each individual local ballot contributes between 0 and 1 points to each candidate’s final local tally.</li>
+  <li>A ballot will always contribute 1 point to its most-preferred candidate and 0 points to its least-preferred candidate.</li>
+  <li>A ballot will never contribute more points to a less-preferred candidate than to a more-preferred one.</li>
+  <li>If all states used the same final local tally procedure, the winner would be the STAR winner.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></li>
+</ul>
+
+<p>The first criterion is obviously met since every candidate receives exactly 0 points or 1 point. The second criterion is met so long as it does not require all most-preferred and least-preferred candidates to receive the same number of points in the event of ties. The third criterion is met because all candidates receiving a score above that of the highest-rated finalist earn 1 point, and all candidates receiving a score below that of the highest-rated finalist earn 0 points. Unfortunately, the fourth criterion is not met by this procedure, as shown by this counterexample:</p>
+
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Number of Voters</th>
+        <th>Candidate A</th>
+        <th>Candidate B</th>
+        <th>Candidate C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>5</td>
+        <td>4</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>4</td>
+        <td>5</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>1</td>
+        <td>0</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Candidate A receives 22 points, Candidate B receives 23 points, and Candidate C receives 16 points, so A and B are the finalists. A is favored over B on 5 ballots while B is favored over A on 6 ballots, so B is the winner under STAR. However, the procedure I specified assigns 6 points to A, 7 points to B, and 8 points to C, so C ends up being the winner.</p>
+
+<p>One thing that makes this example weird is that half the voters only rated candidates 0, 1, or 2, and thus only employed half of the available range of scores. Unfortunately, assuming all voters use the full range of their ballot does not prevent this problem:</p>
+
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Number of Voters</th>
+        <th>Candidate A</th>
+        <th>Candidate B</th>
+        <th>Candidate C</th>
+        <th>Candidate D</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>5</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>4</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>4</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>1</td>
+        <td>0</td>
+        <td>5</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>5</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>In this example, every voter rates at least one candidate 0 and at least one candidate 5. Candidate A receives 62 points, Candidate B receives 63 points, Candidate C receives 56 points, and Candidate D receives 55 points, so A and B are still the finalists. A is favored over B on 13 ballots while B is favored over A on 14 ballots, so B is the STAR winner. My procedure assigns 14 points to A, 15 points to B, 16 points to C, and 15 points to D, so under it C is the winner.</p>
+
+<p>Under what circumstances does this procedure deviate from simple STAR voting? Well, the first step will select the same finalists since the ratings are altered in a way that preserves the relative differences between their sums, then added and compared as in STAR. For the second step, STAR effectively awards points to the finalists in the same way that my procedure does.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup> However, unlike my procedure, STAR never awards any points to non-finalists.</p>
+
+<p>Since finalists are awarded points in the same way, the finalist that loses under STAR will never win under this procedure. However, a non-finalist might win if they are higher-rated than both finalists on over half the ballots. This is because every ballot assigns a point to at least one finalist, so at least one finalist will earn points from half the ballots or more. Thus, to beat this finalist, the non-finalist will have to be rated higher than both finalists on over half the ballots, since this is the only way the non-finalist can earn points from over half the ballots. This implies that failure to choose the STAR winner is rare, since this situation should not arise often.</p>
+
+<p>We can derive a couple interesting properties from this information. First of all, a non-finalist winner will necessarily beat both finalists in pairwise matchups. Since a finalist winner necessarily beats the other finalist in a pairwise matchup, this means that my procedure never elects the Condorcet loser. It also means that for 3 candidate elections, the winner under my procedure will always be either the STAR winner or the Condorcet winner. This does not hold for 4 or more candidates; in the second example I gave, D is the Condorcet winner, not C.</p>
+
+<p>Of course, all of this assumes that every state is using this procedure, which implies that all states have chosen to use STAR voting. In that case, it should be easy to amend the interstate compact to simply calculate the national STAR vote if that is desirable. What’s more relevant is what happens when this procedure is used alongside the procedures for other voting methods, which is what the first three criteria cover. Thus, I chose to prioritize meeting them over the last criterion.</p>
+
+<p>Overall, I feel this is reasonable for a first version of an extension of Quinn’s proposal to STAR voting. Given the assessment I was able to provide, I see no reason why this procedure would behave badly. It converts STAR ballots to scores of 0 or 1 in a way similar to how 3-2-1 ballots are converted, and while it can’t guarantee the STAR result within the states that use it, it can only fail to give the STAR result when another candidate is rated higher than the two finalists on over half the ballots, an event which should be rare.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>It also works with <a href="https://en.wikipedia.org/wiki/Borda_count">borda count</a>, but because borda is (at least arguably) worse than plurality, I have chosen to omit it. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Since Quinn was applying the criteria to the tally procedure for 3-2-1 voting, this originally said “the 3-2-1 winner”. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>It’s probably more accurate to say that STAR awards 0 points to both finalists for ballots where they are tied, but saying it awards 1 point to both like my procedure does will never change the outcome, so I ignore this for simplicity. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<hr>
+
+<div class="notecomments">
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'technically-exists'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		 
+</div>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>

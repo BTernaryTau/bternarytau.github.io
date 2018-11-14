@@ -1,0 +1,134 @@
+html {
+  background: #f7f7f7; }
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-bottom: 16px; }
+
+nav ul {
+  padding: 0px;
+  list-style: none;
+  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.15em; }
+  nav ul li {
+    display: inline;
+    margin-right: 20px; }
+  nav ul a {
+    color: #000; }
+
+a {
+  text-decoration: none;
+  color: #00b; }
+  a:hover {
+    text-decoration: underline; }
+
+h1 {
+  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: 3em; }
+
+h2 {
+  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: 2.5em; }
+  h2 a {
+    color: #000; }
+
+h3 {
+  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: 1.5em; }
+
+p {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  color: #333; }
+
+div.pagination-prev {
+  margin-bottom: 20px;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  color: #333;
+  float: left; }
+div.pagination-next {
+  margin-bottom: 20px;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  color: #333;
+  float: right; }
+div.footnotes {
+  border-top: 1px solid #aaaaaa;
+  font-size: 0.9em; }
+  div.footnotes ol {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-left: 24px; }
+    div.footnotes ol p {
+      font-size: 1em; }
+
+footer {
+  border-top: 1px solid #aaaaaa;
+  font-size: .64em;
+  clear: both; }
+  footer ul {
+    padding: 0px;
+    list-style: none;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-weight: bold; }
+    footer ul li {
+      display: inline;
+      margin-right: 20px; }
+
+ul {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  color: #333; }
+  ul ul {
+    font-size: 1em; }
+  ul.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+    line-height: 1.15em; }
+    ul.posts li {
+      list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+hr {
+  border: 0;
+  background: #aaa;
+  height: 1px;
+  margin: 0 0 20px; }
+
+ol {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  color: #333; }
+
+blockquote {
+  border-left: 4px solid #ccc;
+  margin: 0 32px;
+  padding: 0 16px; }
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em; }
+
+sub {
+  top: 0.4em; }
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%; }
+
+th, td {
+  font-size: 1.25em;
+  border: 1px solid black;
+  padding: 10px; }

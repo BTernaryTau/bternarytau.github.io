@@ -1,29 +1,86 @@
----
-layout: null
----
-
-
 // Update the service worker every time Jekyll processes the site
-const version = '{{site.time | date: '%Y%m%d%H%M%S'}}';
+const version = '20181114221352';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
 	'/assets/css/max-499px.css',
 	'/assets/css/min-500px.css',
 	
-	{% for page in site.html_pages %}
-		'{{ page.url }}',
-	{% endfor %}
-
-	{% for post in site.posts limit:5 %}
-		'{{ post.url }}',
-	{% endfor %}
 	
-	{% for file in site.static_files %}
-		{% if file.extname == '.ico' or file.extname == '.png' or file.extname == '.svg' or file.extname == '.xml' %}
-			'{{ file.path }}',
-		{% endif %}
-	{% endfor %}
+		'/about/',
+	
+		'/archive/',
+	
+		'/miscellaneous/',
+	
+		'/',
+	
+		'/miscellaneous/superintelligence-reference-page',
+	
+		'/page2/',
+	
+		'/page3/',
+	
+		'/page4/',
+	
+
+	
+		'/2018/10/14/star-voting-in-an-interstate-compact',
+	
+		'/2018/07/21/should-you-pursue-common-or-rare-achievements',
+	
+		'/2018/07/01/why-discuss-superintelligence',
+	
+		'/2018/06/04/my-thoughts-on-microsoft-acquiring-github',
+	
+		'/2018/06/01/outlining-the-opposite-of-a-singleton',
+	
+	
+	
+		
+	
+		
+			'/android-chrome-192x192.png',
+		
+	
+		
+			'/android-chrome-512x512.png',
+		
+	
+		
+			'/apple-touch-icon.png',
+		
+	
+		
+			'/browserconfig.xml',
+		
+	
+		
+			'/favicon-16x16.png',
+		
+	
+		
+			'/favicon-32x32.png',
+		
+	
+		
+			'/favicon.ico',
+		
+	
+		
+	
+		
+			'/mstile-150x150.png',
+		
+	
+		
+			'/safari-pinned-tab.svg',
+		
+	
+		
+	
+		
+	
 ];
 
 self.addEventListener('install', function(event) {
