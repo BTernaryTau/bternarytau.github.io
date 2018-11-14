@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20181114222701';
+const version = '20181114223708';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
@@ -24,7 +24,7 @@ var urlsToCache = [
 	
 		'/page4/',
 	
-
+	
 	
 		'/2018/10/14/star-voting-in-an-interstate-compact',
 	
@@ -90,6 +90,24 @@ self.addEventListener('install', function(event) {
 		caches.open(CACHE_NAME).then(function(cache) {
 			console.log('Opened cache');
 			return cache.addAll(urlsToCache);
+		})
+	);
+});
+
+self.addEventListener('activate', function(event) {
+	console.log('Activating new service worker...');
+	
+	var cacheWhitelist = [CACHE_NAME];
+	
+	event.waitUntil(
+		caches.keys().then(function(cacheNames) {
+			return Promise.all(
+				cacheNames.map(function(cacheName) {
+					if (cacheWhitelist.indexOf(cacheName) === -1) {
+						return caches.delete(cacheName);
+					}
+				})
+			);
 		})
 	);
 });
