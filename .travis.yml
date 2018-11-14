@@ -1,7 +1,7 @@
 language: ruby
-# only run CI-builds on master branch
+# only run CI-builds on release branch
 branches:
-    only: master
+    only: release
 rvm: 2.4.3
 # set execution permission on our build script
 before_script: chmod +x ./script/cibuild
