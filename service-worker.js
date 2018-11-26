@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20181114223708';
+const version = '20181126210629';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
@@ -26,6 +26,8 @@ var urlsToCache = [
 	
 	
 	
+		'/2018/11/26/ranked-choice-voting-is-worth-supporting',
+	
 		'/2018/10/14/star-voting-in-an-interstate-compact',
 	
 		'/2018/07/21/should-you-pursue-common-or-rare-achievements',
@@ -33,8 +35,6 @@ var urlsToCache = [
 		'/2018/07/01/why-discuss-superintelligence',
 	
 		'/2018/06/04/my-thoughts-on-microsoft-acquiring-github',
-	
-		'/2018/06/01/outlining-the-opposite-of-a-singleton',
 	
 	
 	
