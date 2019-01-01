@@ -4,12 +4,63 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2018-11-26T21:06:29+00:00</updated>
+	<updated>2019-01-01T00:44:48+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
 	</author>
 
+	
+		<entry>
+			<title>The world's problems</title>
+			<link href="http://bternarytau.github.io/2018/12/31/the-worlds-problems"/>
+			<updated>2018-12-31T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2018/12/31/the-worlds-problems</id>
+			<content type="html">&lt;p&gt;There are a lot of problems out there. Some of these problems are small, like whether you should get a new phone or not. Other problems are big, like how to solve climate change. But of these problems, which ones are the most important? I don’t know, of course, but I’m going to hazard a guess at them anyway.&lt;/p&gt;
+
+&lt;p&gt;First, a quick overview of the criteria I’m using to determine importance.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; I’ll be considering the impact, tractability, and neglectedness of problems. Impact is simply how good solving the problem would be. Tractability is how easy it is to make progress on the problem; if all else is equal, directing the same amount of resources to a more tractable problem will result in more good being done. Neglectedness is how few people and resources are being directed at the problem. Due to &lt;a href=&quot;https://www.investopedia.com/terms/l/lawofdiminishingmarginalreturn.asp&quot;&gt;the law of diminishing returns&lt;/a&gt;, a more neglected problem will generally be easier to make progress on than a less neglected one.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;My current guess for the 5th most important problem is poverty, which I believe can be most effectively solved through &lt;a href=&quot;https://en.wikipedia.org/wiki/Unconditional_cash_transfer&quot;&gt;unconditional cash transfers&lt;/a&gt;. In developing countries, this would involve performing the work of charities like &lt;a href=&quot;https://www.givedirectly.org/&quot;&gt;GiveDirectly&lt;/a&gt;. For developed countries, the goal would be the implementation of policies like &lt;a href=&quot;https://en.wikipedia.org/wiki/Basic_income&quot;&gt;universal basic income&lt;/a&gt;, which provides regular cash transfers to every citizen.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;I’d expect solving this well to have a large positive impact by reducing human suffering and giving many people an opportunity to contribute to society that they would have otherwise been denied. The simplicity of unconditional cash transfers would make the problem very tractable. As for neglectedness, few charities are working on this, and no country has yet to implement a full UBI. If you’re interested in further reading on why these options might be worth supporting, I’d suggest starting with &lt;a href=&quot;https://www.givewell.org/international/technical/programs/cash-transfers&quot;&gt;GiveWell’s page on cash transfers&lt;/a&gt; and &lt;a href=&quot;http://www.scottsantens.com/basic-income-faq&quot;&gt;Scott Santens’ basic income FAQ&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Improving information aggregation occupies the 4th spot on my list of problems. Thanks to the internet, access to information is no longer a problem for most people. However, it often remains difficult to determine the accuracy of a given piece of information, or to properly combine small bits of evidence to reach a solid conclusion. One technology that could help with this in many circumstances is &lt;a href=&quot;https://en.wikipedia.org/wiki/Prediction_market&quot;&gt;prediction markets&lt;/a&gt;. Prediction markets operate via “stocks” that pay out a certain amount only if a certain event happens. Thus, the price of one of these financial instruments as a percentage of the payout amount is the probability of the event happening, according to the market. For example, if an instrument pays out $100 if Trump is reelected in 2020 and it’s trading for $38, then the market currently believes there’s a 38% chance of Trump’s reelection.&lt;/p&gt;
+
+&lt;p&gt;The impact of improving information aggregation would be huge, as the decision-making processes of organizations from corporations to governments would receive a substantial boost. The main issue is that popularizing prediction markets seems like a rather intractable problem, especially given that online prediction markets are effectively outlawed in the United States. On the other hand, very few people are working on this issue, and it may be the most neglected problem on this list. For additional reading on how prediction markets could be directly incorporated into a governance structure, see &lt;a href=&quot;http://mason.gmu.edu/~rhanson/futarchy.html&quot;&gt;Robin Hanson’s futarchy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The 3rd position goes to the problem of aggregating values. The largest improvement here was the invention of democracy, but there’s still much room to do better. The most common voting method, &lt;a href=&quot;https://en.wikipedia.org/wiki/Plurality_voting&quot;&gt;single-choice plurality voting&lt;/a&gt;, is generally agreed to be one of the worst voting methods in existence. It’s highly inexpressive, and it falls prey to vote-splitting and spoilers, which makes it hard for new candidates to run, increases polarization, and forces strategic voters to vote dishonestly.&lt;/p&gt;
+
+&lt;p&gt;The impact of improving value aggregation through a better voting method is quite large, as can be seen in the available improvements in &lt;a href=&quot;https://electology.github.io/vse-sim/VSE/&quot;&gt;voter satisfaction efficiency&lt;/a&gt; under alternative methods. &lt;a href=&quot;https://electology.org/blog/fargo-nd-becomes-first-us-city-adopt-approval-voting-landslide-win&quot;&gt;Current voting reform efforts&lt;/a&gt; suggest that this is a fairly tractable problem as well. And while it’s not the least neglected problem, there seem to be few people pushing the best reforms available. For further reading, I’d start with &lt;a href=&quot;https://www.lesswrong.com/s/ZBNBTSMAXbyJwJoKY/p/D6trAzh6DApKPhbv4&quot;&gt;this introduction to voting theory&lt;/a&gt;, which is how I was first introduced to the subject.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;The 2nd entry on the list is home to the problem of identifying important problems. It turns out that doing this is really hard, and a lot of groups have put a whole lot more effort into this than I have. Unfortunately, these groups tend to end up generating &lt;a href=&quot;https://borgenproject.org/world-issues/&quot;&gt;very&lt;/a&gt; &lt;a href=&quot;https://80000hours.org/articles/cause-selection/&quot;&gt;different&lt;/a&gt; &lt;a href=&quot;https://www.gviusa.com/blog/6-critical-global-issues-what-are-the-worlds-biggest-problems-and-how-i-can-help/&quot;&gt;lists&lt;/a&gt;, likely in part because they use different criteria. Given that it is pretty hard to make progress on important problems if you don’t know what the important problems are, this seems like a pressing issue.&lt;/p&gt;
+
+&lt;p&gt;Identifying important problems would likely have a very large impact through shifting efforts from less important problems to more important ones. It appears to be somewhat tractable given the existing progress that has been made. Since people generally pick a cause to focus on without checking how well it meets these criteria, this should be a rather neglected problem as well. The &lt;a href=&quot;https://www.effectivealtruism.org/&quot;&gt;effective altruism movement&lt;/a&gt; is an excellent place to start looking into this topic.&lt;/p&gt;
+
+&lt;p&gt;The only problem I find more important than identifying important problems is that of &lt;a href=&quot;http://www.existential-risk.org/faq.html&quot;&gt;existential risks&lt;/a&gt;. While it is difficult to make progress on important problems if you don’t know what they are, it is impossible to make progress on them if humanity is extinct or otherwise incapable of realizing a better future. Given &lt;a href=&quot;https://nickbostrom.com/astronomical/waste.html&quot;&gt;the astronomical amount of potential good&lt;/a&gt; that could be realized in the future, this would be an unacceptable loss.&lt;/p&gt;
+
+&lt;p&gt;I consider preserving the possibility of a good future to be one of the highest impact actions there is. Unfortunately, it’s likely one of the less tractable problems on this list, as reliably affecting the far future seems to be a difficult task. Existential risk is a very neglected problem, however, so there should still be ways to improve the situation. If you’re interested, the &lt;a href=&quot;https://futureoflife.org/&quot;&gt;Future of Life Institute&lt;/a&gt; and the &lt;a href=&quot;https://www.fhi.ox.ac.uk/&quot;&gt;Future of Humanity Institute&lt;/a&gt; have some great resources on this topic.&lt;/p&gt;
+
+&lt;p&gt;One aspect of these problems that I find quite fascinating is how solving one can help with solving others. Someone lifted out of poverty by cash transfers may go on to discover the importance of a problem that would have otherwise gone unnoticed. Prediction markets could help identify which voting methods outperform others in specific circumstances. And preventing existential catastrophes ensures that we retain the opportunity to fix all of these other problems.&lt;/p&gt;
+
+&lt;p&gt;These kinds of relationships should not be too surprising; it makes perfect sense that more important problems would have many indirect effects on other problems. Of course, just because these are important problems does not mean they are the most important problems, and I expect to change my mind on some of these in the future. In particular, I feel fairly uncertain about whether eliminating poverty and aggregating information should be on this list. I’m thinking I might write a post at the end of every year giving my updated positions on this topic.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;These criteria come from the &lt;a href=&quot;https://concepts.effectivealtruism.org/concepts/importance-neglectedness-tractability/&quot;&gt;effective altruism movement&lt;/a&gt;, though I won’t be applying them as rigorously here as others might elsewhere. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;A more neglected problem will also generally have less people advocating for it, which in turn means you’re less likely to have heard of it. If my choice of problems seems weird to you, there’s a good chance that this is the reason. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Technically my first introduction was probably CGP Grey’s &lt;a href=&quot;https://www.youtube.com/playlist?list=PL7679C7ACE93A5638&quot;&gt;Politics in the Animal Kingdom series&lt;/a&gt;, but “single-choice voting is bad” is about all I took away from it at the time. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>Ranked choice voting is worth supporting</title>
