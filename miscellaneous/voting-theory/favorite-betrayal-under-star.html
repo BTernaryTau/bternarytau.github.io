@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>Favorite betrayal under STAR</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Favorite betrayal under STAR | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Favorite betrayal under STAR" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Technically Exists" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Favorite betrayal under STAR","url":"/miscellaneous/voting-theory/favorite-betrayal-under-star","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1 id="technically-exists">Technically Exists</h1>
+<h2 id="favorite-betrayal-under-star">Favorite betrayal under STAR</h2>
+
+<p>STAR voting is known to fail the <a href="https://en.wikipedia.org/wiki/Comparison_of_electoral_systems#Strategy_criteria">favorite betrayal criterion</a>, but it is unclear under what situations favorite betrayal is incentivized. In <a href="https://www.starvoting.us/farewell_to_pass_fail">A Farewell to Pass/Fail:
+Why We Ditched Later No Harm</a>, Emily Dempsey says:</p>
+
+<blockquote>
+  <p>Specifically, STAR Voting only incentivizes Favorite Betrayal when there is a Condorcet Cycle.  Not much is known about how likely Condorcet Cycles are in real-world elections, but they are certainly less likely (and, I would wager, much more difficult for a voter to predict) than other problematic phenomena such as Vote Splitting and Center Squeeze Scenarios, in which many other voting systems incentivize Favorite Betrayal and STAR Voting does not.</p>
+</blockquote>
+
+<p>On the other hand, Wikipedia <a href="https://en.wikipedia.org/wiki/Comparison_of_electoral_systems#cite_note-starFB-33">states the following</a>:</p>
+
+<blockquote>
+  <p>In STAR voting, in order for favorite betrayal to be strategically advantageous, four separate things must be true: the favorite candidate X must be in the runoff under an honest vote, X must lose the runoff under an honest vote, the betrayal beneficiary Y must not be in the runoff under an honest vote, and the Y must win the runoff under a strategic vote.</p>
+</blockquote>
+
+<p>Given that these situations are not identical but merely partially overlap, there seems to be disagreement on this issue. To help resolve this, here is an example where favorite betrayal is incentivized:</p>
+
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Number of Voters</th>
+        <th>Candidate A</th>
+        <th>Candidate B</th>
+        <th>Candidate C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>5</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>5</td>
+        <td>0</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>4</td>
+        <td>0</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>3</td>
+        <td>5</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>In this election, Candidate A receives 36 points, Candidate B receives 31 points, and Candidate C receives 36 points, so A and C are the finalists. A is favored over C on 2 ballots while C is favored over A on 8 ballots, so C is the winner. However, the voter in the first row can change this outcome by betraying their favorite candidate:</p>
+
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Number of Voters</th>
+        <th>Candidate A</th>
+        <th>Candidate B</th>
+        <th>Candidate C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>5</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>5</td>
+        <td>0</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>4</td>
+        <td>0</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>3</td>
+        <td>5</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Now Candidate A receives 32 points, Candidate B receives 35 points, and Candidate C receives 36 points, so B and C are the finalists. B is favored over C on 7 ballots while C is favored over B on 3 ballots, so B wins the election. Notice that this voter cannot achieve this result by simply rating A and B the same; A will still have more points than B, preventing B from reaching the runoff.</p>
+
+<p>Importantly, this example lacks a Condorcet cycle. Instead, B is the Condorcet winner, and will always win in the runoff. The only reason B originally loses is because they have too low a score to make the runoff. After looking more closely at how favorite betrayal was induced in this scenario, there seem to be four requirements:</p>
+
+<ol>
+  <li>C must beat A pairwise</li>
+  <li>B must beat C pairwise</li>
+  <li>A must beat B (and anyone else besides C) scorewise</li>
+  <li>C must beat B (and anyone else besides A) scorewise</li>
+</ol>
+
+<p>where A is the favorite, B is less preferred than A, and C is less preferred than both A and B. Notably, the first three requirements <em>almost</em> force a Condorcet cycle. The only reason they don’t is because A can beat B scorewise but lose to B pairwise, as in the example given above.</p>
+
+<p>These requirements seem to match the requirements Wikipedia specified. However, Wikipedia does not indicate how common such situations are likely to be. While determining that is beyond the scope of this page, it is worth noting that it seems likely to be uncommon. First of all, B must beat C pairwise while C beats B scorewise. Second, either B must beat A pairwise while A beats B scorewise, or A, B, and C must form a Condorcet cycle. Two reversals between pairwise and scorewise outcomes is probably a rare situation, as is one such reversal and a Condorcet cycle.</p>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>

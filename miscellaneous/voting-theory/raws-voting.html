@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>RAWS voting</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>RAWS voting | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="RAWS voting" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Technically Exists" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"RAWS voting","url":"/miscellaneous/voting-theory/raws-voting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1 id="technically-exists">Technically Exists</h1>
+<h2 id="raws-voting">RAWS voting</h2>
+<h3 id="introduction">Introduction</h3>
+
+<p>RAWS voting, or Runoff Alternating With Score voting, is a rated runoff method similar to <a href="https://en.wikipedia.org/wiki/STAR_voting">STAR voting</a>.</p>
+
+<h3 id="description">Description</h3>
+
+<p>Voters cast ballots by rating all candidates on a scale such as 0 to 5, where a blank rating is interpreted as the minimum value. A series of elimination rounds is used to reduce the candidate pool to a single winner, with the method of elimination alternating every round.</p>
+
+<p>For rounds with an odd number of candidates remaining, the candidates’ scores are added up, and the candidate with the smallest total is eliminated.</p>
+
+<p>For rounds with an even number of candidates remaining, each candidate gets a point for every ballot that rates them highest out of all remaining candidates. If a ballot rates multiple remaining candidates highest, then each of the <em>n</em> highest-rated candidates receives 1/<em>n</em> points. The candidate with the smallest total is eliminated.</p>
+
+<h3 id="analysis">Analysis</h3>
+
+<p>Rounds with odd numbers of candidates remaining can be considered to be eliminating a candidate using <a href="https://en.wikipedia.org/wiki/Score_voting">score voting</a>. Rounds with even numbers of candidates remaining can be considered to be eliminating a candidate using a round of <a href="https://rangevoting.org/rangeVirv.html#SanF">Tom Ruen’s IRV variant</a>, which unlike standard <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">instant-runoff voting</a> can handle equal rankings.</p>
+
+<p>In elections with 3 candidates or less, RAWS voting is equivalent to STAR voting. Eliminating the candidate with the lowest score is equivalent to picking the two candidates with the highest scores, and the IRV variant step is equivalent to an automatic runoff.</p>
+
+<p>In elections with 4 or more candidates, RAWS voting is equivalent to STAR voting if the two highest-rated candidates are never eliminated in the rounds with odd numbers of candidates. If the highest-rated candidate isn’t eliminated but the second highest is, it is possible for the STAR winner to still be selected.</p>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>

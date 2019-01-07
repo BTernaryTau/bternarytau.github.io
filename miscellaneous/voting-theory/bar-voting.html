@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>BAR voting</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>BAR voting | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="BAR voting" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Technically Exists" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"BAR voting","url":"/miscellaneous/voting-theory/bar-voting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1 id="technically-exists">Technically Exists</h1>
+<h2 id="bar-voting">BAR voting</h2>
+<h3 id="introduction">Introduction</h3>
+
+<p>BAR voting, or Borda then Automatic Runoff voting, is a ranked method based on <a href="https://en.wikipedia.org/wiki/STAR_voting">STAR voting</a>. It was originally invented by <a href="https://lompocrecord.com/news/local/lompoc-city-council-approves-method-to-fill-vacant-seat/article_719b944f-5bc5-577e-8115-b9527598e025.html">the city council of Lompoc, California</a> for the purpose of filling a vacant seat.</p>
+
+<h3 id="description">Description</h3>
+
+<p>As under <a href="https://en.wikipedia.org/wiki/Borda_count">Borda count</a>, voters cast ballots by ranking the candidates, though unlike Borda all candidates must be ranked. For an election with <em>n</em> candidates, the candidate ranked 1st receives <em>n</em> points, the candidate ranked 2nd receives <em>n</em> - 1 points, and so on, with the candidate ranked last receiving 1 point. These points are added up, and the two candidates with the greatest point totals move on to the automatic runoff. The winner of the automatic runoff is the candidate ranked higher on a majority of ballots.</p>
+
+<p>This can also be thought of as a variation of STAR voting in which the rating scale is determined by the number of candidates and duplicate ratings are not allowed. However, these changes transform the rated runoff method into a ranked method, making for an unusual variation.</p>
+
+<h3 id="analysis">Analysis</h3>
+
+<p>One commonly cited problem with Borda is its <a href="https://en.wikipedia.org/wiki/Independence_of_clones_criterion#Borda_count">susceptibility to teaming</a>. Adding a runoff step will likely decrease the size of the largest defeat that a given number of clones can overcome, but otherwise fail to help with the problem because the runoff step can simply be filled with two clones to render it irrelevant.</p>
+
+<p>Another potential problem is the <a href="https://rangevoting.org/DH3Summ.html">DH3 pathology</a>. Since two of the three factions rank each frontrunner below the dark horse candidate(s), the dark horse candidate(s) will be able to win a runoff against any of the frontrunners. If two dark horses make the runoff, it doesn’t matter which one wins, so the runoff would likely not prevent this pathology.</p>
+
+<p>Overall, BAR voting seems to be roughly as good a voting method as Borda, which is to say, not good at all.</p>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>
