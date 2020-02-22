@@ -11,7 +11,7 @@
   gtag('config', 'UA-112986341-1');
 </script>
 
-			<title>Voting theory</title>
+			<title>Bogobogosort voting</title>
 			<link rel="manifest" href="/manifest.json">
 			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
 			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
@@ -25,13 +25,13 @@
 			<meta name="theme-color" content="#f7f7f7"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Voting theory | Technically Exists</title>
+<title>Bogobogosort voting | Technically Exists</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Voting theory" />
+<meta property="og:title" content="Bogobogosort voting" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:site_name" content="Technically Exists" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Voting theory","url":"/miscellaneous/voting-theory/","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Bogobogosort voting","url":"/miscellaneous/voting-theory/bogobogosort-voting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		</head>
@@ -46,29 +46,20 @@
 			</nav>
 			<div class="container">
 			
-			<h1>Technically Exists</h1>
-<h2>Voting theory</h2>
-<h3>Voting methods</h3>
+			<h1 id="technically-exists">Technically Exists</h1>
+<h2 id="bogobogosort-voting">Bogobogosort voting</h2>
+<h3 id="introduction">Introduction</h3>
 
-<ul>
-	<li><a href="/miscellaneous/voting-theory/bar-voting">BAR voting</a></li>
-</ul>
+<p>Bogobogosort voting is a voting method based on the popular <a href="https://www.dangermouse.net/esoteric/bogobogosort.html">bogobogosort</a> algorithm.</p>
 
-<h3>Esoteric voting methods</h3>
+<h3 id="description">Description</h3>
 
-<p>Inspired by <a href="http://www.dangermouse.net/esoteric/">DM's Esoteric Programming Languages</a>.</p>
+<p>Voters cast their ballots by marking a single candidate as their favorite. The candidates are then sorted from most to least votes using bogobogosort. The candidate at the top of the sorted list is chosen as the winner.</p>
 
-<ul>
-	<li><a href="/miscellaneous/voting-theory/bogobogosort-voting">Bogobogosort voting</a></li>
-	<li><a href="/miscellaneous/voting-theory/consensus-plurality-voting">Consensus plurality voting</a></li>
-	<li><a href="/miscellaneous/voting-theory/raws-voting">RAWS voting</a></li>
-</ul>
+<h3 id="analysis">Analysis</h3>
 
-<h3>Voting criteria</h3>
+<p>This method is almost identical to <a href="https://en.wikipedia.org/wiki/Plurality_voting">plurality voting</a>. The primary difference is that while plurality runs in O(n) time, bogobogosort voting takes O(n!<sup>n</sup>) time to run in expectation, making it far slower than even the <a href="https://en.wikipedia.org/wiki/Kemeny%E2%80%93Young_method">Kemeny–Young method</a>. This makes it perfect for incumbents who want to hold on to power as long as possible. All they have to do is convince enough people to run and the results will be delayed for an incredibly long period of time, allowing them to keep their position.</p>
 
-<ul>
-	<li><a href="/miscellaneous/voting-theory/favorite-betrayal-under-star">Favorite betrayal under STAR (WIP)</a></li>
-</ul>
 			
 			</div><!-- /.container -->
 			<footer>
