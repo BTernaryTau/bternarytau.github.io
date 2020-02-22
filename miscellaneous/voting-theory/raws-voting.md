@@ -22,4 +22,4 @@ Rounds with odd numbers of candidates remaining can be considered to be eliminat
 
 In elections with 3 candidates or less, RAWS voting is equivalent to STAR voting. Eliminating the candidate with the lowest score is equivalent to picking the two candidates with the highest scores, and the IRV variant step is equivalent to an automatic runoff.
 
-In elections with 4 or more candidates, RAWS voting is equivalent to STAR voting if the two highest-rated candidates are never eliminated in the rounds with odd numbers of candidates. If the highest-rated candidate isn't eliminated but the second highest is, it is possible for the STAR winner to still be selected.
+In elections with 4 or more candidates, RAWS voting is equivalent to STAR voting if the two highest-rated candidates are never eliminated in the rounds with odd numbers of candidates. If only one of those two candidates is eliminated, it is possible for the STAR winner to still be selected.
