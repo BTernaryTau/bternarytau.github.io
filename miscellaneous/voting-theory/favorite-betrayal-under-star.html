@@ -11,7 +11,7 @@
   gtag('config', 'UA-112986341-1');
 </script>
 
-			<title>Favorite betrayal under STAR (WIP)</title>
+			<title>Favorite betrayal under STAR</title>
 			<link rel="manifest" href="/manifest.json">
 			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
 			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
@@ -25,13 +25,13 @@
 			<meta name="theme-color" content="#f7f7f7"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Favorite betrayal under STAR (WIP) | Technically Exists</title>
+<title>Favorite betrayal under STAR | Technically Exists</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Favorite betrayal under STAR (WIP)" />
+<meta property="og:title" content="Favorite betrayal under STAR" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:site_name" content="Technically Exists" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Favorite betrayal under STAR (WIP)","url":"/miscellaneous/voting-theory/favorite-betrayal-under-star","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Favorite betrayal under STAR","url":"/miscellaneous/voting-theory/favorite-betrayal-under-star","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		</head>
@@ -47,9 +47,9 @@
 			<div class="container">
 			
 			<h1 id="technically-exists">Technically Exists</h1>
-<h2 id="favorite-betrayal-under-star-wip">Favorite betrayal under STAR (WIP)</h2>
+<h2 id="favorite-betrayal-under-star">Favorite betrayal under STAR</h2>
 
-<p>STAR voting is known to fail the <a href="https://en.wikipedia.org/wiki/Comparison_of_electoral_systems#Strategy_criteria">favorite betrayal criterion</a>, but it is unclear under what situations favorite betrayal is incentivized. In <a href="https://www.starvoting.us/farewell_to_pass_fail">A Farewell to Pass/Fail:
+<p>STAR voting is known to fail the <a href="https://en.wikipedia.org/wiki/Comparison_of_electoral_systems#Strategy_criteria">favorite betrayal criterion</a>, but there is disagreement regarding which situations incentivize favorite betrayal. In <a href="https://www.starvoting.us/farewell_to_pass_fail">A Farewell to Pass/Fail:
 Why We Ditched Later No Harm</a>, Emily Dempsey says:</p>
 
 <blockquote>
@@ -62,7 +62,16 @@ Why We Ditched Later No Harm</a>, Emily Dempsey says:</p>
   <p>In STAR voting, in order for favorite betrayal to be strategically advantageous, four separate things must be true: the favorite candidate X must be in the runoff under an honest vote, X must lose the runoff under an honest vote, the betrayal beneficiary Y must not be in the runoff under an honest vote, and the Y must win the runoff under a strategic vote.</p>
 </blockquote>
 
-<p>Given that these situations are not identical but merely partially overlap, there seems to be disagreement on this issue. To help resolve this, here is an example where favorite betrayal is incentivized:</p>
+<p>It is fairly straightforward to show that all four of these criteria are indeed necessary:</p>
+
+<ol>
+  <li>Assume that X is not in the runoff under an honest vote. Then decreasing the rating given to X will also result in X not making the runoff. This means that decreasing the rating given to X cannot affect the outcome of the election. However, favorite betrayal requires that decreasing the rating given to X have an effect on the outcome of the election, so this is a contradiction. Therefore, X must be in the runoff under an honest vote.</li>
+  <li>Assume that X wins the runoff under an honest vote. Then the voter’s most preferred outcome has occurred, so there is no incentive to cast a strategic vote instead of an honest vote. However, favorite betrayal involves casting a strategic vote, so this is a contradiction. Therefore, X must lose the runoff under an honest vote.</li>
+  <li>Assume that Y is in the runoff under an honest vote. By (1.) X must be the other candidate in the runoff, and by (2.) X must lose the runoff. This means that Y must win the runoff under an honest vote, so there is no incentive to cast a strategic vote to help Y win. However, favorite betrayal involves casting a strategic vote to help Y win, so this is a contradiction. Therefore, Y must not be in the runoff under an honest vote.</li>
+  <li>Assume that there is no strategic vote that causes Y to win the runoff. Since there is no incentive to attempt the impossible, there is no incentive to cast a strategic vote to help Y win the runoff. However, favorite betrayal involves casting a strategic vote to help Y win, so this is a contradiction. Therefore, Y must win the runoff under some strategic vote.</li>
+</ol>
+
+<p>On the other hand, it is possible to devise a counterexample to the claim that a Condorcet cycle is necessary:</p>
 
 <div style="overflow-x:auto;">
   <table>
@@ -146,18 +155,7 @@ Why We Ditched Later No Harm</a>, Emily Dempsey says:</p>
 
 <p>Now Candidate A receives 32 points, Candidate B receives 35 points, and Candidate C receives 36 points, so B and C are the finalists. B is favored over C on 7 ballots while C is favored over B on 3 ballots, so B wins the election. Notice that this voter cannot achieve this result by simply rating A and B the same; A will still have more points than B, preventing B from reaching the runoff.</p>
 
-<p>Importantly, this example lacks a Condorcet cycle. Instead, B is the Condorcet winner, and will always win in the runoff. The only reason B originally loses is because they have too low a score to make the runoff. After looking more closely at how favorite betrayal was induced in this scenario, there seem to be four requirements:</p>
-
-<ol>
-  <li>C must beat A pairwise</li>
-  <li>B must beat C pairwise</li>
-  <li>A must beat B (and anyone else besides C) scorewise</li>
-  <li>C must beat B (and anyone else besides A) scorewise</li>
-</ol>
-
-<p>where A is the favorite, B is less preferred than A, and C is less preferred than both A and B. Notably, the first three requirements <em>almost</em> force a Condorcet cycle. The only reason they don’t is because A can beat B scorewise but lose to B pairwise, as in the example given above.</p>
-
-<p>These requirements seem to match the requirements Wikipedia specified. However, Wikipedia does not indicate how common such situations are likely to be. While determining that is beyond the scope of this page, it is worth noting that it seems likely to be uncommon. First of all, B must beat C pairwise while C beats B scorewise. Second, either B must beat A pairwise while A beats B scorewise, or A, B, and C must form a Condorcet cycle. Two reversals between pairwise and scorewise outcomes is probably a rare situation, as is one such reversal and a Condorcet cycle.</p>
+<p>Importantly, this example lacks a Condorcet cycle. Instead, B is the Condorcet winner, and will always win in the runoff. Thus, this disproves the claim that favorite betrayal is only incentivized under STAR voting when a Condorcet cycle exists.</p>
 
 			
 			</div><!-- /.container -->
