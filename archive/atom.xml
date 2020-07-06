@@ -4,7 +4,7 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2020-07-05T19:54:32+00:00</updated>
+	<updated>2020-07-06T13:28:49+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
@@ -40,7 +40,7 @@
 
 &lt;p&gt;As you may have guessed, prime numbers have a unique property that involves Euler’s totient function. Specifically, for any prime number &lt;em&gt;p&lt;/em&gt;, &lt;em&gt;φ&lt;/em&gt;(&lt;em&gt;p&lt;/em&gt;) = &lt;em&gt;p&lt;/em&gt; - 1. This arises from the fact that &lt;em&gt;p&lt;/em&gt; only has two factors, 1 and &lt;em&gt;p&lt;/em&gt;. This means that gcd(&lt;em&gt;k&lt;/em&gt;, &lt;em&gt;p&lt;/em&gt;) equals &lt;em&gt;p&lt;/em&gt; when &lt;em&gt;k&lt;/em&gt; is a multiple of &lt;em&gt;p&lt;/em&gt; and 1 otherwise. For &lt;em&gt;k&lt;/em&gt; ≤ &lt;em&gt;p&lt;/em&gt;, the only &lt;em&gt;k&lt;/em&gt; that’s a multiple of &lt;em&gt;p&lt;/em&gt; is &lt;em&gt;p&lt;/em&gt; itself. Thus, every other &lt;em&gt;k&lt;/em&gt; will be a totative of &lt;em&gt;p&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;When calculating &lt;em&gt;φ&lt;/em&gt;(1), there is only a single value of &lt;em&gt;k&lt;/em&gt; to consider, namely 1. It so happens that gcd(1, 1) = 1, so 1 is a totative of 1 and &lt;em&gt;φ&lt;/em&gt;(1) = 1. Once again, this does not fit the pattern that the prime numbers follow. Thus, if we include 1 as a prime, we most amend our statement to say that for any prime number &lt;em&gt;p&lt;/em&gt; except 1, &lt;em&gt;φ&lt;/em&gt;(&lt;em&gt;p&lt;/em&gt;) = &lt;em&gt;p&lt;/em&gt; - 1.&lt;/p&gt;
+&lt;p&gt;When calculating &lt;em&gt;φ&lt;/em&gt;(1), there is only a single value of &lt;em&gt;k&lt;/em&gt; to consider, namely 1. It so happens that gcd(1, 1) = 1, so 1 is a totative of 1 and &lt;em&gt;φ&lt;/em&gt;(1) = 1. Once again, this does not fit the pattern that the prime numbers follow. Thus, if we include 1 as a prime, we must amend our statement to say that for any prime number &lt;em&gt;p&lt;/em&gt; except 1, &lt;em&gt;φ&lt;/em&gt;(&lt;em&gt;p&lt;/em&gt;) = &lt;em&gt;p&lt;/em&gt; - 1.&lt;/p&gt;
 
 &lt;p&gt;Along with Euler’s totient function, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Divisor_function&quot;&gt;sum-of-divisors function&lt;/a&gt; also highlights a property of primes that 1 lacks. The sum-of-divisors function, referred to as σ, takes a positive integer as input and outputs the sum of all its positive divisors. For instance, 12 has 1, 2, 3, 4, 6, and 12 as divisors, so σ(12) = 1 + 2 + 3 + 4 + 6 + 12 = 28. As we’ve said before, a prime number &lt;em&gt;p&lt;/em&gt; has only two divisors, 1 and &lt;em&gt;p&lt;/em&gt;, so it’s easy to see that σ(&lt;em&gt;p&lt;/em&gt;) = &lt;em&gt;p&lt;/em&gt; + 1 for any prime number. As has become quite predictable by now, 1 fails to follow this pattern. It only has a single divisor, 1, so σ(1) = 1 rather than 2 as it would if it followed the pattern.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
