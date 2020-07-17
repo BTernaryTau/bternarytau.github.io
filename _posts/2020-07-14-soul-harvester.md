@@ -12,6 +12,8 @@ The exact results vary from procedure to procedure, but what they all have in co
 
 The issue that all of these procedures encounter is related to the soul's dependence on a person's consciousness. Without a consciousness to shape it, a soul would merely be a small and unremarkable reservoir of magical energy. However, magical energy shaped directly by consciousness becomes incredibly useful.
 
+<!--break-->
+
 The reason souls are so valuable is that they can be used as oracle machines, which can perform feats that should be computationally impossible. Many of the most powerful spells and rituals are dependent on the ability to solve impossible computations, and thus require the use of a soul in order to be completed.
 
 One such spell is the Explorable Prophecy. This spell operates by simulating the counterfactual universe in which it has no effect, and then allowing the caster to explore this simulation as they please. Needless to say, this requires an incredible amount of computational power, assuming it is even computable at all. Without the existence of souls, casting a spell like this one would be entirely infeasible. With souls, this task becomes possible, albeit incredibly difficult.
