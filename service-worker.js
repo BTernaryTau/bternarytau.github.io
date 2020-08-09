@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20200809183816';
+const version = '20200809193903';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
@@ -54,6 +54,8 @@ var urlsToCache = [
 	
 	
 	
+		'/2020/08/09/quadratic-voting-and-types-of-one-person-one-vote',
+	
 		'/2020/07/14/soul-harvester',
 	
 		'/2020/07/05/why-1-is-not-prime',
@@ -61,8 +63,6 @@ var urlsToCache = [
 		'/2020/04/01/thanos-is-a-straw-centrist',
 	
 		'/2020/02/16/the-meaning-of-one-person-one-vote',
-	
-		'/2019/04/01/on-normative-ethical-theories',
 	
 	
 	
@@ -82,6 +82,10 @@ var urlsToCache = [
 	
 		
 			'/assets/OPOV.png',
+		
+	
+		
+			'/assets/quadratic-voting-cost.png',
 		
 	
 		

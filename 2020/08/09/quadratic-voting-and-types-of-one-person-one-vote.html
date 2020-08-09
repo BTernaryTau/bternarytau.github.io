@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>Quadratic voting and types of one person, one vote</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Quadratic voting and types of one person, one vote | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Quadratic voting and types of one person, one vote" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In a previous post, I laid out a hierarchy of three different possible meanings of one person, one vote (OPOV). The 1st level of OPOV required that each voter have exactly one ballot. The 2nd level required that each ballot have the same weight. Finally, the 3rd level required each possible ballot to be perfectly cancelled out by another possible ballot. I also created a combination Euler/pyramid diagram to demonstrate the relationship visually:" />
+<meta property="og:description" content="In a previous post, I laid out a hierarchy of three different possible meanings of one person, one vote (OPOV). The 1st level of OPOV required that each voter have exactly one ballot. The 2nd level required that each ballot have the same weight. Finally, the 3rd level required each possible ballot to be perfectly cancelled out by another possible ballot. I also created a combination Euler/pyramid diagram to demonstrate the relationship visually:" />
+<meta property="og:site_name" content="Technically Exists" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-08-09T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"In a previous post, I laid out a hierarchy of three different possible meanings of one person, one vote (OPOV). The 1st level of OPOV required that each voter have exactly one ballot. The 2nd level required that each ballot have the same weight. Finally, the 3rd level required each possible ballot to be perfectly cancelled out by another possible ballot. I also created a combination Euler/pyramid diagram to demonstrate the relationship visually:","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/08/09/quadratic-voting-and-types-of-one-person-one-vote"},"@type":"BlogPosting","url":"/2020/08/09/quadratic-voting-and-types-of-one-person-one-vote","headline":"Quadratic voting and types of one person, one vote","dateModified":"2020-08-09T00:00:00+00:00","datePublished":"2020-08-09T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1>Technically Exists</h1>
+<h2>Quadratic voting and types of one person, one vote</h2>
+<p class="meta">2020-08-09</p>
+
+<div class="content">
+	<p>In a <a href="/2020/02/16/the-meaning-of-one-person-one-vote">previous post</a>, I laid out a hierarchy of three different possible meanings of one person, one vote (OPOV). The 1st level of OPOV required that each voter have exactly one ballot. The 2nd level required that each ballot have the same weight. Finally, the 3rd level required each possible ballot to be perfectly cancelled out by another possible ballot. I also created a combination Euler/pyramid diagram to demonstrate the relationship visually:</p>
+
+<p><img src="/assets/OPOV.png" alt="One person, one vote diagram" /></p>
+
+<!--break-->
+
+<p>Before moving on, I’d like to formalize these types of OPOV a little more. I do think the 3rd level was defined well enough, but you can visit <a href="/miscellaneous/voting-theory/cancellation-criterion">this page for the cancellation criterion</a> if you need a refresher. For the 2nd level, it might not always be clear when the “weights” of two ballots are equal. It turns out that this has already been formalized through the <a href="https://electowiki.org/wiki/Neutrality_criterion">anonymity criterion</a>, which requires that for every fixed set of votes, the winner of the election remains the same regardless of which voters cast which of the votes from that set. This captures straightforward failure cases like the Electoral College, but also some stranger edge cases that might not have clear “weights” to compare.</p>
+
+<p>When considering the 1st level, we run into the issue of defining what counts as “one ballot”. For a rated method with a 0-5 scale, we could give a voter an unfair advantage by giving them two 0-5 ballots and adding them together. We could also give them an advantage by giving them a single 0-10 ballot. But mathematically, these two advantages are one and the same, even though supposedly one has two ballots and the other only one.</p>
+
+<p>We can solve this by requiring ballots to provide the same set of options for casting a vote to each voter. Now the single 0-10 ballot still violates this, even if it wouldn’t under a more literal interpretation of “one ballot”. I decided to formalize this idea into the <a href="/miscellaneous/voting-theory/identical-input-options-criterion">identical input options (IIO) criterion</a>. As a quick reality check, the IIO criterion is implied by the anonymity criterion, which means that any voting system<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> passing anonymity must also pass IIO. This matches up with the idea that any voting system with equally-weighted ballots should also have exactly one ballot per voter, as shown in the above diagram.</p>
+
+<p>Now that we’ve formalized the types of OPOV more, we can move on to the other portion of this post’s topic: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531">quadratic voting</a>. Under quadratic voting, voters “buy” multiple points in favor of a single option using “voice credits”, and the option with the most points in favor wins. The cost of buying points for a given option is the square of the number of points being bought. This means that 1 point would cost 1 credit, 2 points would cost 4 credits, 3 points would cost 9 credits, and so on. Thus, the cost function ends up being quadratic.</p>
+
+<p><img src="/assets/quadratic-voting-cost.png" alt="Graph showing the quadratic nature of the cost function" /></p>
+
+<p>In the previous OPOV post, I said that quadratic voting failed every type of OPOV. This is true for the version I just described, but it turns out that there are variations of quadratic voting that can pass different types of OPOV. This makes quadratic voting a useful tool for explaining how voting systems can be altered to pass or fail the various types of OPOV. In particular, I want to consider the scenario of quadratic voting being used in U.S. presidential elections.</p>
+
+<p>Let’s start off by considering the case where all states switch to using quadratic voting, but still operate within the Electoral College system. We’ll assume that the voice credits persist over multiple elections, possibly (but not necessarily) because they are real currency. This means that different voters will have different amounts of voice credits in each election, and so some voters will be able to cast votes that others won’t. For example, a voter with 10 voice credits could give Candidate A 3 points and Candidate B 1 point since 3<sup>2</sup> + 1<sup>2</sup> = 9 + 1 = 10. In contrast, a voter with only 9 voice credits would be unable to cast this vote. Thus, this system fails the IIO criterion.</p>
+
+<p>What happens when we modify the system to distribute a fixed number of voice credits to each voter in each election, without the ability to save them for future elections? Well, we’ve eliminated the issue of different voters being able to cast different votes, so the IIO criterion is now passed.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup> However, because the Electoral College is still in place, it remains possible to change the outcome of many elections by changing which voters cast which votes in each election. Thus, the anonymity criterion is still failed.</p>
+
+<p>Modifying this system to pass the anonymity criterion is straightforward; all we need to do is replace the Electoral College with a national popular vote. Now every voter is treated the same regardless of what state they vote in, so there is no way to change the outcome of the election by swapping votes around. However, it’s not always possible for one voter to perfectly cancel out the vote of another voter. For example, if each voter is given 100 voice credits per election and there are three candidates A, B, and C, then one voter can cast a vote that gives 10 points to A. Perfectly cancelling this vote out would require giving 10 points to B and 10 points to C, but doing that would cost 200 voice credits, so any voter with only 100 voice credits couldn’t cast a cancelling vote. Thus, the cancellation criterion is still failed.</p>
+
+<p>At this point it might feel like we’ve modified quadratic voting to pass all the types of OPOV it possibly can. However, there is a way to modify it further so that it passes the cancellation criterion; instead of restricting voters to buying points in favor of an option, we also let them buy points in opposition to an option. This means that in the example above, the vote that gives 10 points in favor of A can now be cancelled by a vote that gives 10 points in opposition to A. In fact, it will always possible to construct a valid vote that cancels out another valid vote, as we can simply reverse whether the points purchased are in favor of or in opposition to each option. Thus, this version of quadratic voting passes the cancellation criterion.</p>
+
+<p>I’m hoping this demonstration of modifying a voting system to pass each type of OPOV in sequence helps build intuition for how the types relate to one another and to the voting systems that pass and fail them. If some of the vaguer types seemed arbitrary, I also hope that my efforts to provide more formal criteria helped clarify things.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>In both this post and the previous post on OPOV, I kind of conflate voting methods with electoral systems under the term “voting systems”. If this doesn’t bother you, you can just ignore it. If this does bother you, you can think about this matter purely in terms of electoral systems by applying a simple default electoral system as a “wrapper” around any voting methods that are mentioned. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>This assumes that for each state, all candidates either make it onto the ballot or can be written in. If this doesn’t happen, then IIO is still violated. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<hr>
+
+<div class="notecomments">
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'technically-exists'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		 
+</div>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>
