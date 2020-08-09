@@ -9,4 +9,4 @@ More details can be found through [The meaning of one person, one vote]({{ site.
 
 * [Identical input options criterion]({{ site.baseurl }}/miscellaneous/voting-theory/identical-input-options-criterion), one ballot
 * [Anonymity criterion](https://electowiki.org/wiki/Neutrality_criterion), equally-weighted ballots
-* [Equality criterion](https://www.equal.vote/theequalvote), Frohnmayer balance
+* [Cancellation criterion]({{ site.baseurl }}/miscellaneous/voting-theory/cancellation-criterion), Equality criterion, Frohnmayer balance
