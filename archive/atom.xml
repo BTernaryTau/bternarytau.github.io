@@ -4,7 +4,7 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2020-08-11T01:31:02+00:00</updated>
+	<updated>2020-08-12T17:57:03+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
@@ -17,6 +17,8 @@
 			<updated>2020-08-10T00:00:00+00:00</updated>
 			<id>http://bternarytau.github.io/2020/08/10/the-npvic-rcv1-and-maine</id>
 			<content type="html">&lt;p&gt;The &lt;a href=&quot;https://www.nationalpopularvote.com/&quot;&gt;National Popular Vote Interstate Compact&lt;/a&gt; (NPVIC) aims to subvert the Electoral College and elect the president of the U.S. by popular vote. It would accomplish this by having the states that signed on give their electoral votes to whichever candidate won the popular vote. However, the way it defines the popular vote assumes that all states will use single-choice plurality voting in their presidential elections. This is a problem, because &lt;a href=&quot;https://bangordailynews.com/2020/07/15/politics/maine-to-use-ranked-choice-voting-in-presidential-election-after-gop-veto-effort-fails/&quot;&gt;Maine has switched its presidential elections&lt;/a&gt; to use single-winner ranked choice voting (RCV-1), also known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Instant-runoff_voting&quot;&gt;instant runoff voting&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--break--&gt;
 
 &lt;p&gt;The NPVIC website doesn’t address this possibility, but &lt;a href=&quot;https://www.reddit.com/r/EndFPTP/comments/9k7xpg/how_would_the_npvic_behave_if_a_state_chose_to/e6ypbs1/&quot;&gt;promoters have suggested&lt;/a&gt; that this problem would be resolved by the state explaining how its votes should be tallied. This is an unsatisfactory answer for a few reasons. First, there are multiple options for how the votes could be added. One option is to ignore the use of RCV-1 and simply count voters’ first preferences. Another option is to have Maine run RCV-1 until all but two candidates are eliminated, then count voters as having cast a plurality vote for whichever of those two candidates they preferred.&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; A third option is to hold a nationwide RCV-1 tally where voters from other states are considered to have cast ballots that ranked only one candidate. Each of these options has advantages that will appeal to some people and disadvantages that will drive others away.&lt;/p&gt;
 
