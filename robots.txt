@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://bternarytau.github.io//sitemap.xml
