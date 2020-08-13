@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>Sequential proportional score voting</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Sequential proportional score voting | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Sequential proportional score voting" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Technically Exists" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"/miscellaneous/voting-theory/sequential-proportional-score-voting","headline":"Sequential proportional score voting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1 id="technically-exists">Technically Exists</h1>
+<h2 id="sequential-proportional-score-voting">Sequential proportional score voting</h2>
+<h3 id="introduction">Introduction</h3>
+
+<p>Sequential proportional score voting (SPSV) is a rated party-agnostic proportional method based on <a href="https://en.wikipedia.org/wiki/Sequential_proportional_approval_voting">sequential proportional approval voting</a> (SPAV) and the <a href="https://electowiki.org/wiki/Kotze-Pereira_transformation">Kotze-Pereira transformation</a> (KP transform). For this reason, it is often referred to as SPAV + KP.</p>
+
+<h3 id="description">Description</h3>
+
+<p>Voters cast ballots by rating all candidates on a scale such as 0 to 5, where a blank rating is interpreted as the minimum value. Each rated ballot is converted into five virtual approval ballots using the KP transform, as shown below.</p>
+
+<p><img src="/assets/Kotze-Pereira-transformation.png" alt="Graphic showing a 0-5 score ballot being converted into 5 approval ballots" /></p>
+
+<p>Once this is done, SPAV is run on the virtual approval ballots to determine which candidates are elected. Each virtual ballot starts off with a weight of 1. For each seat, the candidate with the most weighted approvals is elected, and every virtual ballot is given a weight of 1/(1 + <em>m</em>), where <em>m</em> is the number of candidates approved on the ballot who have already been elected.</p>
+
+<h3 id="analysis">Analysis</h3>
+
+<p>With the above reweighting formula, SPSV is equivalent to <a href="https://en.wikipedia.org/wiki/D%27Hondt_method">D’Hondt</a> when voters vote perfectly along party lines. However, if the formula 1/(1 + 2<em>m</em>) is used instead, then under such circumstances it becomes equivalent to <a href="https://en.wikipedia.org/wiki/Webster/Sainte-Lagu%C3%AB_method">Webster/Sainte-Laguë</a>.</p>
+
+<p>SPSV is similar to <a href="https://electowiki.org/wiki/Reweighted_Range_Voting">Reweighted Range Voting</a> (RRV), but it has the additional benefit of passing <a href="https://electowiki.org/wiki/Scale_invariance">scale invariance</a>.</p>
+
+<p>When voters <a href="https://electowiki.org/wiki/Tactical_voting#Definitions">min-max vote</a>, SPSV reduces to SPAV. Equivalently, SPAV and SPSV with a scale of 0 to 1 are mathematically identical and give the same results.</p>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>

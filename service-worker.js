@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20200812180301';
+const version = '20200813103720';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
@@ -37,6 +37,8 @@ var urlsToCache = [
 		'/miscellaneous/voting-theory/list-of-voting-method-simulations',
 	
 		'/miscellaneous/voting-theory/raws-voting',
+	
+		'/miscellaneous/voting-theory/sequential-proportional-score-voting',
 	
 		'/miscellaneous/superintelligence-reference-page',
 	
@@ -78,6 +80,10 @@ var urlsToCache = [
 	
 		
 			'/apple-touch-icon.png',
+		
+	
+		
+			'/assets/Kotze-Pereira-transformation.png',
 		
 	
 		
