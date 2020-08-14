@@ -3,13 +3,13 @@ layout: post
 title: "Outlining the opposite of a singleton"
 date: 2018-06-01
 ---
-In [one of my previous posts]({{ site.baseurl }}{% post_url 2018-02-09-singletons-and-universal-inevitable-threats %}), I discussed the concept of a singleton as defined by Nick Bostrom. Now I'd like to consider what the rough opposite of a singleton would look like, based on what has been written by others on the subject.
+In [one of my previous posts]({% post_url 2018-02-09-singletons-and-universal-inevitable-threats %}), I discussed the concept of a singleton as defined by Nick Bostrom. Now I'd like to consider what the rough opposite of a singleton would look like, based on what has been written by others on the subject.
 
 For me, the obvious place to start is Scott Alexander's [Meditations On Moloch](https://slatestarcodex.com/2014/07/30/meditations-on-moloch/). In it, Moloch is introduced as that which causes the following:
 
 > In some competition optimizing for X, the opportunity arises to throw some other value under the bus for improved X. Those who take it prosper. Those who don’t take it die out. Eventually, everyone’s relative status is about the same as before, but everyone’s absolute status is worse than before.
 
-This type of situation is known as a [coordination problem](https://conceptually.org/concepts/coordination-problems/), something I discussed previously in the context of [boycotting video games]({{ site.baseurl }}{% post_url 2018-01-26-video-game-boycotts %}). If those in the competition could choose to cooperate, they could easily coordinate to avoid sacrificing any other values. But as long as they are competing, once one of them chooses to sacrifice something for a short-term advantage, the rest must do the same or be eliminated.
+This type of situation is known as a [coordination problem](https://conceptually.org/concepts/coordination-problems/), something I discussed previously in the context of [boycotting video games]({% post_url 2018-01-26-video-game-boycotts %}). If those in the competition could choose to cooperate, they could easily coordinate to avoid sacrificing any other values. But as long as they are competing, once one of them chooses to sacrifice something for a short-term advantage, the rest must do the same or be eliminated.
 
 <!--break-->
 

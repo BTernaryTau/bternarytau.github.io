@@ -3,7 +3,7 @@ layout: post
 title: "Freedom of speech is good"
 date: 2018-05-20
 ---
-In my [previous post]({{ site.baseurl }}{% post_url 2018-04-28-freedom-of-speech-is-bad %}), I laid out what I consider to be the strongest argument against freedom of speech. Now I will cover what I believe to be the flaw in that argument.
+In my [previous post]({% post_url 2018-04-28-freedom-of-speech-is-bad %}), I laid out what I consider to be the strongest argument against freedom of speech. Now I will cover what I believe to be the flaw in that argument.
 
 In that argument's analogy, ideological propaganda produced by think tanks is equated with pathogens produced by bioweapon labs. But this comparison misses something. Multiple pathogens will all weaken a host more than just one of them would, but multiple ideologies will contradict and weaken each other, influencing people less. This gives freedom of speech an advantage that "freedom to distribute pathogens" lacks.
 

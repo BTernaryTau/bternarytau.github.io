@@ -3,7 +3,7 @@ layout: post
 title: "Can boycotts be solved?"
 date: 2018-02-01
 ---
-In my [last post]({{ site.baseurl }}{% post_url 2018-01-26-video-game-boycotts %}), I talked about why individuals' incentives will prevent video game boycotts from succeeding. Now I'd like to discuss potential solutions (or at least vague outlines for potential solutions) to this problem.
+In my [last post]({% post_url 2018-01-26-video-game-boycotts %}), I talked about why individuals' incentives will prevent video game boycotts from succeeding. Now I'd like to discuss potential solutions (or at least vague outlines for potential solutions) to this problem.
 
 The first idea that comes to mind is looking at historical successes. Two successful boycotts that I'm aware of are the Continental Association and the Montgomery bus boycott. For those who don't know, the Continental Association was a boycott of British goods by the American colonies prior to the American Revolutionary War, and the Montgomery bus boycott was a protest against the segregated bus system in Montgomery, Alabama during the American Civil Rights Movement. In looking at these examples, I hope to identify both parts of a coordination mechanism: an agreement and an enforcement mechanism.
 

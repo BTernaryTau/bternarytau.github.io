@@ -1,11 +1,11 @@
 name: BTernaryTau
 title: Technically Exists
+description: A blog about mathematics, computer science, social choice theory, futurism, video games, and more
 markdown: kramdown
 excerpt_separator: "<!--break-->"
 permalink: "/:year/:month/:day/:title"
 paginate: 5
 paginate_path: "/page:num/"
-baseurl: "https://bternarytau.github.io"
 plugins:
     - jekyll-paginate
     - jekyll-sitemap
