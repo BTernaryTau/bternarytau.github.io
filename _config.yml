@@ -6,6 +6,7 @@ excerpt_separator: "<!--break-->"
 permalink: "/:year/:month/:day/:title"
 paginate: 5
 paginate_path: "/page:num/"
+url: "https://bternarytau.github.io"
 plugins:
     - jekyll-paginate
     - jekyll-sitemap
