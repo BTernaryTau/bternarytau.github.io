@@ -2,9 +2,10 @@ name: BTernaryTau
 title: Technically Exists
 markdown: kramdown
 excerpt_separator: "<!--break-->"
-permalink: /:year/:month/:day/:title
+permalink: "/:year/:month/:day/:title"
 paginate: 5
 paginate_path: "/page:num/"
+baseurl: "https://bternarytau.github.io"
 url: "https://bternarytau.github.io"
 plugins:
     - jekyll-paginate
