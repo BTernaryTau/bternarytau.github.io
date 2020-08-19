@@ -15,7 +15,7 @@ hide_footnotes: true
 		{% assign excerpt_words = post.excerpt | number_of_words %}
 		{% assign content_words = post.content | number_of_words %}
 		{% if excerpt_words != content_words %}
-			<p><a href="{{site.baseurl}}{{ post.url }}" aria-label="Read the rest of {{ post.title }}">Read more</a></p>
+			<p><a href="{{site.baseurl}}{{ post.url }}" aria-label="Read the rest of {{ post.title }}" rel="nofollow">Read more</a></p>
 		{% endif %}
 	</div>
 {% endfor %}
