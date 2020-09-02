@@ -135,3 +135,12 @@ th, td {
   font-size: 1.25em;
   border: 1px solid black;
   padding: 10px; }
+
+code {
+  font-size: 1.25em;
+  line-height: 1.3em; }
+
+pre.highlight {
+  word-wrap: normal;
+  overflow-x: auto;
+  white-space: pre; }

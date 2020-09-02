@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>Candidate balancing algorithm</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Candidate balancing algorithm | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Candidate balancing algorithm" />
+<meta name="author" content="BTernaryTau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A blog about mathematics, computer science, social choice theory, futurism, video games, and more" />
+<meta property="og:description" content="A blog about mathematics, computer science, social choice theory, futurism, video games, and more" />
+<link rel="canonical" href="https://bternarytau.github.io/miscellaneous/voting-theory/candidate-balancing-algorithm" />
+<meta property="og:url" content="https://bternarytau.github.io/miscellaneous/voting-theory/candidate-balancing-algorithm" />
+<meta property="og:site_name" content="Technically Exists" />
+<script type="application/ld+json">
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bternarytau.github.io/assets/logo.png"},"name":"BTernaryTau"},"author":{"@type":"Person","name":"BTernaryTau"},"description":"A blog about mathematics, computer science, social choice theory, futurism, video games, and more","@type":"WebPage","url":"https://bternarytau.github.io/miscellaneous/voting-theory/candidate-balancing-algorithm","headline":"Candidate balancing algorithm","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1 id="technically-exists">Technically Exists</h1>
+<h2 id="candidate-balancing-algorithm">Candidate balancing algorithm</h2>
+<h3 id="introduction">Introduction</h3>
+
+<p>The candidate balancing algorithm is an algorithm for balancing elected candidates among several groups. These groups must be disjoint subsets of the set of candidates, but they need not partition the candidate set.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The candidate balancing algorithm operates on an ordered list of candidates, generally the output of some bloc voting method. It follows these rules, starting with the first candidate on the list, until one candidate from each group has been elected:</p>
+
+<ol>
+  <li>If the candidate is not a member of any group, they are elected, and the algorithm proceeds to the next candidate in the list.</li>
+  <li>If the candidate is a member of a group that does already have an elected candidate, the algorithm simply proceeds to the next candidate in the list.</li>
+  <li>If the candidate is a member of a group that does not already have an elected candidate, they are elected and their group is marked as having an elected candidate. The algorithm then proceeds to the next candidate in the list.</li>
+</ol>
+
+<p>Once each group has one elected candidate or the end of the list is reached, all elected candidates are removed from the list, and the algorithm recursively runs itself on the new list. The algorithm terminates as soon as all seats are filled.</p>
+
+<h3 id="pseudocode">Pseudocode</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function balanceCandidates(List candidates, Set groups, int numSeats) {
+  List electedCandidates = List.empty();
+  Set satisfiedGroups = Set.empty();
+  int seatsRemaining = numSeats;
+  
+  for (candidate in candidates) {
+    // Handle candidate without a group
+    if (candidate.group == null) {
+	  electedCandidates.add(candidate);
+	  seatsRemaining--;
+	} else if (!satisfiedGroups.contains(candidate.group)) {
+	  electedCandidates.add(candidate);
+	  satisfiedGroups.add(candidate.group);
+	  seatsRemaining--;
+	}
+	
+	// Terminate if all seats are filled
+	if (seatsRemaining == 0) {
+	  return electedCandidates;
+	}
+	
+	if (satisfiedGroups == groups) {
+	  break;
+	}
+  }
+  
+  // Remove elected candidates
+  candidates.removeAll(electedCandidates);
+  
+  // Make recursive call to fill remaining seats
+  return electedCandidates.append(balanceCandidates(candidates, groups, seatsRemaining));
+}
+</code></pre></div></div>
+
+<h3 id="applications">Applications</h3>
+
+<p>One application for the candidate balancing algorithm is electing a gender-balanced list of candidates. To accomplish this, female candidates are placed in one group and male candidates in another, with non-binary candidates remaining uncategorized.</p>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>
