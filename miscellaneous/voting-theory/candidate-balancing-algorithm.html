@@ -79,22 +79,22 @@
   for (candidate in candidates) {
     // Handle candidate without a group
     if (candidate.group == null) {
-	  electedCandidates.add(candidate);
-	  seatsRemaining--;
-	} else if (!satisfiedGroups.contains(candidate.group)) {
-	  electedCandidates.add(candidate);
-	  satisfiedGroups.add(candidate.group);
-	  seatsRemaining--;
-	}
-	
-	// Terminate if all seats are filled
-	if (seatsRemaining == 0) {
-	  return electedCandidates;
-	}
-	
-	if (satisfiedGroups == groups) {
-	  break;
-	}
+      electedCandidates.add(candidate);
+      seatsRemaining--;
+    } else if (!satisfiedGroups.contains(candidate.group)) {
+      electedCandidates.add(candidate);
+      satisfiedGroups.add(candidate.group);
+      seatsRemaining--;
+    }
+    
+    // Terminate if all seats are filled
+    if (seatsRemaining == 0) {
+      return electedCandidates;
+    }
+    
+    if (satisfiedGroups == groups) {
+      break;
+    }
   }
   
   // Remove elected candidates
