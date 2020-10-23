@@ -4,12 +4,35 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2020-10-05T01:57:10+00:00</updated>
+	<updated>2020-10-23T16:54:40+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
 	</author>
 
+	
+		<entry>
+			<title>The motivation behind SPSV, part 1</title>
+			<link href="http://bternarytau.github.io/2020/10/23/the-motivation-behind-spsv-part-1"/>
+			<updated>2020-10-23T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2020/10/23/the-motivation-behind-spsv-part-1</id>
+			<content type="html">&lt;p&gt;&lt;em&gt;This blog post has been adapted from &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/&quot;&gt;a series of posts&lt;/a&gt; written for &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/&quot;&gt;r/SimDemocracy&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/miscellaneous/voting-theory/sequential-proportional-score-voting&quot;&gt;Sequential proportional score voting&lt;/a&gt; (SPSV) is a multi-winner voting method and a form of &lt;a href=&quot;https://electowiki.org/wiki/Proportional_representation&quot;&gt;proportional representation&lt;/a&gt;. Like score voting, it uses rated ballots, and it is party-agnostic, meaning it does not take into account which parties the candidates are from. Currently, the only known instance of this method being used is the subreddit r/SimDemocracy, which uses it to elect its legislature.&lt;/p&gt;
+
+&lt;p&gt;Before SimDemocracy used SPSV, it used a method known as bloc score. This method was simpler to understand, but it had major issues when it came to electing a senate that represents the voters. This occurred because it was not a proportional method.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;As an example of why proportionally is important, let’s consider an election with 3 parties: A, B, and C. A is supported by 50 voters, B by 30 voters, and C by 20 voters. For simplicity, we’ll say that there are 10 seats and each party runs 10 candidates. We’ll first consider this election under bloc score, and then we’ll consider it under closed party-list, a proportional method.&lt;/p&gt;
+
+&lt;p&gt;Under bloc score, voters rate each of the candidates, and the candidates with the highest total scores win. Since each voter supports exactly one party, we’ll assume that they give all candidates in that party the maximum rating, 5, and all other candidates the minimum rating, 0. This means that the A candidates each have 250 points, the B candidates 150 points, and the C candidates 100 points. Thus, bloc score will elect the 10 A candidates. This is clearly not representative; A has only 50% of the vote, but has total control over the elected body.&lt;/p&gt;
+
+&lt;p&gt;Closed party-list works very differently. Instead of rating candidates, voters cast their vote for a single party. Each party wins seats in proportion to how many votes they receive. In this case, A receives 50 votes, B receives 30 votes, and C receives 20 votes. Thus, closed party-list will elect 5 A candidates, 3 B candidates, and 2 C candidates. This results in the elected body having a makeup that closely resembles the makeup of the voters, and so is far more representative.&lt;/p&gt;
+
+&lt;p&gt;While closed party-list gives far more representative outcomes than a non-proportional method like bloc score, it also has a lot of disadvantages. One is that voters don’t get any say over which candidates from a party are elected; instead, that’s determined by party insiders. SPSV is much better, but it’s easiest to build up to it rather than diving straight in. Thus, the next part will cover a proportional method very similar to closed party-list that lets voters choose which candidates are elected, and from there we’ll keep making small changes until we arrive at SPSV itself.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>The NPVIC, RCV-1, and Maine</title>

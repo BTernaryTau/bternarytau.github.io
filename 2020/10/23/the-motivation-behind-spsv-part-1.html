@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>The motivation behind SPSV, part 1</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>The motivation behind SPSV, part 1 | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="The motivation behind SPSV, part 1" />
+<meta name="author" content="BTernaryTau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This blog post has been adapted from a series of posts written for r/SimDemocracy. Sequential proportional score voting (SPSV) is a multi-winner voting method and a form of proportional representation. Like score voting, it uses rated ballots, and it is party-agnostic, meaning it does not take into account which parties the candidates are from. Currently, the only known instance of this method being used is the subreddit r/SimDemocracy, which uses it to elect its legislature. Before SimDemocracy used SPSV, it used a method known as bloc score. This method was simpler to understand, but it had major issues when it came to electing a senate that represents the voters. This occurred because it was not a proportional method." />
+<meta property="og:description" content="This blog post has been adapted from a series of posts written for r/SimDemocracy. Sequential proportional score voting (SPSV) is a multi-winner voting method and a form of proportional representation. Like score voting, it uses rated ballots, and it is party-agnostic, meaning it does not take into account which parties the candidates are from. Currently, the only known instance of this method being used is the subreddit r/SimDemocracy, which uses it to elect its legislature. Before SimDemocracy used SPSV, it used a method known as bloc score. This method was simpler to understand, but it had major issues when it came to electing a senate that represents the voters. This occurred because it was not a proportional method." />
+<link rel="canonical" href="https://bternarytau.github.io/2020/10/23/the-motivation-behind-spsv-part-1" />
+<meta property="og:url" content="https://bternarytau.github.io/2020/10/23/the-motivation-behind-spsv-part-1" />
+<meta property="og:site_name" content="Technically Exists" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-23T00:00:00+00:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-10-23T00:00:00+00:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bternarytau.github.io/assets/logo.png"},"name":"BTernaryTau"},"author":{"@type":"Person","name":"BTernaryTau"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://bternarytau.github.io/2020/10/23/the-motivation-behind-spsv-part-1"},"description":"This blog post has been adapted from a series of posts written for r/SimDemocracy. Sequential proportional score voting (SPSV) is a multi-winner voting method and a form of proportional representation. Like score voting, it uses rated ballots, and it is party-agnostic, meaning it does not take into account which parties the candidates are from. Currently, the only known instance of this method being used is the subreddit r/SimDemocracy, which uses it to elect its legislature. Before SimDemocracy used SPSV, it used a method known as bloc score. This method was simpler to understand, but it had major issues when it came to electing a senate that represents the voters. This occurred because it was not a proportional method.","@type":"BlogPosting","url":"https://bternarytau.github.io/2020/10/23/the-motivation-behind-spsv-part-1","headline":"The motivation behind SPSV, part 1","dateModified":"2020-10-23T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1>Technically Exists</h1>
+<h2>The motivation behind SPSV, part 1</h2>
+<p class="meta">2020-10-23</p>
+
+<div class="content">
+	<p><em>This blog post has been adapted from <a href="https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/">a series of posts</a> written for <a href="https://www.reddit.com/r/SimDemocracy/">r/SimDemocracy</a>.</em></p>
+
+<p><a href="/miscellaneous/voting-theory/sequential-proportional-score-voting">Sequential proportional score voting</a> (SPSV) is a multi-winner voting method and a form of <a href="https://electowiki.org/wiki/Proportional_representation">proportional representation</a>. Like score voting, it uses rated ballots, and it is party-agnostic, meaning it does not take into account which parties the candidates are from. Currently, the only known instance of this method being used is the subreddit r/SimDemocracy, which uses it to elect its legislature.</p>
+
+<p>Before SimDemocracy used SPSV, it used a method known as bloc score. This method was simpler to understand, but it had major issues when it came to electing a senate that represents the voters. This occurred because it was not a proportional method.</p>
+
+<!--break-->
+
+<p>As an example of why proportionally is important, let’s consider an election with 3 parties: A, B, and C. A is supported by 50 voters, B by 30 voters, and C by 20 voters. For simplicity, we’ll say that there are 10 seats and each party runs 10 candidates. We’ll first consider this election under bloc score, and then we’ll consider it under closed party-list, a proportional method.</p>
+
+<p>Under bloc score, voters rate each of the candidates, and the candidates with the highest total scores win. Since each voter supports exactly one party, we’ll assume that they give all candidates in that party the maximum rating, 5, and all other candidates the minimum rating, 0. This means that the A candidates each have 250 points, the B candidates 150 points, and the C candidates 100 points. Thus, bloc score will elect the 10 A candidates. This is clearly not representative; A has only 50% of the vote, but has total control over the elected body.</p>
+
+<p>Closed party-list works very differently. Instead of rating candidates, voters cast their vote for a single party. Each party wins seats in proportion to how many votes they receive. In this case, A receives 50 votes, B receives 30 votes, and C receives 20 votes. Thus, closed party-list will elect 5 A candidates, 3 B candidates, and 2 C candidates. This results in the elected body having a makeup that closely resembles the makeup of the voters, and so is far more representative.</p>
+
+<p>While closed party-list gives far more representative outcomes than a non-proportional method like bloc score, it also has a lot of disadvantages. One is that voters don’t get any say over which candidates from a party are elected; instead, that’s determined by party insiders. SPSV is much better, but it’s easiest to build up to it rather than diving straight in. Thus, the next part will cover a proportional method very similar to closed party-list that lets voters choose which candidates are elected, and from there we’ll keep making small changes until we arrive at SPSV itself.</p>
+
+</div>
+
+<hr>
+
+<div class="notecomments">
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'technically-exists'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		 
+</div>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>
