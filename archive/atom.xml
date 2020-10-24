@@ -4,12 +4,114 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2020-10-23T16:54:40+00:00</updated>
+	<updated>2020-10-24T23:47:42+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
 	</author>
 
+	
+		<entry>
+			<title>The motivation behind SPSV, part 2</title>
+			<link href="http://bternarytau.github.io/2020/10/24/the-motivation-behind-spsv-part-2"/>
+			<updated>2020-10-24T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2020/10/24/the-motivation-behind-spsv-part-2</id>
+			<content type="html">&lt;p&gt;&lt;em&gt;This blog post has been adapted from &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/&quot;&gt;a series of posts&lt;/a&gt; written for &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/&quot;&gt;r/SimDemocracy&lt;/a&gt;. If you haven’t read &lt;a href=&quot;/2020/10/23/the-motivation-behind-spsv-part-1&quot;&gt;the previous entry&lt;/a&gt;, please do so.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve seen that closed party-list gives more representative outcomes than non-proportional methods like bloc score. However, it also failed to give voters a say in which candidates from a given party would be elected. In the previous post’s example election, this didn’t matter since the voters didn’t have opinions on the individual candidates anyway. But what happens when they do have such opinions, as is the case in real elections?&lt;/p&gt;
+
+&lt;p&gt;If the parties all share their voters’ preferences, then this isn’t a problem since the party can just choose the candidates the voters want. But if party insiders prefer a different set of candidates, then the voters could feel cheated out of their say in which candidates get elected. Needless to say, this should not happen in a legitimate election.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;One way of fixing this problem is to switch to the &lt;a href=&quot;https://en.wikipedia.org/wiki/D%27Hondt_method&quot;&gt;D’Hondt method&lt;/a&gt;. This method is named after Belgian mathematician Victor D’Hondt, who came up with it in 1878. However, it was actually first proposed by Thomas Jefferson in 1792, so it is sometimes referred to as Jefferson’s method instead. Instead of casting a vote for a single party, voters cast their vote for a single candidate, as is done under single-choice plurality voting. These votes are then used to determine both how many seats each party gets and which candidates from each party are elected.&lt;/p&gt;
+
+&lt;p&gt;To allocate seats, every party is assigned the votes received by each of its candidates. The first seat is given to the party with the most votes. For the next seat, the party that won the first seat has its total number of votes halved, and then the party with the most votes remaining wins. This continues for each available seat, with every party having 1/(1 + &lt;em&gt;m&lt;/em&gt;) of their original vote count, where &lt;em&gt;m&lt;/em&gt; is the number of seats that party has won so far.&lt;/p&gt;
+
+&lt;p&gt;This can be thought of as splitting that party’s votes between the seats they’ve already won and the seat they’re trying to win each round. If a party already has 3 seats, then it only has 1/(1 + 3) = 1/4 of its votes remaining since if it won another seat, it would have to split its votes among the 4 seats to justify having all of them. Thus, it can only afford to put 1/4 of its votes toward winning a new seat. This ensures that each seat has approximately the same number of votes allocated to it, as a party that wins 4 seats will have needed about 4 times as many votes to do so as a party that wins 1 seat.&lt;/p&gt;
+
+&lt;p&gt;Once all seats have been allocated, it is simple to assign candidates to them. For each party, assign the first seat that party won to the candidate from that party with the most votes, assign the second seat to the candidate with the second-most votes, and so on. This allows the voters supporting each party to have a say in what candidates from that party get elected.&lt;/p&gt;
+
+&lt;p&gt;In the last post, we went over an example election where the parties A, B, and C ran for 10 seats, and A was supported by 50 voters, B by 30 voters, and C by 20 voters. Closed party-list elected 5 A candidates, 3 B candidates, and 2 C candidates, thus giving a proportional outcome. Using D’Hondt will also result in this outcome, as is demonstrated by the table of vote counts below.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Round&lt;/th&gt;
+      &lt;th&gt;A&lt;/th&gt;
+      &lt;th&gt;B&lt;/th&gt;
+      &lt;th&gt;C&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;50&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;30&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;25&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;16.67&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;20&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;16.67&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;12.5&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;15&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;12.5&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;10&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;8.33&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;10&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;8.33&lt;/td&gt;
+      &lt;td&gt;7.5&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;10&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;While the party proportions are the same, the difference is that D’Hondt will ensure that the elected A candidates are the 5 A candidates with the most votes, and same for the other parties. D’Hondt also specifies how to deal with scenarios where perfect party proportionally is impossible without fractional seats.&lt;/p&gt;
+
+&lt;p&gt;Overall, this method gives voters strictly more choice than closed party-list did. However, it still limits voters to supporting a single candidate and a single party. In the next part, we’ll look at some proposals for altering this method to resolve this issue.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>The motivation behind SPSV, part 1</title>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>The motivation behind SPSV, part 2</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>The motivation behind SPSV, part 2 | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="The motivation behind SPSV, part 2" />
+<meta name="author" content="BTernaryTau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This blog post has been adapted from a series of posts written for r/SimDemocracy. If you haven’t read the previous entry, please do so. We’ve seen that closed party-list gives more representative outcomes than non-proportional methods like bloc score. However, it also failed to give voters a say in which candidates from a given party would be elected. In the previous post’s example election, this didn’t matter since the voters didn’t have opinions on the individual candidates anyway. But what happens when they do have such opinions, as is the case in real elections? If the parties all share their voters’ preferences, then this isn’t a problem since the party can just choose the candidates the voters want. But if party insiders prefer a different set of candidates, then the voters could feel cheated out of their say in which candidates get elected. Needless to say, this should not happen in a legitimate election." />
+<meta property="og:description" content="This blog post has been adapted from a series of posts written for r/SimDemocracy. If you haven’t read the previous entry, please do so. We’ve seen that closed party-list gives more representative outcomes than non-proportional methods like bloc score. However, it also failed to give voters a say in which candidates from a given party would be elected. In the previous post’s example election, this didn’t matter since the voters didn’t have opinions on the individual candidates anyway. But what happens when they do have such opinions, as is the case in real elections? If the parties all share their voters’ preferences, then this isn’t a problem since the party can just choose the candidates the voters want. But if party insiders prefer a different set of candidates, then the voters could feel cheated out of their say in which candidates get elected. Needless to say, this should not happen in a legitimate election." />
+<link rel="canonical" href="https://bternarytau.github.io/2020/10/24/the-motivation-behind-spsv-part-2" />
+<meta property="og:url" content="https://bternarytau.github.io/2020/10/24/the-motivation-behind-spsv-part-2" />
+<meta property="og:site_name" content="Technically Exists" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-24T00:00:00+00:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-10-24T00:00:00+00:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bternarytau.github.io/assets/logo.png"},"name":"BTernaryTau"},"author":{"@type":"Person","name":"BTernaryTau"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://bternarytau.github.io/2020/10/24/the-motivation-behind-spsv-part-2"},"description":"This blog post has been adapted from a series of posts written for r/SimDemocracy. If you haven’t read the previous entry, please do so. We’ve seen that closed party-list gives more representative outcomes than non-proportional methods like bloc score. However, it also failed to give voters a say in which candidates from a given party would be elected. In the previous post’s example election, this didn’t matter since the voters didn’t have opinions on the individual candidates anyway. But what happens when they do have such opinions, as is the case in real elections? If the parties all share their voters’ preferences, then this isn’t a problem since the party can just choose the candidates the voters want. But if party insiders prefer a different set of candidates, then the voters could feel cheated out of their say in which candidates get elected. Needless to say, this should not happen in a legitimate election.","@type":"BlogPosting","url":"https://bternarytau.github.io/2020/10/24/the-motivation-behind-spsv-part-2","headline":"The motivation behind SPSV, part 2","dateModified":"2020-10-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1>Technically Exists</h1>
+<h2>The motivation behind SPSV, part 2</h2>
+<p class="meta">2020-10-24</p>
+
+<div class="content">
+	<p><em>This blog post has been adapted from <a href="https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/">a series of posts</a> written for <a href="https://www.reddit.com/r/SimDemocracy/">r/SimDemocracy</a>. If you haven’t read <a href="/2020/10/23/the-motivation-behind-spsv-part-1">the previous entry</a>, please do so.</em></p>
+
+<p>We’ve seen that closed party-list gives more representative outcomes than non-proportional methods like bloc score. However, it also failed to give voters a say in which candidates from a given party would be elected. In the previous post’s example election, this didn’t matter since the voters didn’t have opinions on the individual candidates anyway. But what happens when they do have such opinions, as is the case in real elections?</p>
+
+<p>If the parties all share their voters’ preferences, then this isn’t a problem since the party can just choose the candidates the voters want. But if party insiders prefer a different set of candidates, then the voters could feel cheated out of their say in which candidates get elected. Needless to say, this should not happen in a legitimate election.</p>
+
+<!--break-->
+
+<p>One way of fixing this problem is to switch to the <a href="https://en.wikipedia.org/wiki/D%27Hondt_method">D’Hondt method</a>. This method is named after Belgian mathematician Victor D’Hondt, who came up with it in 1878. However, it was actually first proposed by Thomas Jefferson in 1792, so it is sometimes referred to as Jefferson’s method instead. Instead of casting a vote for a single party, voters cast their vote for a single candidate, as is done under single-choice plurality voting. These votes are then used to determine both how many seats each party gets and which candidates from each party are elected.</p>
+
+<p>To allocate seats, every party is assigned the votes received by each of its candidates. The first seat is given to the party with the most votes. For the next seat, the party that won the first seat has its total number of votes halved, and then the party with the most votes remaining wins. This continues for each available seat, with every party having 1/(1 + <em>m</em>) of their original vote count, where <em>m</em> is the number of seats that party has won so far.</p>
+
+<p>This can be thought of as splitting that party’s votes between the seats they’ve already won and the seat they’re trying to win each round. If a party already has 3 seats, then it only has 1/(1 + 3) = 1/4 of its votes remaining since if it won another seat, it would have to split its votes among the 4 seats to justify having all of them. Thus, it can only afford to put 1/4 of its votes toward winning a new seat. This ensures that each seat has approximately the same number of votes allocated to it, as a party that wins 4 seats will have needed about 4 times as many votes to do so as a party that wins 1 seat.</p>
+
+<p>Once all seats have been allocated, it is simple to assign candidates to them. For each party, assign the first seat that party won to the candidate from that party with the most votes, assign the second seat to the candidate with the second-most votes, and so on. This allows the voters supporting each party to have a say in what candidates from that party get elected.</p>
+
+<p>In the last post, we went over an example election where the parties A, B, and C ran for 10 seats, and A was supported by 50 voters, B by 30 voters, and C by 20 voters. Closed party-list elected 5 A candidates, 3 B candidates, and 2 C candidates, thus giving a proportional outcome. Using D’Hondt will also result in this outcome, as is demonstrated by the table of vote counts below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Round</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><em>50</em></td>
+      <td>30</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>25</td>
+      <td><em>30</em></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><em>25</em></td>
+      <td>15</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>16.67</td>
+      <td>15</td>
+      <td><em>20</em></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><em>16.67</em></td>
+      <td>15</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>12.5</td>
+      <td><em>15</em></td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><em>12.5</em></td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><em>10</em></td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>8.33</td>
+      <td><em>10</em></td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>8.33</td>
+      <td>7.5</td>
+      <td><em>10</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>While the party proportions are the same, the difference is that D’Hondt will ensure that the elected A candidates are the 5 A candidates with the most votes, and same for the other parties. D’Hondt also specifies how to deal with scenarios where perfect party proportionally is impossible without fractional seats.</p>
+
+<p>Overall, this method gives voters strictly more choice than closed party-list did. However, it still limits voters to supporting a single candidate and a single party. In the next part, we’ll look at some proposals for altering this method to resolve this issue.</p>
+
+</div>
+
+<hr>
+
+<div class="notecomments">
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'technically-exists'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		 
+</div>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>
