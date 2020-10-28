@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20201026155446';
+const version = '20201028010842';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
@@ -60,6 +60,8 @@ var urlsToCache = [
 	
 	
 	
+		'/2020/10/27/the-motivation-behind-spsv-part-5',
+	
 		'/2020/10/26/the-motivation-behind-spsv-part-4',
 	
 		'/2020/10/25/the-motivation-behind-spsv-part-3',
@@ -67,8 +69,6 @@ var urlsToCache = [
 		'/2020/10/24/the-motivation-behind-spsv-part-2',
 	
 		'/2020/10/23/the-motivation-behind-spsv-part-1',
-	
-		'/2020/08/10/the-npvic-rcv1-and-maine',
 	
 	
 	
@@ -84,6 +84,30 @@ var urlsToCache = [
 	
 		
 			'/apple-touch-icon.png',
+		
+	
+		
+			'/assets/0-electorate.png',
+		
+	
+		
+			'/assets/1-dhondt.png',
+		
+	
+		
+			'/assets/2-rrv.png',
+		
+	
+		
+			'/assets/3-spsv.png',
+		
+	
+		
+			'/assets/4-rrv-ten-seats.png',
+		
+	
+		
+			'/assets/5-spsv-ten-seats.png',
 		
 	
 		

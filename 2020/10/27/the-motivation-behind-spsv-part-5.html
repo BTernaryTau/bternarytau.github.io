@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>The motivation behind SPSV, part 5</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>The motivation behind SPSV, part 5 | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="The motivation behind SPSV, part 5" />
+<meta name="author" content="BTernaryTau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In the last post, we went over how RRV extends SPAV to work with 0-n rated ballots. I mentioned that SPSV also extends SPAV to work with such ballots, but that it does so using a different method. In this post, I want to start off by explaining how this method works and why I find it superior to RRV’s approach. After this, we can move on to the full explanation of the motivation behind SPSV and to comparisons with other proportional methods. Section A: The Kotze-Pereira transformation The extension method that SPSV uses is called the Kotze-Pereira transformation, or KP transform for short. The basic idea behind the KP transform is that it’s possible to use approval ballots as building blocks for creating a score ballot. As an example, let’s use a 0-3 rated ballot that rates candidate A 0, candidate B 1, candidate C 2, and candidate D 3. We can construct this ballot out of 3 approval ballots by having the first ballot approve B, C, and D, the second approve C and D, and the third approve only D. That way, each candidate’s score equals the number of approvals they have. This isn’t our only option though. We could also use 1 ballot that approves B and D, and 2 ballots that approve C and D. This is a problem because not only do we want to construct score ballots from approval ballots, we also want to decompose score ballots into approval ballots. Thus, we need a means of choosing a unique set of approval ballots for each score ballot." />
+<meta property="og:description" content="In the last post, we went over how RRV extends SPAV to work with 0-n rated ballots. I mentioned that SPSV also extends SPAV to work with such ballots, but that it does so using a different method. In this post, I want to start off by explaining how this method works and why I find it superior to RRV’s approach. After this, we can move on to the full explanation of the motivation behind SPSV and to comparisons with other proportional methods. Section A: The Kotze-Pereira transformation The extension method that SPSV uses is called the Kotze-Pereira transformation, or KP transform for short. The basic idea behind the KP transform is that it’s possible to use approval ballots as building blocks for creating a score ballot. As an example, let’s use a 0-3 rated ballot that rates candidate A 0, candidate B 1, candidate C 2, and candidate D 3. We can construct this ballot out of 3 approval ballots by having the first ballot approve B, C, and D, the second approve C and D, and the third approve only D. That way, each candidate’s score equals the number of approvals they have. This isn’t our only option though. We could also use 1 ballot that approves B and D, and 2 ballots that approve C and D. This is a problem because not only do we want to construct score ballots from approval ballots, we also want to decompose score ballots into approval ballots. Thus, we need a means of choosing a unique set of approval ballots for each score ballot." />
+<link rel="canonical" href="https://bternarytau.github.io/2020/10/27/the-motivation-behind-spsv-part-5" />
+<meta property="og:url" content="https://bternarytau.github.io/2020/10/27/the-motivation-behind-spsv-part-5" />
+<meta property="og:site_name" content="Technically Exists" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-27T00:00:00+00:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-10-27T00:00:00+00:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bternarytau.github.io/assets/logo.png"},"name":"BTernaryTau"},"author":{"@type":"Person","name":"BTernaryTau"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://bternarytau.github.io/2020/10/27/the-motivation-behind-spsv-part-5"},"description":"In the last post, we went over how RRV extends SPAV to work with 0-n rated ballots. I mentioned that SPSV also extends SPAV to work with such ballots, but that it does so using a different method. In this post, I want to start off by explaining how this method works and why I find it superior to RRV’s approach. After this, we can move on to the full explanation of the motivation behind SPSV and to comparisons with other proportional methods. Section A: The Kotze-Pereira transformation The extension method that SPSV uses is called the Kotze-Pereira transformation, or KP transform for short. The basic idea behind the KP transform is that it’s possible to use approval ballots as building blocks for creating a score ballot. As an example, let’s use a 0-3 rated ballot that rates candidate A 0, candidate B 1, candidate C 2, and candidate D 3. We can construct this ballot out of 3 approval ballots by having the first ballot approve B, C, and D, the second approve C and D, and the third approve only D. That way, each candidate’s score equals the number of approvals they have. This isn’t our only option though. We could also use 1 ballot that approves B and D, and 2 ballots that approve C and D. This is a problem because not only do we want to construct score ballots from approval ballots, we also want to decompose score ballots into approval ballots. Thus, we need a means of choosing a unique set of approval ballots for each score ballot.","@type":"BlogPosting","url":"https://bternarytau.github.io/2020/10/27/the-motivation-behind-spsv-part-5","headline":"The motivation behind SPSV, part 5","dateModified":"2020-10-27T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1>Technically Exists</h1>
+<h2>The motivation behind SPSV, part 5</h2>
+<p class="meta">2020-10-27</p>
+
+<div class="content">
+	<p>In the last post, we went over how RRV extends SPAV to work with 0-<em>n</em> rated ballots. I mentioned that SPSV also extends SPAV to work with such ballots, but that it does so using a different method. In this post, I want to start off by explaining how this method works and why I find it superior to RRV’s approach. After this, we can move on to the full explanation of the motivation behind SPSV and to comparisons with other proportional methods.</p>
+
+<h3 id="section-a-the-kotze-pereira-transformation">Section A: The Kotze-Pereira transformation</h3>
+
+<p>The extension method that SPSV uses is called the Kotze-Pereira transformation, or KP transform for short. The basic idea behind the KP transform is that it’s possible to use approval ballots as building blocks for creating a score ballot. As an example, let’s use a 0-3 rated ballot that rates candidate A 0, candidate B 1, candidate C 2, and candidate D 3. We can construct this ballot out of 3 approval ballots by having the first ballot approve B, C, and D, the second approve C and D, and the third approve only D. That way, each candidate’s score equals the number of approvals they have.</p>
+
+<p>This isn’t our only option though. We could also use 1 ballot that approves B and D, and 2 ballots that approve C and D. This is a problem because not only do we want to construct score ballots from approval ballots, we also want to decompose score ballots into approval ballots. Thus, we need a means of choosing a unique set of approval ballots for each score ballot.</p>
+
+<!--break-->
+
+<p>It turns out that there’s a pretty intuitive criterion we can use. Specifically, we can restrict ourselves to only using approval ballots that “stack” on top of each other. By that, I mean there must be some way to order the ballots such that approvals are never added to subsequent ballots, only removed. Intuitively, this means that if each ballot was a row of toy blocks, then you could stack them on top of each other, like so:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In contrast, the second set of ballots cannot be stacked on top of each other:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>✅</td>
+      <td> </td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If the approvals were toy blocks, the approval for B would need to floating in the air. If we try to solve this by moving the B and D ballot to the bottom, we find that the approvals for C would need to be floating. Thus, there is no valid way to stack these ballots.</p>
+
+<p>It turns out that there is exactly one set of approval ballots that act as stackable building blocks for every possible score ballot. Constructing this set is simple: if a candidate receives <em>n</em> points from a score ballot, stack <em>n</em> approvals in that candidate’s column. Once you’ve done this for every candidate, the rows will form the desired approval ballots.</p>
+
+<p>This is how the KP transform transforms a 0-<em>n</em> score ballot into <em>n</em> approval ballots. From here, it’s simple to describe how SPSV works: run the KP transform on every voter’s score ballot, then run SPAV on the resulting approval ballots. That’s it. That’s the entire voting method.</p>
+
+<h3 id="section-b-comparison-with-rrv">Section B: Comparison with RRV</h3>
+
+<p>It’s probably not clear whether the above process gives results that differ from those that RRV gives. However, since RRV and SPSV are considered different methods, you can probably guess that the answer is yes. It may not be immediately apparent what the differences are, but after exploring a simple example they should be much clearer.</p>
+
+<p>First, let’s look at how electing a bunch of candidates that a voter slightly supports affects their ballot weight. We’ll consider an election with candidates A-G, where the voter rates A 5 and all other candidates 1. C will be elected first, then D, then E, and so on. We’ll look at how many points this voter’s ballot contributes toward both A and B as more candidates are elected, under both 0-5 RRV and 0-5 SPSV.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Candidate</th>
+      <th>Method</th>
+      <th>N/A</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+      <th>F</th>
+      <th>G</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>RRV</td>
+      <td>5</td>
+      <td>4.17</td>
+      <td>3.57</td>
+      <td>3.13</td>
+      <td>2.78</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>SPSV</td>
+      <td>5</td>
+      <td>4.5</td>
+      <td>4.33</td>
+      <td>4.25</td>
+      <td>4.2</td>
+      <td>4.17</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>RRV</td>
+      <td>1</td>
+      <td>0.83</td>
+      <td>0.71</td>
+      <td>0.63</td>
+      <td>0.56</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>SPSV</td>
+      <td>1</td>
+      <td>0.5</td>
+      <td>0.33</td>
+      <td>0.25</td>
+      <td>0.2</td>
+      <td>0.17</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Let’s start with candidate A. Both methods start with the original score of 5. After C is elected, we can see that RRV has deweighted the ballot more harshly, going down to a 4.17 compared to SPSV’s 4.5. By the time G is elected, RRV has deweighted the ballot all the way to 2.5, while SPSV has only now reached 4.17. If we were to continue electing candidates with a rating of 1, RRV’s rating will approach 0 while SPSV’s rating will approach 4.</p>
+
+<p>Moving on to candidate B, both voting methods start with a score of 1. The election of C prompts RRV to reduce the score to 0.83, while SPSV brings it all the way down to 0.5. Once G has been elected, RRV finally reaches 0.5, while SPSV is now all the way at 0.17. Continuing to elect candidates rated 1 would lead to both scores approaching 0, but SPSV’s score does so quicker than RRV’s.</p>
+
+<p>This example shows that SPSV prioritizes preserving the strength of ratings for highly-preferred candidates, and deprioritizes preserving the strength of ratings for weakly-preferred candidates. This effect is strongest when the deweighting results from electing a weakly-preferred candidate. In contrast, RRV deweights all ratings equally, regardless of how preferred the elected candidate was. Personally, I think SPSV interprets my ballot in a more faithful way than RRV does, and I would guess that most people would feel similarly.</p>
+
+<h3 id="section-c-visualizing-representation-accuracy">Section C: Visualizing representation accuracy</h3>
+
+<p>When it comes to choosing a good voting method, how faithfully it interpets ballots is not the only important factor to consider. We also want to take into account the accuracy of the voting methods in question.</p>
+
+<p>In order to visualize this, I’m first going to have to set up the scenario in which the elections take place. In this scenario there are three factions: the cyan group, the magenta group, and the yellow group. There are three seats available, and each group is running three candidates. Every voter gives the same ratings to candidates if they are from the same group. Those ratings are as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Voter Group</th>
+      <th>Cyan Candidates</th>
+      <th>Magenta Candidates</th>
+      <th>Yellow Candidate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cyan</td>
+      <td>10/10</td>
+      <td>0/10</td>
+      <td>3/10</td>
+    </tr>
+    <tr>
+      <td>Magenta</td>
+      <td>7/10</td>
+      <td>10/10</td>
+      <td>0/10</td>
+    </tr>
+    <tr>
+      <td>Yellow</td>
+      <td>0/10</td>
+      <td>5/10</td>
+      <td>10/10</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>At this point, the only detail we haven’t covered is the distribution of the three groups of voters. I’ve saved this for last because we actually won’t be looking at single distribution of the three groups, but rather all of them.</p>
+
+<p><img src="/assets/0-electorate.png" alt="Electorate plot" /></p>
+
+<p>This is an example of a <a href="https://en.wikipedia.org/wiki/Ternary_plot">ternary plot</a>. This particular ternary plot shows the proportion of the electorate that each group makes up. In the top-left corner, the electorate consists of only cyan voters. In the top-right corner, the electorate consists of only magenta voters. And if you couldn’t guess, in the bottom corner the electorate consists of only yellow voters. As you move closer to the center, the mix of voters becomes more even, until you reach the center where each faction makes up exactly 1/3 of the electorate.</p>
+
+<p>Now that you’ve seen the voter distribution, we’re going to look at what the winners look like for each of these possible electorates. We’ll start with a method we covered a while back, D’Hondt. Since D’Hondt uses single-mark ballots, each group will simply vote for a candidate from their faction. The distribution of winners looks like this:</p>
+
+<p><img src="/assets/1-dhondt.png" alt="D'Hondt plot" /></p>
+
+<p>Here, the colors represent how many candidates were elected from each faction. In the top-left, all elected candidates were from the cyan faction, so the area is colored cyan. Below that, we see a greenish-aqua color. This represents the election of two cyan candidates and one yellow candidate. If we then move to the right, we see a gray area that represents the election of one candidate from each group.</p>
+
+<p>As you can see, D’Hondt behaves pretty nicely when voters can easily be divided into factions. However, because it uses single-mark ballots, it cannot take into account anything other than voters’ first preferences. Thus, even in this favorable scenario it still can’t behave optimally.</p>
+
+<p>Next, we’ll take a look at how RRV behaves.</p>
+
+<p><img src="/assets/2-rrv.png" alt="RRV plot" /></p>
+
+<p>There are a couple things to notice here. First of all, this plot doesn’t look nearly as nice as the one for D’Hondt. This is pretty much an inevitable result of using information beyond first preferences. However, RRV actually doesn’t do that bad, all things considered. If you’re curious, you can <a href="https://forum.electionscience.org/t/sequential-multiwinner-voting-methods-visualized/773">check out how other proportional rated methods perform</a> for yourself; you’ll see that many of them have larger concave areas and appear far more irregular than RRV does.</p>
+
+<p>Moving on, the other thing to notice is that the plot is no longer symmetrical. Looking at the corners, the cyan area is larger than the other two, and the yellow area is the smallest. This reflects how the cyan candidates each receive 7 points from every magenta voter, and thus have a lot of second-choice support. Yellow, on the other hand, has very little second-choice support, and this is reflected in its smaller area.</p>
+
+<p>The last method we will look at is, of course, SPSV. Here is its plot:</p>
+
+<p><img src="/assets/3-spsv.png" alt="SPSV plot" /></p>
+
+<p>Overall, it looks pretty similar to RRV’s plot, which makes sense given that they are both extensions of SPAV. The main difference is that the center region is larger while the corner regions are all smaller. In fact, SPSV’s regions vary in size less than RRV’s do. The variance between the different corners hasn’t changed much, since SPSV still takes second choices into account. However, RRV had an oddly small center region, indicating that it is biased toward only representing two factions.</p>
+
+<p>This is easier to observe if we increase the number of seats available. Below are the plots for RRV and SPSV when filling 10 seats instead of 3.</p>
+
+<p><img src="/assets/4-rrv-ten-seats.png" alt="RRV 10 seat plot" /></p>
+
+<p><img src="/assets/5-spsv-ten-seats.png" alt="SPSV 10 seat plot" /></p>
+
+<p>As you might’ve guessed, the top plot is for RRV while the one below is for SPSV. The region outlined in black on each plot is the area in which all 3 factions have at least one candidate elected. In RRV, this area is really small, around 1/4 the size of the whole ternary plot. In SPSV, this area takes up all but the outer edge of the plot. A faction will only be completely excluded by SPSV if it makes up a really small proportion of the population, in which case there simply aren’t enough seats to fairly include them.</p>
+
+<p>I hope that everyone reading this feels that they have a better understanding of SPSV, or at least enjoyed themselves along the way. I know that this stuff can seem very complicated, and I’m not always able to explain things well. I encourage you to comment below with any questions you may have, and I’ll do my best to make things clearer. Thank you for reading! ❤️</p>
+
+</div>
+
+<hr>
+
+<div class="notecomments">
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'technically-exists'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		 
+</div>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>
