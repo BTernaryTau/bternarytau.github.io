@@ -4,7 +4,7 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2020-10-28T01:08:42+00:00</updated>
+	<updated>2020-12-24T18:27:41+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
@@ -479,7 +479,7 @@
 
 &lt;p&gt;But importantly, this approach extends to cases where the ballots can’t be neatly divided into groups. Since every ballot is reweighted individually, SPAV can handle complex relations between partially overlapping groups that methods like D’Hondt don’t even try to deal with. This makes it a major improvement in terms of the types of preferences that voters can express.&lt;/p&gt;
 
-&lt;p&gt;However, there’s still room to improve upon this. Right now voters must decide between fully supporting a candidate and not supporting a candidates at all. But we know that rated ballots can allow voters to express significantly more nuanced opinions. The next post will take a look at a proportional method that’s similar to SPAV but can handle ballots with more ratings.&lt;/p&gt;
+&lt;p&gt;However, there’s still room to improve upon this. Right now voters must decide between fully supporting a candidate and not supporting a candidate at all. But we know that rated ballots can allow voters to express significantly more nuanced opinions. The next post will take a look at a proportional method that’s similar to SPAV but can handle ballots with more ratings.&lt;/p&gt;
 </content>
 		</entry>
 	
