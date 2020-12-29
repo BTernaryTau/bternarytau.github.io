@@ -4,7 +4,7 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2020-12-24T18:27:41+00:00</updated>
+	<updated>2020-12-29T15:20:32+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
@@ -16,7 +16,9 @@
 			<link href="http://bternarytau.github.io/2020/10/27/the-motivation-behind-spsv-part-5"/>
 			<updated>2020-10-27T00:00:00+00:00</updated>
 			<id>http://bternarytau.github.io/2020/10/27/the-motivation-behind-spsv-part-5</id>
-			<content type="html">&lt;p&gt;In the last post, we went over how RRV extends SPAV to work with 0-&lt;em&gt;n&lt;/em&gt; rated ballots. I mentioned that SPSV also extends SPAV to work with such ballots, but that it does so using a different method. In this post, I want to start off by explaining how this method works and why I find it superior to RRV’s approach. After this, we can move on to the full explanation of the motivation behind SPSV and to comparisons with other proportional methods.&lt;/p&gt;
+			<content type="html">&lt;p&gt;&lt;em&gt;This blog post has been adapted from &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/&quot;&gt;a series of posts&lt;/a&gt; written for &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/&quot;&gt;r/SimDemocracy&lt;/a&gt;. If you haven’t read the previous entries, please start with &lt;a href=&quot;/2020/10/23/the-motivation-behind-spsv-part-1&quot;&gt;part 1&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In the last post, we went over how RRV extends SPAV to work with 0-&lt;em&gt;n&lt;/em&gt; rated ballots. I mentioned that SPSV also extends SPAV to work with such ballots, but that it does so using a different method. In this post, I want to start off by explaining how this method works and why I find it superior to RRV’s approach. After this, we can move on to the full explanation of the motivation behind SPSV and to comparisons with other proportional methods.&lt;/p&gt;
 
 &lt;h3 id=&quot;section-a-the-kotze-pereira-transformation&quot;&gt;Section A: The Kotze-Pereira transformation&lt;/h3&gt;
 

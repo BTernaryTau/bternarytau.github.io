@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20201224182741';
+const version = '20201229152032';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
