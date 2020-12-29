@@ -3,6 +3,8 @@ layout: post
 title: "The motivation behind SPSV, part 5"
 date: 2020-10-27
 ---
+*This blog post has been adapted from [a series of posts](https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/) written for [r/SimDemocracy](https://www.reddit.com/r/SimDemocracy/). If you haven’t read the previous entries, please start with [part 1]({% post_url 2020-10-23-the-motivation-behind-spsv-part-1 %}).*
+
 In the last post, we went over how RRV extends SPAV to work with 0-*n* rated ballots. I mentioned that SPSV also extends SPAV to work with such ballots, but that it does so using a different method. In this post, I want to start off by explaining how this method works and why I find it superior to RRV's approach. After this, we can move on to the full explanation of the motivation behind SPSV and to comparisons with other proportional methods.
 
 ### Section A: The Kotze-Pereira transformation
