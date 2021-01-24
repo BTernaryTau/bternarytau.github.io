@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20201229152032';
+const version = '20210124230837';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
@@ -58,7 +58,11 @@ var urlsToCache = [
 	
 		'/page6/',
 	
+		'/page7/',
 	
+	
+	
+		'/2021/01/24/social-choice-theory-paradigms',
 	
 		'/2020/10/27/the-motivation-behind-spsv-part-5',
 	
@@ -67,8 +71,6 @@ var urlsToCache = [
 		'/2020/10/25/the-motivation-behind-spsv-part-3',
 	
 		'/2020/10/24/the-motivation-behind-spsv-part-2',
-	
-		'/2020/10/23/the-motivation-behind-spsv-part-1',
 	
 	
 	

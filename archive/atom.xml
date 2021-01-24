@@ -4,12 +4,107 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2020-12-29T15:20:32+00:00</updated>
+	<updated>2021-01-24T23:08:37+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
 	</author>
 
+	
+		<entry>
+			<title>Social choice theory paradigms</title>
+			<link href="http://bternarytau.github.io/2021/01/24/social-choice-theory-paradigms"/>
+			<updated>2021-01-24T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2021/01/24/social-choice-theory-paradigms</id>
+			<content type="html">&lt;p&gt;Within social choice theory, there are two major approaches to evaluating voting methods: pass/fail analysis and probabilistic analysis. Pass/fail analysis primarily consists of defining mathematical criteria that seem desirable to have, then proving which methods pass them and which methods fail them. It also has other aspects like proving that certain sets of criteria cannot all be satisfied by the same voting method; this is where the famous &lt;a href=&quot;https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem&quot;&gt;Arrow’s impossibility theorem&lt;/a&gt; comes from. On the other hand, probabilistic analysis does away with this and instead assesses voting method performance using simulations and, where possible, data from real-world elections. This approach has its downsides, but overall I think it is by far the superior evaluation method.&lt;/p&gt;
+
+&lt;p&gt;As a simple example of the limitations of pass/fail analysis, I’d like to consider &lt;a href=&quot;https://en.wikipedia.org/wiki/Reversal_symmetry&quot;&gt;reversal symmetry&lt;/a&gt;. Reversal symmetry is passed if reversing the preferences of every voter will always result in a different winner when there are at least two candidates running. The idea behind this criterion is that voting methods should not consider the best candidate to also be the worst candidate. &lt;a href=&quot;https://en.wikipedia.org/wiki/Plurality_voting&quot;&gt;Single-choice plurality&lt;/a&gt; fails reversal symmetry, since it is possible for one candidate to have both a plurality of first-choice support and a plurality of last-choice “support”, which becomes first-choice support if preferences are inverted. On the other hand, &lt;a href=&quot;https://en.wikipedia.org/wiki/Approval_voting&quot;&gt;approval voting&lt;/a&gt; passes reversal symmetry, since the candidate with the most approvals cannot also be the candidate with the least approvals.&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;But what about a method that almost never violates reversal symmetry, but can do so in a very specific type of scenario? Enter &lt;a href=&quot;https://en.wikipedia.org/wiki/STAR_voting&quot;&gt;STAR voting&lt;/a&gt;. For elections with fewer than 3 candidates, STAR voting will never fail reversal symmetry, and the same holds for elections with more than 3 candidates. However, there is one type of 3 candidate election that causes STAR to fail reversal symmetry.&lt;/p&gt;
+
+&lt;div style=&quot;overflow-x:auto;&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Number of Voters&lt;/th&gt;
+        &lt;th&gt;Candidate A&lt;/th&gt;
+        &lt;th&gt;Candidate B&lt;/th&gt;
+        &lt;th&gt;Candidate C&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here, Candidate A receives 10 points, Candidate B receives 9 points, and Candidate C receives 6 points, so A and B are the finalists. A is favored over B on 2 ballots while B is favored over A on 3 ballots, so B is the winner under STAR. What happens if we then invert these voters’ preferences?&lt;/p&gt;
+
+&lt;div style=&quot;overflow-x:auto;&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Number of Voters&lt;/th&gt;
+        &lt;th&gt;Candidate A&lt;/th&gt;
+        &lt;th&gt;Candidate B&lt;/th&gt;
+        &lt;th&gt;Candidate C&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now Candidate A receives 15 points, Candidate B receives 16 points, and Candidate C receives 19 points, so B and C are the finalists. B is favored over C on 3 ballots while C is favored over B on 2 ballots, so B is again the winner under STAR.&lt;/p&gt;
+
+&lt;p&gt;This failure only happens in elections with 3 candidates A, B, and C, where scorewise A&amp;gt;B&amp;gt;C, but pairwise C&amp;gt;B&amp;gt;A. In any other election, STAR will pass reversal symmetry. But in pass/fail analysis, STAR is just considered to fail the criterion, with no consideration as to how often this failure might occur.&lt;/p&gt;
+
+&lt;p&gt;This brings us to the first big problem with pass/fail analysis; it doesn’t consider how frequently a method fails a given criterion. Proving that a method passes a criterion is useful, as that tells us that the method fails it 0% of the time. Constructing an example election where a method fails a criterion is much less useful, as we have no idea whether the method fails it 1% of the time or 99% of the time. In contrast, probabilistic analysis is specifically geared toward figuring out criterion failure rates.&lt;/p&gt;
+
+&lt;p&gt;The other big problem with pass/fail analysis is that it ignores the severity of failures. This is especially important when it comes to strategic voting. There is a big difference between incentivizing semi-honest voting, where voters may have to rank or rate A equal to B when they really prefer A to B, and incentivizing voters to reverse their preferences, ranking or rating B above A when they prefer A to B. Likewise, there is a big difference between strategic voting leading to a slightly less popular candidate being elected, and strategic voting leading to &lt;a href=&quot;https://electowiki.org/wiki/Dark_horse_plus_3_rivals&quot;&gt;the least popular candidate being elected&lt;/a&gt;. Probabilistic analysis can capture these details in a way that pass/fail analysis cannot.&lt;/p&gt;
+
+&lt;p&gt;As an example of this, I’d like to introduce the concept of &lt;a href=&quot;http://electionscience.github.io/vse-sim/VSEbasic/&quot;&gt;Voter Satisfaction Efficiency&lt;/a&gt; (VSE). VSE is a measure of the accuracy of voting methods that is obtained using simulations. The highest possible VSE is 100%, which corresponds to always choosing the best available candidate. A VSE of 0% corresponds to choosing a candidate uniformly at random, and a negative VSE corresponds to performing worse than chance.&lt;/p&gt;
+
+&lt;p&gt;To calculate the Voter Satisfaction Efficiency for a given voting method, you first simulate thousands of elections under that method. You then calculate how well-liked each candidate is by the electorate, and use those values along with the knowledge of which candidate the voting method chose in each election to obtain a final value for that method’s VSE. Importantly, this cannot be done using elections in real life because we have no reliable way of determining how satisfied with each candidate each voter would be. Using simulated voters eliminates this problem, and it also allows us to use a greater number of elections for the calculation.&lt;/p&gt;
+
+&lt;p&gt;In addition to comparing VSE across different voting methods, we can also compare VSE across different voter behaviors. This allows us to capture details and nuances that pass/fail analysis usually misses. One great example of this is present in &lt;a href=&quot;http://electionscience.github.io/vse-sim/VSE/&quot;&gt;Jameson Quinn’s VSE simulations&lt;/a&gt;. In these simulations, Quinn compares a number of voting methods under several different behaviors, including all honest voters and all strategic voters. If we only focus on &lt;a href=&quot;https://electowiki.org/wiki/Borda_count&quot;&gt;Borda count&lt;/a&gt; and &lt;a href=&quot;https://electowiki.org/wiki/Score_voting&quot;&gt;score voting&lt;/a&gt; with a 0-10 ballot, we can see that under honesty, both have a VSE of around 97%, which is really good. However, if we switch to considering their behavior under strategic voting, we find that score now has a VSE of 96%, which is a little lower, but not much. On the other hand, Borda’s VSE drops all the way to -11%! It turns out that rather than being a mere hypothetical, it is actually possible for strategic voting to cause one of the worst possible candidates to be elected so often that the voting method underperforms &lt;em&gt;selecting a candidate completely at random&lt;/em&gt;. This is the sort of detail that the usage of pass/fail analysis risks overlooking.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, the issue with pass/fail analysis lies in the “fail” part. If a method passes a criterion, then we know both the frequency and severity of failures, which is very useful. It’s when a method fails a criterion that we find ourselves knowing that the method isn’t perfect, but almost nothing else.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;For simplicity, we ignore all elections in which ties occur, as is common in pass/fail analysis. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>The motivation behind SPSV, part 5</title>
