@@ -13,3 +13,4 @@ title: "List of voting method simulations"
 * John Huang's [3-way election simulations](http://votesim.usa4r.org/simple3way/simple3way.html)
 * John Huang's [Multi-dimensional spatial voting simulations](http://votesim.usa4r.org/spatial5dim/spatial5dim.html)
 * Aldo Tragni's [Bounded reciprocal distance utility Yee diagrams](https://forum.electionscience.org/t/yee-diagramm-strong-monotonicity-failure-resistance/823)
+* Dave Gallets's [Interactive election simulations](http://sites.gallets.org/election-sim/) (with a [separate page](http://sites.gallets.org/election-sim/irv-vs-star/) focusing on IRV and STAR)
