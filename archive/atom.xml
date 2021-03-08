@@ -4,12 +4,35 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2021-02-05T20:43:59+00:00</updated>
+	<updated>2021-03-08T02:42:39+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
 	</author>
 
+	
+		<entry>
+			<title>On dealbreaker voting criteria</title>
+			<link href="http://bternarytau.github.io/2021/03/07/on-dealbreaker-voting-criteria"/>
+			<updated>2021-03-07T00:00:00+00:00</updated>
+			<id>http://bternarytau.github.io/2021/03/07/on-dealbreaker-voting-criteria</id>
+			<content type="html">&lt;p&gt;In &lt;a href=&quot;/2021/01/24/social-choice-theory-paradigms&quot;&gt;my previous post&lt;/a&gt;, I argued that probabilistic analysis was superior to pass/fail analysis as an approach to social choice theory. As a quick recap, pass/fail analysis tries to identify desirable criteria, then figure out which methods pass them and which methods don’t. Probabilistic analysis instead tries to identify how often failures of these criteria occur and how severe those failures are.&lt;/p&gt;
+
+&lt;p&gt;One consequence of pass/fail analysis is that it’s tempting to adopt what I would call a “dealbreaker criterion”, a voting criterion which a voting method must pass for you to even consider recommending it. If a voting method fails that criterion, it doesn’t matter if it is otherwise great; that failure is a dealbreaker. I’m not sure how many people actually do this, but I do know that it’s common to pick a criterion to emphasize as being crucial, which at the very least comes close.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;A good example of this would be the &lt;a href=&quot;https://en.wikipedia.org/wiki/Comparison_of_electoral_systems#Strategy_criteria&quot;&gt;favorite betrayal criterion&lt;/a&gt;, which is passed if voters are never incentivized to give less than maximum support to their favorite candidate. One of the leading voting reform organizations, the Center for Election Science, places a lot of emphasis on this criterion. In &lt;a href=&quot;https://electionscience.org/approval-voting-faqs/&quot;&gt;their FAQ page&lt;/a&gt;, the first bullet point after the question “How is approval voting better than our current system?” is “Voters can always vote for their favorite candidate, whether they have a good or bad chance of winning”. The two single-winner methods they support, approval voting and score voting, both pass the favorite betrayal criterion. At the very minimum this is quite close to being a dealbreaker criterion for them, and it’s highly likely that some of their members do hold it as a dealbreaker criterion even if the organization doesn’t quite do so.&lt;/p&gt;
+
+&lt;p&gt;Having a dealbreaker criterion means that you care about pass/fail analysis for that criterion, since you’re not interested in supporting any method that fails it. It doesn’t matter if a voting method fails favorite betrayal only 1% of the time; you want to feel 100% safe about voting for your favorite, not 99%! While this seems like a reasonable position to take, it leads to some surprising conclusions.&lt;/p&gt;
+
+&lt;p&gt;For example, while single-winner approval voting passes the favorite betrayal criterion, &lt;a href=&quot;https://electionscience.org/voting-methods/getting-proportional-with-approval-voting/&quot;&gt;the proportional version&lt;/a&gt; that the Center for Election Science supports does not. In fact, essentially no proportional method passes this criterion, including every method currently in use, so adopting it as a dealbreaker pretty much means opposing proportional representation. This is not at all obvious, and I expect that most proponents of the favorite betrayal criterion haven’t really wrangled with this implication, especially if they consider favorite betrayal to be a dealbreaker.&lt;/p&gt;
+
+&lt;p&gt;This sort of thing happens often enough that it’s turned me off of having any dealbreaker criteria. As a couple more examples, the Center for Range Voting strongly supports the &lt;a href=&quot;https://en.wikipedia.org/wiki/Participation_criterion&quot;&gt;participation criterion&lt;/a&gt;, but recommends reweighted range voting even though it fails participation. Likewise, the Equal Vote Coalition strongly supports the &lt;a href=&quot;https://bternarytau.github.io/miscellaneous/voting-theory/cancellation-criterion&quot;&gt;cancellation criterion&lt;/a&gt;, but recommends allocated score voting even though it fails this criterion. It’s debatable whether the level of support for these criteria is high enough for them to truly be dealbreakers, but even if we assume they aren’t, it’s clear that adopting them as dealbreakers would have surprising consequences for those organizations’ recommendations.&lt;/p&gt;
+
+&lt;p&gt;This is another reason I dislike pass/fail analysis. The way it encourages people to adopt dealbreaker criteria can lead them to quickly reject voting methods without thinking through whether the failure of that criterion is really bad enough to dismiss the method. Under probabilistic analysis, this approach is much less natural than one that weights failures of criteria based on how frequent and severe they are, which captures a lot more information than simply having a dealbreaker criterion.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>Social choice theory paradigms</title>
