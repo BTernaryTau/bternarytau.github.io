@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20210519200952';
+const version = '20210519205512';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
@@ -79,6 +79,10 @@ var urlsToCache = [
 		
 	
 		
+	
+		
+	
+		
 			'/android-chrome-192x192.png',
 		
 	
@@ -154,8 +158,6 @@ var urlsToCache = [
 	
 		
 			'/safari-pinned-tab.svg',
-		
-	
 		
 	
 		
