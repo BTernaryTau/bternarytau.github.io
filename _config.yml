@@ -18,3 +18,4 @@ host: 0.0.0.0
 author: BTernaryTau
 publisher: BTernaryTau
 logo: /assets/logo.png
+exclude: [script]
