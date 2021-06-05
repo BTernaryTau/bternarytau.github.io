@@ -6,6 +6,7 @@ title: "List of voting method simulations"
 ## {{ page.title }}
 ### Metric-based simulations
 
+* Robert F. Bordley's [average utility simulations](https://www.jstor.org/stable/1956015)
 * Samuel Merrill's [Condorcet efficiency and social utility efficiency simulations](https://www.jstor.org/stable/2110786)
 * Warren D. Smith's [Bayesian Regret simulations](https://rangevoting.org/BayRegDum.html)
 * Brian Olson's [Close election simulations](https://bolson.org/voting/sim.html)
@@ -16,13 +17,16 @@ title: "List of voting method simulations"
 * John Huang's [Multi-dimensional spatial voting simulations](http://votesim.usa4r.org/spatial5dim/spatial5dim.html)
 * Dave Gallets's [FPTP, IRV, and STAR simulations](http://sites.gallets.org/election-sim/irv-vs-star/)
 * John Huang's [Strategic voter simulations](http://votesim.usa4r.org/tactical/tactical.html)
+* User psephomancy's [statistical simulations](https://www.votingtheory.org/forum/topic/28/graphs-and-notes-from-weber-1977) of Robert J. Weber's [closed-form effectiveness calculations](https://cowles.yale.edu/publications/cfdp/cfdp-498) (partial transcription [here](https://gist.github.com/endolith/e64af102646bef7b4b2714733c2c31ce))
 
 ### Visualization-based simulations
 
 * Ka-Ping Yee's [Voting simulation visualizations](http://zesty.ca/voting/sim/)
 * Brian Olson's [Yee diagrams](https://bolson.org/voting/sim_one_seat/)
+* Warren D. Smith's [Yee diagrams](https://www.rangevoting.org/Extremism.html)
 * The Equal Vote Coalition's [Animated Yee diagrams](https://www.youtube.com/watch?v=-4FXLQoLDBA)
 * User psephomancy's [2D unimodal and bimodal voting diagrams](https://imgur.com/gallery/huNsRO6)
+* Keith Edmonds's [Proportional cardinal voting method visualizations](https://forum.electionscience.org/t/utilitarian-sum-vs-monroe-selection/355)
 * Parker Friedland's [Apportionment algorithm ternary plots](https://forum.electionscience.org/t/apportionment-algorithems-visualized/569)
 * Parker Friedland's [Single-winner voting method ternary plots](https://forum.electionscience.org/t/single-winner-voting-methods-visualized/575)
 * Parker Friedland's [Sequential multi-winner voting method ternary plots](https://forum.electionscience.org/t/sequential-multiwinner-voting-methods-visualized/773)
@@ -31,6 +35,7 @@ title: "List of voting method simulations"
 
 ### Interactive simulations
 
+* Ka-Ping Yee's [Voteline simulator](http://zesty.ca/voting/voteline/), which is unfortunately a Flash applet
 * Nicky Case's [To Build a Better Ballot](https://ncase.me/ballot/)
 * The [Smart Voting Simulator](https://www.smartvotesim.com/) built off of the above simulator
 * Dave Gallets's [Interactive election simulations](http://sites.gallets.org/election-sim/)
