@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Why I like STAR voting: the 5-star ballot"
+date: 2021-06-06
+---
+
+*This blog post is the second in a series of posts about STAR voting. If you haven’t read [the previous entry]({% post_url 2021-04-25-why-i-like-star-voting-simplicity-and-familiarity %}), I recommend you do so before starting this one.*
+
+In the previous post I made the case that STAR voting is simple enough to be a viable option for voting method reform, but I didn't explain why STAR voting would be worth adopting. I want to start that explanation by talking about the ballot type that STAR voting uses. Often referred to as "the 5-star ballot", it is a rated ballot with a scale of 0-5. This means that unlike with RCV ballots, you are free to rate candidates equally and to skip ratings as you like.
+
+<p><img src="/assets/STAR-ballot.png" alt="STAR ballot" class="cap-width" /></p>
+<p align="center"><i>An example STAR ballot</i></p>
+
+<!--break-->
+
+The process of filling out this ballot is simple and intuitive. You start by giving your favorite candidate a rating of 5 and your least favorite candidate a rating of 0. Then you simply go down the list and rate each candidate relative to those two. An important aspect of this process is that you never have to consider all the candidates at once. If you have to, you can limit yourself to only considering at most 3 candidates at a time. This isn't a big deal for elections with only a few candidates, but if you have an election with 20 or so candidates this could save a lot of voters from being overwhelmed.
+
+In contrast, when filling out a ranked ballot in a 20-candidate election you'll probably find yourself considering most or all of the candidates at once. There are ways you can avoid this, but none of them are particularly intuitive. Most likely you'll find yourself filling in the rankings sequentially, each time considering all of the candidates that you have yet to rank.[^1] Not only will this be more difficult than rating the candidates, it will also just take longer.[^2]
+
+Another advantage of rated ballots is that [voters are less likely to spoil them](https://www.rangevoting.org/SPRatesSumm.html) by filling them out incorrectly. The single-mark ballots used for most elections in the United States have a spoilage rate of around 1-4%. Rated ballots outperform single-mark ballots on this metric with a spoilage rate of roughly 0-2%. On the other hand, ranked ballots tend to increase spoilage rates to around 4-9%.
+
+It's hard to say precisely why rated ballots are spoiled less often than single-mark ballots. One possibility is that voters pay more attention when they have to express a preference for each candidate, reducing the rate at which they make mistakes. However, it is quite easy to explain why ranked ballots have high spoilage rates; there are far more restrictions on how to fill them out. Voters must not give a candidate multiple rankings or skip rankings, and most of the time they are forbidden from giving multiple candidates the same ranking too.
+
+On top of this, spoiled rated ballots can usually be partially salvaged as most candidates will have been given valid ratings. The candidates that have invalid ratings can be handled a few ways. One option is to simply count any invalid ratings as being blank, which under STAR voting means that candidate will receive a 0. Another option for when multiple ratings are given to a candidate is to default to the lowest of those ratings. But regardless of how this is handled, voters will be able to fill out rated ballots far more reliably than ranked or single-mark ballots.
+
+A third advantage of ratings is that they do a great job of capturing information about voter preferences. [Direct comparisons](https://www.researchgate.net/publication/233061022_Rankings_Ratings_and_the_Measurement_of_Values_Evidence_for_the_Superior_Validity_of_Ratings) between ratings and rankings show that ratings have greater validity. In particular, one problem with full rankings is that they have a tendency to capture noise as they force every voter to differentiate between all alternatives. In contrast, ratings allow voters to express the differences that actually matter to them without including extra noise. Additionally, the existence of a fixed pool of candidates that all voters are rating gives voters context, allowing them to rate candidates relative to one another. This allows 5-star ballots to avoid the problems with 5-star product ratings, which arise from consumers not having the context of how good or bad competing products are or even what products are competitors.
+
+In addition to ranked ballots, approval ballots and single-mark ballots also fall short of capturing high-quality information. Approval ballots actually do a better job at this than you might expect, but ultimately a binary evaluation of each candidate falls short of the higher resolution evaluations that the 5-star ballot enables. On the other hand, single-mark ballots are just as pathetic as you'd expect when it comes to capturing voter preferences. Asking for your favorite candidate is simply not enough.
+
+This brings us to the final reason why 5-star ballots are great: expressiveness. Single-mark ballots, approval ballots, and ranked ballots capped at a few candidates are all much worse at allowing voters to express their preferences between the candidates. You can try to make ranked ballots more expressive by allowing voters to rank an unlimited number of candidates, but as previously mentioned this will, in practice, just lead to the collection of noise.
+
+This leaves ballots with a greater number of ratings as the only practical option for increasing expressiveness further. However, there are diminishing returns to adding more ratings, which starts to really kick in at around 6-8 ratings. Since a 5-star ballot already has 6 ratings (remember that 0 is an option), there wouldn't be too much of a benefit from a larger rating scale.[^3]
+
+A good ballot format must be easy to fill out while minimizing ballot spoilage, and it must also allow voters to express themselves while capturing voter preferences accurately. The 5-star ballot excels at balancing all of these concerns in a way that other formats simply cannot match. Single-mark ballots are more easily spoiled, barely allow voters to express themselves at all, and cannot collect enough preference information. Ranked ballots are more difficult to fill out, have very high spoilage rates, and have lower validity. Approval ballots do better, but they're still not all that expressive and have a limited ability to collect voter preferences.
+
+The 5-star ballot is one major reason why STAR voting is such a great method, but it's not the only reason. Next in the series will be a post on how implementing STAR voting could change pre-election polls for the better. That post will be more speculative than this one, but I believe that pre-election polls are an underappreciated aspect of elections that deserve a closer look. Until then, just remember that single-mark ballots are terrible and we can do so much better.
+
+[^1]: Computer scientists might realize that this is a sorting problem and consider using an algorithm like [merge sort](https://en.wikipedia.org/wiki/Merge_sort) that runs in O(*n* log *n*) time instead of the one I mentioned above, but even if you can perform merge sort in you head faster than you can perform selection sort, it will almost certainly still be slower than a simple O(*n*) rating algorithm.
+
+[^2]: Many jurisdictions try to avoid these problems by [limiting voters](https://www.fairvoteca.org/tips_for_voters_english) to [only ranking](https://ballotpedia.org/Mayoral_election_in_New_York,_New_York_(2021)#Ranked-choice_voting) a [few candidates](https://eastpointevotes.com/ranked-choice-voting/). This does reduce the complexity of filling out a ranked ballot some, but it comes at the cost of ballot expressiveness.
+
+[^3]: My guess is that a scale with 6 ratings is a little smaller than is optimal for maximizing effective expressiveness, and the 0-5 scale was chosen primarily for marketing purposes. However, [there are reasons](https://www.equal.vote/science) to believe that STAR voting benefits from a smaller scale in ways that other rated methods don't, so I don't consider this to be an issue.
