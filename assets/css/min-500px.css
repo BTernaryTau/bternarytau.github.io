@@ -101,6 +101,8 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+  img.cap-width {
+    max-width: 500px; }
 
 hr {
   border: 0;
