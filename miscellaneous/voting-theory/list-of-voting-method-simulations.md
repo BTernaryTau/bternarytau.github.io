@@ -12,7 +12,7 @@ title: "List of voting method simulations"
 * Brian Olson's [close election simulations](https://bolson.org/voting/sim.html)
 * Joseph T. Ornstein and Robert Z. Norman's [IRV monotonicity failure simulations](https://www.researchgate.net/publication/258164743_Frequency_of_monotonicity_failure_under_Instant_Runoff_Voting_Estimates_based_on_a_spatial_model_of_elections)
 * Jameson Quinn's [Voter Satisfaction Efficiency simulations](https://electionscience.github.io/vse-sim/VSE/)
-* Keith Edmonds's [proportional cardinal voting method simulations](https://forum.electionscience.org/t/wolf-committee-results/519)
+* Keith Edmonds's [proportional cardinal voting method simulations](https://forum.electionscience.org/t/wolf-committee-results/519) ([backup link](https://github.com/endolith/Keith_Edmonds_vote_sim))
 * John Huang's [3-way election simulations](http://votesim.usa4r.org/simple3way/simple3way.html)
 * John Huang's [multi-dimensional spatial voting simulations](http://votesim.usa4r.org/spatial5dim/spatial5dim.html)
 * Dave Gallets's [FPTP, IRV, and STAR simulations](http://sites.gallets.org/election-sim/irv-vs-star/)
@@ -29,7 +29,7 @@ title: "List of voting method simulations"
 * Keith Edmonds's [proportional cardinal voting method visualizations](https://forum.electionscience.org/t/utilitarian-sum-vs-monroe-selection/355)
 * Parker Friedland's [apportionment algorithm ternary plots](https://forum.electionscience.org/t/apportionment-algorithems-visualized/569)
 * Parker Friedland's [single-winner voting method ternary plots](https://forum.electionscience.org/t/single-winner-voting-methods-visualized/575)
-* Parker Friedland's [sequential multi-winner voting method ternary plots](https://forum.electionscience.org/t/sequential-multiwinner-voting-methods-visualized/773)
+* Parker Friedland's [sequential multi-winner voting method ternary plots](https://forum.electionscience.org/t/sequential-multiwinner-voting-methods-visualized/773) ([backup link](https://github.com/ParkerFriedland/TernaryPlot))
 * Aldo Tragni's [Yee diagrams](https://forum.electionscience.org/t/yee-diagramm-strong-monotonicity-failure-resistance/823)
 * Justin Helps's [animated FPTP, IRV, and approval simulations](https://www.youtube.com/watch?v=yhO6jfHPFQU)
 
