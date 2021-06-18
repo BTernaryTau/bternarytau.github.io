@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>Unified levels of support</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.10/dist/katex.css" integrity="sha384-1gzTdjHZLufp5FQLVWOUgR2+OzKVh+lZdxrcJLH6LbOWTS5zZ4hjjGyfSXQzQRnA" crossorigin="anonymous">
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Unified levels of support | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Unified levels of support" />
+<meta name="author" content="BTernaryTau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A blog about mathematics, computer science, social choice theory, futurism, video games, and more" />
+<meta property="og:description" content="A blog about mathematics, computer science, social choice theory, futurism, video games, and more" />
+<link rel="canonical" href="https://bternarytau.github.io/miscellaneous/voting-theory/unified-levels-of-support" />
+<meta property="og:url" content="https://bternarytau.github.io/miscellaneous/voting-theory/unified-levels-of-support" />
+<meta property="og:site_name" content="Technically Exists" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unified levels of support" />
+<script type="application/ld+json">
+{"headline":"Unified levels of support","description":"A blog about mathematics, computer science, social choice theory, futurism, video games, and more","author":{"@type":"Person","name":"BTernaryTau"},"@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bternarytau.github.io/assets/logo.png"},"name":"BTernaryTau"},"url":"https://bternarytau.github.io/miscellaneous/voting-theory/unified-levels-of-support","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1 id="technically-exists">Technically Exists</h1>
+<h2 id="unified-levels-of-support">Unified levels of support</h2>
+<h3 id="introduction">Introduction</h3>
+
+<p>Unified levels of support serves as a general framework for comparing the amount of support a ballot gives to one candidate to the amount of support it gives to another candidate. This framework consists of procedures for producing mappings from candidates to levels of support for various ballot formats. The levels of support are represented by the positive integers, where integers closer to 0 correspond to higher levels of support. It is important to emphasize that unified levels of support is not intended for use in comparing support levels across different ballot types, only within them.</p>
+
+<h3 id="mapping-rules">Mapping rules</h3>
+
+<h4 id="single-mark-ballots">Single-mark ballots</h4>
+
+<p>For single-mark ballots, the candidate that is marked is mapped to 1. All other candidates are mapped to 2.</p>
+
+<h4 id="n-mark-ballots"><em>n</em>-mark ballots</h4>
+
+<p><em>n</em>-mark ballots are very similar to single-mark ballots. Marked candidates are mapped to 1, and unmarked candidates are mapped to 2.</p>
+
+<h4 id="approval-ballots">Approval ballots</h4>
+
+<p>For approval ballots, candidates who are approved of are mapped to 1, and candidates who aren’t approved of are mapped to 2.</p>
+
+<h4 id="ranked-ballots">Ranked ballots</h4>
+
+<p>For ranked ballots, a candidate ranked <em>i</em>th is mapped to <em>i</em>. One important clarification is that ranked ballots with equal rankings are assumed to be using <a href="https://en.wikipedia.org/wiki/Ranking#Dense_ranking_%28%221223%22_ranking%29">dense ranking</a>. As an example, the ballot A&gt;B=C=D&gt;E is considered to rank E 3rd, not 5th, so E is mapped to 3. Another detail is that any unranked candidates are treated as if they are ranked immediately below the last ranked candidate. Thus, the ballot A&gt;B&gt;C is considered to rank D and E 4th, so both are mapped to 4.</p>
+
+<h4 id="rated-ballots">Rated ballots</h4>
+
+<p>For rated ballots with ratings <em>r</em><sub>1</sub>, <em>r</em><sub>2</sub>, …, <em>r<sub>n</sub></em>, where <em>r</em><sub>1</sub> indicates maximum support and <em>r<sub>n</sub></em> indicates minimum support, a candidate with a rating of <em>r<sub>i</sub></em> is mapped to <em>i</em>.</p>
+
+<h4 id="for-or-against-n-ballots">For-or-against-<em>n</em> ballots</h4>
+
+<p>For-or-against-<em>n</em> ballots allow voters to either vote for <em>n</em> candidates or vote against <em>n</em> candidates. Candidates voted for are mapped to 1, candidates left unmarked are mapped to 2, and candidates voted against are mapped to 3.</p>
+
+<h3 id="example-usage">Example Usage</h3>
+
+<p>Consider two ranked ballots, A&gt;B=C=D&gt;E&gt;F and A=B&gt;C&gt;D=E. Following the rules from the ranked ballots section, both ballots give candidates A, C, E, and F the same levels of support (1–4 respectively). The first ballot gives B less support and D more support than the second ballot does, since the first ballot maps B and D to 2 while the second ballot maps B to 1 and D to 3.</p>
+
+<p>Unified levels of support allows for comparisons of how much support each candidate receives from each of those ballots, despite those ballots giving equal rankings to many candidates and despite the second ballot lacking an explicit ranking for candidate F.</p>
+
+<h3 id="applications">Applications</h3>
+
+<p>Unified levels of support is intended to function as an interface for any voting criteria that depend on comparing levels of support across candidates and/or across ballots. Since it is new, no criteria that make use of it exist yet.</p>
+
+<h3 id="limitations">Limitations</h3>
+
+<p>One example of a voting method that unified levels of support can’t completely handle is the version of score voting that uses average scores <a href="https://rangevoting.org/Blanks.html">unaffected by blanks</a>. In this case, the mapping scheme is incomplete because there is nowhere to map blanks to. For voting methods that count blanks as 0s instead, blanks and 0s can simply be treated as the same rating, enabling the framework to provide complete mappings for those methods.</p>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>
