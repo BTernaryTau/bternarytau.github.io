@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>Recursive ranked voting</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.10/dist/katex.css" integrity="sha384-1gzTdjHZLufp5FQLVWOUgR2+OzKVh+lZdxrcJLH6LbOWTS5zZ4hjjGyfSXQzQRnA" crossorigin="anonymous">
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Recursive ranked voting | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Recursive ranked voting" />
+<meta name="author" content="BTernaryTau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A blog about mathematics, computer science, social choice theory, futurism, video games, and more" />
+<meta property="og:description" content="A blog about mathematics, computer science, social choice theory, futurism, video games, and more" />
+<link rel="canonical" href="https://bternarytau.github.io/miscellaneous/voting-theory/recursive-ranked-voting" />
+<meta property="og:url" content="https://bternarytau.github.io/miscellaneous/voting-theory/recursive-ranked-voting" />
+<meta property="og:site_name" content="Technically Exists" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Recursive ranked voting" />
+<script type="application/ld+json">
+{"headline":"Recursive ranked voting","description":"A blog about mathematics, computer science, social choice theory, futurism, video games, and more","author":{"@type":"Person","name":"BTernaryTau"},"@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bternarytau.github.io/assets/logo.png"},"name":"BTernaryTau"},"url":"https://bternarytau.github.io/miscellaneous/voting-theory/recursive-ranked-voting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1 id="technically-exists">Technically Exists</h1>
+<h2 id="recursive-ranked-voting">Recursive ranked voting</h2>
+<h3 id="introduction">Introduction</h3>
+
+<p>Recursive ranked voting is a voting method that chooses a winner recursively, <a href="https://www.dangermouse.net/esoteric/bogobogosort.html">because as anyone who knows anything at all about computer science knows, recursion is always good and cool</a>.</p>
+
+<h3 id="description">Description</h3>
+
+<p>Under recursive ranked voting, voters cast their ballots by ranking all the candidates. Equal rankings are not allowed. The votes are tallied using every ranked voting method the voters are familiar with (excluding this one). If all of them agree on the winner, that candidate is elected. Otherwise, the voters vote on which of those voting methods to use to choose the winner, using (what else?) recursive ranked voting.</p>
+
+<h3 id="analysis">Analysis</h3>
+
+<p>Because the way recursive ranked voting is tallied depends on what ranked voting methods the voters know of, it is actually more of a family of voting methods. As the number of ranked methods the voters are familiar with increases, the expected number of voting rounds before recursive ranked voting terminates also increases. Without making assumptions about human behavior, it is impossible to show that recursive ranked voting always terminates. However, there is a base case, and it is possible to reach it, so it’s safe to assume that termination will occur sooner or later.</p>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>
