@@ -12,6 +12,7 @@ title: "List of voting method simulations"
 * Samuel Merrill's [social utility efficiency simulations](https://www.jstor.org/stable/2110786)
 * Warren D. Smith's [Bayesian Regret simulations](https://rangevoting.org/BayRegDum.html)
 * Brian Olson's [close election simulations](https://bolson.org/voting/sim.html)
+* Jeremy A. Hansen's [bloc approval and bloc plurality utility simulations](https://www.researchgate.net/publication/275274570_Comparing_Approval_At-Large_to_Plurality_At-Large_in_Multi-Member_Districts)
 * Jameson Quinn's [Voter Satisfaction Efficiency simulations](https://electionscience.github.io/vse-sim/VSE/)
 * Keith Edmonds's [proportional cardinal voting method utility simulations](https://forum.electionscience.org/t/wolf-committee-results/519) ([backup link](https://github.com/endolith/Keith_Edmonds_vote_sim))
 * John Huang's [3-way election simulations](http://votesim.usa4r.org/simple3way/simple3way.html)
@@ -23,8 +24,11 @@ title: "List of voting method simulations"
 
 * Samuel Merrill's [Condorcet efficiency simulations](https://www.jstor.org/stable/2110786)
 * Joseph T. Ornstein and Robert Z. Norman's [IRV monotonicity failure simulations](https://www.researchgate.net/publication/258164743_Frequency_of_monotonicity_failure_under_Instant_Runoff_Voting_Estimates_based_on_a_spatial_model_of_elections)
+* Jeremy A. Hansen's [bloc approval and bloc plurality variance simulations](https://www.researchgate.net/publication/275274570_Comparing_Approval_At-Large_to_Plurality_At-Large_in_Multi-Member_Districts)
+* Mostapha Diss and Ahmed Doghmi's [Condorcet committee efficiency, prior successor paradox, and leaving member paradox simulations](https://www.researchgate.net/publication/318007397_Multi-Winner_Scoring_Election_Methods_Condorcet_Consistency_and_Paradoxes)
 * Keith Edmonds's [proportional cardinal voting method variance simulations](https://forum.electionscience.org/t/wolf-committee-results/519) ([backup link](https://github.com/endolith/Keith_Edmonds_vote_sim))
 * Dave Gallets's [FPTP, IRV, and STAR simulations](http://sites.gallets.org/election-sim/irv-vs-star/)
+* Richard Fobes's [ranked ballot pseudo clone independence and pseudo IIA failure simulations](https://www.reddit.com/r/EndFPTP/comments/ns8cri/clone_independence_ci_and_independence_of/)
 
 ### Visualization-based simulations
 
