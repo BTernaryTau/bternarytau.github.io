@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Superintelligence reference page"
+description: "A collection of links to notable pages on superintelligence and AI alignment."
 ---
 # {{ site.title }}
 ## {{ page.title }}

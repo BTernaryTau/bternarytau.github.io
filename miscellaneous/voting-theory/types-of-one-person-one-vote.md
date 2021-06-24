@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Types of one person, one vote"
+description: "There are several voting method criteria that can be viewed as versions of one person, one vote."
 ---
 # {{ site.title }}
 ## {{ page.title }}

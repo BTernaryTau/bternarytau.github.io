@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Cancellation criterion"
+description: "The cancellation criterion, also known as the equality criterion and as Frohnmayer balance, requires that every vote be perfectly cancelled out by some other vote."
 ---
 # {{ site.title }}
 ## {{ page.title }}

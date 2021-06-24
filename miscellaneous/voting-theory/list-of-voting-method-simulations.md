@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "List of voting method simulations"
+description: "A catalog of simulations that test the behavior of voting methods in various ways."
 ---
 # {{ site.title }}
 ## {{ page.title }}

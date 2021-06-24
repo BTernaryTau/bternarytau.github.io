@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Candidate balancing algorithm"
+description: "The candidate balancing algorithm is an algorithm for balancing elected candidates among several groups."
 ---
 # {{ site.title }}
 ## {{ page.title }}

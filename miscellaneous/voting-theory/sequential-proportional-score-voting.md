@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Sequential proportional score voting"
+description: "Sequential proportional score voting is a rated party-agnostic proportional method based on sequential proportional approval voting and the Kotze-Pereira transformation."
 ---
 # {{ site.title }}
 ## {{ page.title }}

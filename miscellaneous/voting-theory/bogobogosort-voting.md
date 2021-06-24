@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Bogobogosort voting"
+description: "Bogobogosort voting is a voting method based on the popular bogobogosort algorithm."
 ---
 # {{ site.title }}
 ## {{ page.title }}

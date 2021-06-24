@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Unified levels of support"
+description: "Unified levels of support serves as a general framework for comparing the amounts of support that ballots give to candidates."
 ---
 # {{ site.title }}
 ## {{ page.title }}

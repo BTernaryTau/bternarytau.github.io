@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Consensus plurality voting"
+description: "Consensus plurality voting is a ranked method related to consensus ranked choice voting and plurality voting."
 ---
 # {{ site.title }}
 ## {{ page.title }}

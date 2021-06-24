@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Anonymity criterion"
+description: "The anonymity criterion requires that a given ballot must be counted the same way regardless of who casted it."
 ---
 # {{ site.title }}
 ## {{ page.title }}

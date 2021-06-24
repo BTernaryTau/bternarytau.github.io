@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Recursive ranked voting"
+description: "Recursive ranked voting is a voting method that chooses a winner using recursion."
 ---
 # {{ site.title }}
 ## {{ page.title }}

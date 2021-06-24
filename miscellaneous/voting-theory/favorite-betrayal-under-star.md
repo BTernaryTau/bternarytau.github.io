@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Favorite betrayal under STAR"
+description: "STAR voting is known to fail the favorite betrayal criterion, but there is disagreement regarding which situations incentivize favorite betrayal."
 ---
 # {{ site.title }}
 ## {{ page.title }}

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Identical input options criterion"
+description: "The identical input options criterion requires that all voters have the same set of options for casting their ballot."
 ---
 # {{ site.title }}
 ## {{ page.title }}

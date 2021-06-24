@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "BAR voting"
+description: "BAR voting is a ranked method based on STAR voting that was invented by the city council of Lompoc, California."
 ---
 # {{ site.title }}
 ## {{ page.title }}

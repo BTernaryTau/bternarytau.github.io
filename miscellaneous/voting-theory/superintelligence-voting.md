@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Superintelligence voting"
+description: "Superintelligence voting is a voting method designed to harness the power of artificial superintelligence for electoral purposes."
 ---
 # {{ site.title }}
 ## {{ page.title }}

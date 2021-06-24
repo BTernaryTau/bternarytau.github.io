@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "RAWS voting"
+description: "RAWS voting, or Runoff Alternating With Score voting, is a rated runoff method similar to STAR voting."
 ---
 # {{ site.title }}
 ## {{ page.title }}
