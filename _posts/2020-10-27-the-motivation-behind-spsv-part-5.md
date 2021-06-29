@@ -43,12 +43,64 @@ It's probably not clear whether the above process gives results that differ from
 
 First, let's look at how electing a bunch of candidates that a voter slightly supports affects their ballot weight. We'll consider an election with candidates A-G, where the voter rates A 5 and all other candidates 1. C will be elected first, then D, then E, and so on. We'll look at how many points this voter's ballot contributes toward both A and B as more candidates are elected, under both 0-5 RRV and 0-5 SPSV.
 
-Candidate|Method|N/A|C|D|E|F|G
---|--|--|--|--|--|--|--
-A|RRV|5|4.17|3.57|3.13|2.78|2.5
-A|SPSV|5|4.5|4.33|4.25|4.2|4.17
-B|RRV|1|0.83|0.71|0.63|0.56|0.5
-B|SPSV|1|0.5|0.33|0.25|0.2|0.17
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Candidate</th>
+        <th>Method</th>
+        <th>N/A</th>
+        <th>C</th>
+		<th>D</th>
+		<th>E</th>
+		<th>F</th>
+		<th>G</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A</td>
+        <td>RRV</td>
+        <td>5</td>
+        <td>4.17</td>
+		<td>3.57</td>
+		<td>3.13</td>
+		<td>2.78</td>
+		<td>2.5</td>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>SPSV</td>
+        <td>5</td>
+        <td>4.5</td>
+		<td>4.33</td>
+		<td>4.25</td>
+		<td>4.2</td>
+		<td>4.17</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>RRV</td>
+        <td>1</td>
+        <td>0.83</td>
+		<td>0.71</td>
+		<td>0.63</td>
+		<td>0.56</td>
+		<td>0.5</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>SPSV</td>
+        <td>1</td>
+        <td>0.5</td>
+		<td>0.33</td>
+		<td>0.25</td>
+		<td>0.2</td>
+		<td>0.17</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Let's start with candidate A. Both methods start with the original score of 5. After C is elected, we can see that RRV has deweighted the ballot more harshly, going down to a 4.17 compared to SPSV's 4.5. By the time G is elected, RRV has deweighted the ballot all the way to 2.5, while SPSV has only now reached 4.17. If we were to continue electing candidates with a rating of 1, RRV's rating will approach 0 while SPSV's rating will approach 4.
 
@@ -62,15 +114,40 @@ When it comes to choosing a good voting method, how faithfully it interpets ball
 
 In order to visualize this, I'm first going to have to set up the scenario in which the elections take place. In this scenario there are three factions: the cyan group, the magenta group, and the yellow group. There are three seats available, and each group is running three candidates. Every voter gives the same ratings to candidates if they are from the same group. Those ratings are as follows:
 
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Voter Group</th>
+        <th>Cyan Candidates</th>
+        <th>Magenta Candidates</th>
+        <th>Yellow Candidates</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cyan</td>
+        <td>10/10</td>
+        <td>0/10</td>
+        <td>3/10</td>
+      </tr>
+      <tr>
+        <td>Magenta</td>
+        <td>7/10</td>
+        <td>10/10</td>
+        <td>0/10</td>
+      </tr>
+      <tr>
+        <td>Yellow</td>
+        <td>0/10</td>
+        <td>5/10</td>
+        <td>10/10</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-| Voter Group | Cyan Candidates | Magenta Candidates | Yellow Candidate |
-| -- | -- | -- | -- |
-| Cyan | 10/10 | 0/10 | 3/10 |
-| Magenta | 7/10 | 10/10 | 0/10 |
-| Yellow | 0/10 | 5/10 | 10/10 |
-
-
-At this point, the only detail we haven't covered is the distribution of the three groups of voters. I've saved this for last because we actually won't be looking at single distribution of the three groups, but rather all of them.
+At this point, the only detail we haven't covered is the distribution of the three groups of voters. I've saved this for last because we actually won't be looking at a single distribution of the three groups, but rather all of them.
 
 ![Electorate plot](/assets/0-electorate.png)
 
