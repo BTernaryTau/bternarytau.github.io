@@ -4,7 +4,7 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<updated>2021-06-29T12:02:49+00:00</updated>
+	<updated>2021-06-29T15:20:36+00:00</updated>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
@@ -460,62 +460,64 @@
 
 &lt;p&gt;First, let’s look at how electing a bunch of candidates that a voter slightly supports affects their ballot weight. We’ll consider an election with candidates A-G, where the voter rates A 5 and all other candidates 1. C will be elected first, then D, then E, and so on. We’ll look at how many points this voter’s ballot contributes toward both A and B as more candidates are elected, under both 0-5 RRV and 0-5 SPSV.&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Candidate&lt;/th&gt;
-      &lt;th&gt;Method&lt;/th&gt;
-      &lt;th&gt;N/A&lt;/th&gt;
-      &lt;th&gt;C&lt;/th&gt;
-      &lt;th&gt;D&lt;/th&gt;
-      &lt;th&gt;E&lt;/th&gt;
-      &lt;th&gt;F&lt;/th&gt;
-      &lt;th&gt;G&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;A&lt;/td&gt;
-      &lt;td&gt;RRV&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;4.17&lt;/td&gt;
-      &lt;td&gt;3.57&lt;/td&gt;
-      &lt;td&gt;3.13&lt;/td&gt;
-      &lt;td&gt;2.78&lt;/td&gt;
-      &lt;td&gt;2.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;A&lt;/td&gt;
-      &lt;td&gt;SPSV&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;4.5&lt;/td&gt;
-      &lt;td&gt;4.33&lt;/td&gt;
-      &lt;td&gt;4.25&lt;/td&gt;
-      &lt;td&gt;4.2&lt;/td&gt;
-      &lt;td&gt;4.17&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;B&lt;/td&gt;
-      &lt;td&gt;RRV&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;0.83&lt;/td&gt;
-      &lt;td&gt;0.71&lt;/td&gt;
-      &lt;td&gt;0.63&lt;/td&gt;
-      &lt;td&gt;0.56&lt;/td&gt;
-      &lt;td&gt;0.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;B&lt;/td&gt;
-      &lt;td&gt;SPSV&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;0.5&lt;/td&gt;
-      &lt;td&gt;0.33&lt;/td&gt;
-      &lt;td&gt;0.25&lt;/td&gt;
-      &lt;td&gt;0.2&lt;/td&gt;
-      &lt;td&gt;0.17&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;div style=&quot;overflow-x:auto;&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Candidate&lt;/th&gt;
+        &lt;th&gt;Method&lt;/th&gt;
+        &lt;th&gt;N/A&lt;/th&gt;
+        &lt;th&gt;C&lt;/th&gt;
+		&lt;th&gt;D&lt;/th&gt;
+		&lt;th&gt;E&lt;/th&gt;
+		&lt;th&gt;F&lt;/th&gt;
+		&lt;th&gt;G&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;A&lt;/td&gt;
+        &lt;td&gt;RRV&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;4.17&lt;/td&gt;
+		&lt;td&gt;3.57&lt;/td&gt;
+		&lt;td&gt;3.13&lt;/td&gt;
+		&lt;td&gt;2.78&lt;/td&gt;
+		&lt;td&gt;2.5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;A&lt;/td&gt;
+        &lt;td&gt;SPSV&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;4.5&lt;/td&gt;
+		&lt;td&gt;4.33&lt;/td&gt;
+		&lt;td&gt;4.25&lt;/td&gt;
+		&lt;td&gt;4.2&lt;/td&gt;
+		&lt;td&gt;4.17&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;B&lt;/td&gt;
+        &lt;td&gt;RRV&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;0.83&lt;/td&gt;
+		&lt;td&gt;0.71&lt;/td&gt;
+		&lt;td&gt;0.63&lt;/td&gt;
+		&lt;td&gt;0.56&lt;/td&gt;
+		&lt;td&gt;0.5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;B&lt;/td&gt;
+        &lt;td&gt;SPSV&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;0.5&lt;/td&gt;
+		&lt;td&gt;0.33&lt;/td&gt;
+		&lt;td&gt;0.25&lt;/td&gt;
+		&lt;td&gt;0.2&lt;/td&gt;
+		&lt;td&gt;0.17&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Let’s start with candidate A. Both methods start with the original score of 5. After C is elected, we can see that RRV has deweighted the ballot more harshly, going down to a 4.17 compared to SPSV’s 4.5. By the time G is elected, RRV has deweighted the ballot all the way to 2.5, while SPSV has only now reached 4.17. If we were to continue electing candidates with a rating of 1, RRV’s rating will approach 0 while SPSV’s rating will approach 4.&lt;/p&gt;
 
@@ -529,38 +531,40 @@
 
 &lt;p&gt;In order to visualize this, I’m first going to have to set up the scenario in which the elections take place. In this scenario there are three factions: the cyan group, the magenta group, and the yellow group. There are three seats available, and each group is running three candidates. Every voter gives the same ratings to candidates if they are from the same group. Those ratings are as follows:&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Voter Group&lt;/th&gt;
-      &lt;th&gt;Cyan Candidates&lt;/th&gt;
-      &lt;th&gt;Magenta Candidates&lt;/th&gt;
-      &lt;th&gt;Yellow Candidate&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Cyan&lt;/td&gt;
-      &lt;td&gt;10/10&lt;/td&gt;
-      &lt;td&gt;0/10&lt;/td&gt;
-      &lt;td&gt;3/10&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Magenta&lt;/td&gt;
-      &lt;td&gt;7/10&lt;/td&gt;
-      &lt;td&gt;10/10&lt;/td&gt;
-      &lt;td&gt;0/10&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Yellow&lt;/td&gt;
-      &lt;td&gt;0/10&lt;/td&gt;
-      &lt;td&gt;5/10&lt;/td&gt;
-      &lt;td&gt;10/10&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;div style=&quot;overflow-x:auto;&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Voter Group&lt;/th&gt;
+        &lt;th&gt;Cyan Candidates&lt;/th&gt;
+        &lt;th&gt;Magenta Candidates&lt;/th&gt;
+        &lt;th&gt;Yellow Candidates&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Cyan&lt;/td&gt;
+        &lt;td&gt;10/10&lt;/td&gt;
+        &lt;td&gt;0/10&lt;/td&gt;
+        &lt;td&gt;3/10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Magenta&lt;/td&gt;
+        &lt;td&gt;7/10&lt;/td&gt;
+        &lt;td&gt;10/10&lt;/td&gt;
+        &lt;td&gt;0/10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Yellow&lt;/td&gt;
+        &lt;td&gt;0/10&lt;/td&gt;
+        &lt;td&gt;5/10&lt;/td&gt;
+        &lt;td&gt;10/10&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
 
-&lt;p&gt;At this point, the only detail we haven’t covered is the distribution of the three groups of voters. I’ve saved this for last because we actually won’t be looking at single distribution of the three groups, but rather all of them.&lt;/p&gt;
+&lt;p&gt;At this point, the only detail we haven’t covered is the distribution of the three groups of voters. I’ve saved this for last because we actually won’t be looking at a single distribution of the three groups, but rather all of them.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/0-electorate.png&quot; alt=&quot;Electorate plot&quot; /&gt;&lt;/p&gt;
 
