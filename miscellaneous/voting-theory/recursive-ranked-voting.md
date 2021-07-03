@@ -5,6 +5,9 @@ description: "Recursive ranked voting is a voting method that chooses a winner u
 ---
 # {{ site.title }}
 ## {{ page.title }}
+
+Inspired by [this story](https://electowiki.org/wiki/User:Psephomancy/Voting_for_voting_systems).
+
 ### Introduction
 
 Recursive ranked voting is a voting method that chooses a winner recursively, [because as anyone who knows anything at all about computer science knows, recursion is always good and cool](https://www.dangermouse.net/esoteric/bogobogosort.html).
