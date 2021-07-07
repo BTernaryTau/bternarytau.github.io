@@ -43,7 +43,7 @@ Unified levels of support allows for comparisons of how much support each candid
 
 ### Applications
 
-Unified levels of support is intended to function as an interface for any voting criteria that depend on comparing levels of support across candidates and/or across ballots. Since it is new, no criteria that make use of it exist yet.
+Unified levels of support is intended to function as an interface for any voting criteria that depend on comparing levels of support across candidates and/or across ballots. An example of a criterion that uses it for comparisons across ballots is the [sequential cancellation criterion](/miscellaneous/voting-theory/sequential-cancellation-criterion).
 
 ### Limitations
 
