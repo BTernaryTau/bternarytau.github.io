@@ -39,7 +39,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Sequential cancellation criterion" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"BTernaryTau"},"headline":"Sequential cancellation criterion","description":"The sequential cancellation criterion is an extension of the cancellation criterion to sequential multi-winner voting methods. This criterion requires that, whenever a voter likes each of the candidates elected so far the same amount as another voter does, their ballots be capable of cancelling each other out in the next round.","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bternarytau.github.io/assets/logo.png"},"name":"BTernaryTau"},"url":"https://bternarytau.github.io/miscellaneous/voting-theory/sequential-cancellation-criterion","@context":"https://schema.org"}</script>
+{"headline":"Sequential cancellation criterion","description":"The sequential cancellation criterion is an extension of the cancellation criterion to sequential multi-winner voting methods. This criterion requires that, whenever a voter likes each of the candidates elected so far the same amount as another voter does, their ballots be capable of cancelling each other out in the next round.","author":{"@type":"Person","name":"BTernaryTau"},"@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bternarytau.github.io/assets/logo.png"},"name":"BTernaryTau"},"url":"https://bternarytau.github.io/miscellaneous/voting-theory/sequential-cancellation-criterion","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		</head>
@@ -75,6 +75,12 @@
 <p>In most cases, a pair of ballots that cancels in one round won’t cancel in previous or subsequent rounds. This means it’s possible that adding a cancelling pair of ballots to the election changes the candidates elected in earlier rounds; when this happens, the ballots aren’t required to cancel.</p>
 
 <p>The sequential cancellation criterion is implied by the cancellation criterion.</p>
+
+<h3 id="application-to-bloc-voting-methods">Application to bloc voting methods</h3>
+
+<p>The sequential cancellation criterion was primarily designed with proportional methods in mind, but it also behaves nicely in the context of <a href="https://electowiki.org/wiki/Bloc_voting">bloc voting</a>. In fact, the sequential cancellation criterion and the cancellation criterion are equivalent for bloc methods. Below is an informal sketch of the relevant proof.</p>
+
+<p>The cancellation criterion always implies the sequential cancellation criterion, so to show that the two are equivalent for bloc methods it suffices to show that if a bloc method passes the sequential cancellation criterion, it must also pass the cancellation criterion. A bloc method works by applying a single-winner method to elect a candidate, removing that candidate from the ballots, and then repeating those two steps until all seats are filled. The sequential cancellation criterion requires that a voting method pass cancellation in the first round, so the single-winner method employed by the bloc method must pass cancellation. Since the bloc method uses this same method in every round, it will pass cancellation in every round. Thus, the bloc method itself must pass cancellation.</p>
 
 <h3 id="comparison-to-vote-unitarity">Comparison to vote unitarity</h3>
 
