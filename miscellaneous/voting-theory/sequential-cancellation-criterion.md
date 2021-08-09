@@ -23,6 +23,12 @@ In most cases, a pair of ballots that cancels in one round won't cancel in previ
 
 The sequential cancellation criterion is implied by the cancellation criterion.
 
+### Application to bloc voting methods
+
+The sequential cancellation criterion was primarily designed with proportional methods in mind, but it also behaves nicely in the context of [bloc voting](https://electowiki.org/wiki/Bloc_voting). In fact, the sequential cancellation criterion and the cancellation criterion are equivalent for bloc methods. Below is an informal sketch of the relevant proof.
+
+The cancellation criterion always implies the sequential cancellation criterion, so to show that the two are equivalent for bloc methods it suffices to show that if a bloc method passes the sequential cancellation criterion, it must also pass the cancellation criterion. A bloc method works by applying a single-winner method to elect a candidate, removing that candidate from the ballots, and then repeating those two steps until all seats are filled. The sequential cancellation criterion requires that a voting method pass cancellation in the first round, so the single-winner method employed by the bloc method must pass cancellation. Since the bloc method uses this same method in every round, it will pass cancellation in every round. Thus, the bloc method itself must pass cancellation.
+
 ### Comparison to vote unitarity
 
 [Vote unitarity](https://electowiki.org/wiki/Vote_unitarity) is an alternate proposal for defining one person, one vote in the context of proportional representation. Unlike the sequential cancellation criterion, it does not attempt to extend the cancellation criterion (and thus does not reduce to the cancellation criterion for single-winner methods). Instead, it takes a different approach centered around constraining the spending of ballot weights.
