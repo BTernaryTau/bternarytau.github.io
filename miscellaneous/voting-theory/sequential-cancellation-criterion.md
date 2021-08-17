@@ -12,7 +12,7 @@ To give a more formal definition of the sequential cancellation criterion, some 
 
 A sequential voting method $$m$$ passes the sequential cancellation criterion if for every ballot $$b$$ and incomplete list of winners $$W$$, there exists some ballot $$b'$$ such that both of the following hold:
 
-1. For every candidate $$c$$ in $$W$$, $$b(c) = b'(c)$$.
+1. For every candidate $$c$$ in $$W$$, $$b'(c) = b(c)$$.
 2. For any list of ballots $$b_1, b_2, \dots, b_n$$, if $$m(b_1, b_2, \dots, b_n)[1:\vert W \vert] = W$$ and $$m(b_1, b_2, \dots, b_n, b, b')[1:\vert W \vert] = W$$, then $$m(b_1, b_2, \dots, b_n, b, b')[1:\vert W \vert+1] = m(b_1, b_2, \dots, b_n)[1:\vert W \vert+1]$$.
 
 Note that this definition assumes that $$m$$ passes the [anonymity criterion](/miscellaneous/voting-theory/anonymity-criterion).
@@ -21,13 +21,13 @@ Because no candidates are elected before the first round, the sequential cancell
 
 In most cases, a pair of ballots that cancels in one round won't cancel in previous or subsequent rounds. This means it's possible that adding a cancelling pair of ballots to the election changes the candidates elected in earlier rounds; when this happens, the ballots aren't required to cancel.
 
-The sequential cancellation criterion is implied by the cancellation criterion.
-
 ### Application to bloc voting methods
 
 The sequential cancellation criterion was primarily designed with proportional methods in mind, but it also behaves nicely in the context of [bloc voting](https://electowiki.org/wiki/Bloc_voting). In fact, the sequential cancellation criterion and the cancellation criterion are equivalent for bloc methods. Below is an informal sketch of the relevant proof.
 
-The cancellation criterion always implies the sequential cancellation criterion, so to show that the two are equivalent for bloc methods it suffices to show that if a bloc method passes the sequential cancellation criterion, it must also pass the cancellation criterion. A bloc method works by applying a single-winner method to elect a candidate, removing that candidate from the ballots, and then repeating those two steps until all seats are filled. The sequential cancellation criterion requires that a voting method pass cancellation in the first round, so the single-winner method employed by the bloc method must pass cancellation. Since the bloc method uses this same method in every round, it will pass cancellation in every round. Thus, the bloc method itself must pass cancellation.
+First, it must be shown that if a bloc method passes the sequential cancellation criterion, it passes the cancellation criterion as well. A bloc method works by applying a single-winner method to elect a candidate, removing that candidate from the ballots, and then repeating those two steps until all seats are filled. The sequential cancellation criterion requires that a voting method pass cancellation in the first round, so the single-winner method employed by the bloc method must pass cancellation. Since the bloc method uses this same method in every round, it will pass cancellation in every round. Thus, the bloc method itself must pass cancellation.
+
+Next, it must be shown that if a bloc method passes the cancellation criterion, it also passes the sequential cancellation criterion. Consider some arbitrary ballot $$b$$ and incomplete list of winners $$W$$. Let $$b_{-W}$$ be the ballot formed by taking $$b$$ and removing every candidate from $$W$$. Since the single-winner method employed passes cancellation, there must exist some cancelling ballot $$b'_{-W}$$ for $$b_{-W}$$. Let $$b'$$ be this cancelling ballot but modified so that it maps each candidate $$c$$ in $$W$$ to $$b(c)$$. If adding $$b$$ and $$b'$$ doesn't change the first $$\vert W \vert$$ winners, then in the next round all candidates in $$W$$ will have been removed and these ballots will reduce to $$b_{-W}$$ and $$b'_{-W}$$. This means the next winner elected will also remain unchanged if $$b$$ and $$b'$$ are added. Therefore, this bloc method must pass sequential cancellation.
 
 ### Comparison to vote unitarity
 
