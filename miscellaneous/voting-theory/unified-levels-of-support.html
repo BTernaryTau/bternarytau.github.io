@@ -86,11 +86,86 @@
 
 <p>For-or-against-<em>n</em> ballots allow voters to either vote for <em>n</em> candidates or vote against <em>n</em> candidates. Candidates voted for are mapped to 1, candidates left unmarked are mapped to 2, and candidates voted against are mapped to 3.</p>
 
-<h3 id="example-usage">Example Usage</h3>
+<h3 id="example-usage">Example usage</h3>
 
 <p>Consider two ranked ballots, A&gt;B=C=D&gt;E&gt;F and A=B&gt;C&gt;D=E. Following the rules from the ranked ballots section, both ballots give candidates A, C, E, and F the same levels of support (1–4 respectively). The first ballot gives B less support and D more support than the second ballot does, since the first ballot maps B and D to 2 while the second ballot maps B to 1 and D to 3.</p>
 
 <p>Unified levels of support allows for comparisons of how much support each candidate receives from each of those ballots, despite those ballots giving equal rankings to many candidates and despite the second ballot lacking an explicit ranking for candidate F.</p>
+
+<h3 id="design-consistency">Design consistency</h3>
+
+<p>The mapping procedures included in unified levels of support are designed to be as consistent with each other as possible. Below is a table of all the instances in which one mapping scheme can be viewed as a subset of a different ballot format’s mapping scheme.</p>
+
+<div style="overflow-x:auto;">
+  <table>
+    <tbody>
+      <tr>
+        <td>Single-mark ballots</td>
+        <td><em>n</em>-mark ballots where <em>n</em> = 1</td>
+      </tr>
+      <tr>
+        <td>Single-mark ballots</td>
+		<td>Approval ballots with 1 candidate approved</td>
+      </tr>
+	  <tr>
+        <td>Single-mark ballots</td>
+		<td>Ranked ballots with 1 candidate ranked 1st and all others not ranked</td>
+      </tr>
+	  <tr>
+        <td>Single-mark ballots</td>
+		<td>Ranked ballots with 1 candidate ranked 1st and all others ranked 2nd</td>
+      </tr>
+	  <tr>
+        <td>Single-mark ballots</td>
+		<td>Rated ballots with 2 ratings where 1 candidate is rated <em>r</em><sub>1</sub> and all others are rated <em>r</em><sub>2</sub></td>
+      </tr>
+	  <tr>
+        <td>Single-mark ballots</td>
+		<td>For-or-against-<em>n</em> ballots where <em>n</em> = 1 and 1 candidate is voted for</td>
+      </tr>
+	  <tr>
+        <td><em>n</em>-mark ballots</td>
+		<td>Approval ballots with <em>n</em> candidates approved</td>
+      </tr>
+	  <tr>
+        <td><em>n</em>-mark ballots</td>
+		<td>Ranked ballots with <em>n</em> candidates ranked 1st and all others not ranked</td>
+      </tr>
+	  <tr>
+        <td><em>n</em>-mark ballots</td>
+		<td>Ranked ballots with <em>n</em> candidates ranked 1st and all others ranked 2nd</td>
+      </tr>
+	  <tr>
+        <td><em>n</em>-mark ballots</td>
+		<td>Rated ballots with 2 ratings where <em>n</em> candidates are rated <em>r</em><sub>1</sub> and all others are rated <em>r</em><sub>2</sub></td>
+      </tr>
+	  <tr>
+        <td><em>n</em>-mark ballots</td>
+		<td>For-or-against-<em>n</em> ballots where <em>n</em> candidates are voted for</td>
+      </tr>
+	  <tr>
+        <td>Approval ballots</td>
+		<td>Ranked ballots with approved candidates ranked 1st and all others not ranked</td>
+      </tr>
+	  <tr>
+        <td>Approval ballots</td>
+		<td>Ranked ballots with approved candidates ranked 1st and all others ranked 2nd</td>
+      </tr>
+	  <tr>
+        <td>Approval ballots</td>
+		<td>Rated ballots with 2 ratings where approved candidates are rated <em>r</em><sub>1</sub> and all others are rated <em>r</em><sub>2</sub></td>
+      </tr>
+	  <tr>
+        <td>Ranked ballots</td>
+		<td>Rated ballots with 1 rating per rank where all candidates ranked <em>i</em>th are rated <em>r<sub>i</sub></em></td>
+      </tr>
+	  <tr>
+        <td>For-or-against-<em>n</em> ballots</td>
+		<td>Rated ballots with 3 ratings where <em>n</em> candidates are rated either <em>r</em><sub>1</sub> or <em>r</em><sub>3</sub> and all others are rated <em>r</em><sub>2</sub></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <h3 id="notation">Notation</h3>
 
