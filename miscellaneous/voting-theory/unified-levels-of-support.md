@@ -35,11 +35,86 @@ For rated ballots with ratings *r*<sub>1</sub>, *r*<sub>2</sub>, …, *r<sub>n</
 
 For-or-against-*n* ballots allow voters to either vote for *n* candidates or vote against *n* candidates. Candidates voted for are mapped to 1, candidates left unmarked are mapped to 2, and candidates voted against are mapped to 3.
 
-### Example Usage
+### Example usage
 
 Consider two ranked ballots, A>B=C=D>E>F and A=B>C>D=E. Following the rules from the ranked ballots section, both ballots give candidates A, C, E, and F the same levels of support (1–4 respectively). The first ballot gives B less support and D more support than the second ballot does, since the first ballot maps B and D to 2 while the second ballot maps B to 1 and D to 3.
 
 Unified levels of support allows for comparisons of how much support each candidate receives from each of those ballots, despite those ballots giving equal rankings to many candidates and despite the second ballot lacking an explicit ranking for candidate F.
+
+### Design consistency
+
+The mapping procedures included in unified levels of support are designed to be as consistent with each other as possible. Below is a table of all the instances in which one mapping scheme can be viewed as a subset of a different ballot format's mapping scheme.
+
+<div style="overflow-x:auto;">
+  <table>
+    <tbody>
+      <tr>
+        <td>Single-mark ballots</td>
+        <td markdown="span">*n*-mark ballots where *n* = 1</td>
+      </tr>
+      <tr>
+        <td>Single-mark ballots</td>
+		<td>Approval ballots with 1 candidate approved</td>
+      </tr>
+	  <tr>
+        <td>Single-mark ballots</td>
+		<td>Ranked ballots with 1 candidate ranked 1st and all others not ranked</td>
+      </tr>
+	  <tr>
+        <td>Single-mark ballots</td>
+		<td>Ranked ballots with 1 candidate ranked 1st and all others ranked 2nd</td>
+      </tr>
+	  <tr>
+        <td>Single-mark ballots</td>
+		<td markdown="span">Rated ballots with 2 ratings where 1 candidate is rated *r*<sub>1</sub> and all others are rated *r*<sub>2</sub></td>
+      </tr>
+	  <tr>
+        <td>Single-mark ballots</td>
+		<td markdown="span">For-or-against-*n* ballots where *n* = 1 and 1 candidate is voted for</td>
+      </tr>
+	  <tr>
+        <td markdown="span">*n*-mark ballots</td>
+		<td markdown="span">Approval ballots with *n* candidates approved</td>
+      </tr>
+	  <tr>
+        <td markdown="span">*n*-mark ballots</td>
+		<td markdown="span">Ranked ballots with *n* candidates ranked 1st and all others not ranked</td>
+      </tr>
+	  <tr>
+        <td markdown="span">*n*-mark ballots</td>
+		<td markdown="span">Ranked ballots with *n* candidates ranked 1st and all others ranked 2nd</td>
+      </tr>
+	  <tr>
+        <td markdown="span">*n*-mark ballots</td>
+		<td markdown="span">Rated ballots with 2 ratings where *n* candidates are rated *r*<sub>1</sub> and all others are rated *r*<sub>2</sub></td>
+      </tr>
+	  <tr>
+        <td markdown="span">*n*-mark ballots</td>
+		<td markdown="span">For-or-against-*n* ballots where *n* candidates are voted for</td>
+      </tr>
+	  <tr>
+        <td>Approval ballots</td>
+		<td>Ranked ballots with approved candidates ranked 1st and all others not ranked</td>
+      </tr>
+	  <tr>
+        <td>Approval ballots</td>
+		<td>Ranked ballots with approved candidates ranked 1st and all others ranked 2nd</td>
+      </tr>
+	  <tr>
+        <td>Approval ballots</td>
+		<td markdown="span">Rated ballots with 2 ratings where approved candidates are rated *r*<sub>1</sub> and all others are rated *r*<sub>2</sub></td>
+      </tr>
+	  <tr>
+        <td>Ranked ballots</td>
+		<td markdown="span">Rated ballots with 1 rating per rank where all candidates ranked *i*th are rated *r<sub>i</sub>*</td>
+      </tr>
+	  <tr>
+        <td markdown="span">For-or-against-*n* ballots</td>
+		<td markdown="span">Rated ballots with 3 ratings where *n* candidates are rated either *r*<sub>1</sub> or *r*<sub>3</sub> and all others are rated *r*<sub>2</sub></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Notation
 
