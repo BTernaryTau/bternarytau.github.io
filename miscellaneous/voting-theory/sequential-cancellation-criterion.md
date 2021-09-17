@@ -15,7 +15,7 @@ A sequential voting method $$m$$ passes the sequential cancellation criterion if
 1. For every candidate $$c$$ in $$W$$, $$b'(c) = b(c)$$.
 2. For any list of ballots $$b_1, b_2, \dots, b_n$$, if $$m(b_1, b_2, \dots, b_n)[1:\vert W \vert] = W$$ and $$m(b_1, b_2, \dots, b_n, b, b')[1:\vert W \vert] = W$$, then $$m(b_1, b_2, \dots, b_n, b, b')[1:\vert W \vert+1] = m(b_1, b_2, \dots, b_n)[1:\vert W \vert+1]$$.
 
-Note that this definition assumes that $$m$$ passes the [anonymity criterion](/miscellaneous/voting-theory/anonymity-criterion).
+Note that this definition assumes that $$m$$ is deterministic and passes the [anonymity criterion](/miscellaneous/voting-theory/anonymity-criterion) (though there is an [extension](https://www.votingtheory.org/forum/topic/122/handling-non-deterministic-tie-breaking-in-voting-criteria/2) that also applies to non-deterministic methods).
 
 Because no candidates are elected before the first round, the sequential cancellation criterion requires that ballots obey the [cancellation criterion](/miscellaneous/voting-theory/cancellation-criterion) during that round. This also means that it reduces to the cancellation criterion for single-winner methods since they only have one round.
 
