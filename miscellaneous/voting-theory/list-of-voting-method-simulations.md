@@ -44,13 +44,13 @@ description: "A catalog of simulations that test the behavior of voting methods 
 #### Other single-winner visualizations
 
 * User psephomancy's [2D unimodal and bimodal voting diagrams](https://imgur.com/gallery/huNsRO6)
+* Parker Friedland's [single-winner voting method ternary plots](https://forum.electionscience.org/t/single-winner-voting-methods-visualized/575)
 * Justin Helps's [animated FPTP, IRV, and approval simulations](https://www.youtube.com/watch?v=yhO6jfHPFQU)
 
 #### Other multi-winner visualizations
 
 * Keith Edmonds's [proportional cardinal voting method visualizations](https://forum.electionscience.org/t/utilitarian-sum-vs-monroe-selection/355)
 * Parker Friedland's [apportionment algorithm ternary plots](https://forum.electionscience.org/t/apportionment-algorithems-visualized/569)
-* Parker Friedland's [single-winner voting method ternary plots](https://forum.electionscience.org/t/single-winner-voting-methods-visualized/575)
 * Parker Friedland's [sequential multi-winner voting method ternary plots](https://forum.electionscience.org/t/sequential-multiwinner-voting-methods-visualized/773) ([backup link](https://github.com/ParkerFriedland/TernaryPlot))
 
 ### Interactive simulations
