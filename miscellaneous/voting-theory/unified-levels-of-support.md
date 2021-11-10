@@ -122,7 +122,7 @@ The level of support given to some candidate $$c$$ by some ballot $$b$$ is typic
 
 ### Applications
 
-Unified levels of support is intended to function as an interface for any voting criteria that depend on comparing levels of support across candidates and/or across ballots. An example of a criterion that uses it for comparisons across ballots is the [sequential cancellation criterion](/miscellaneous/voting-theory/sequential-cancellation-criterion).
+Unified levels of support is intended to function as an interface for any voting criteria that depend on comparing levels of support across candidates and/or across ballots. An example of a criterion that uses it for comparisons across ballots is the [sequential cancellation criterion](/miscellaneous/voting-theory/sequential-cancellation-criterion). An example of a criterion that uses it for comparisons across ballots and comparisons across candidates is the [free cancellation criterion](/miscellaneous/voting-theory/free-cancellation-criterion).
 
 #### Opposite ballots
 
