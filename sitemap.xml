@@ -178,6 +178,9 @@
 <loc>https://bternarytau.github.io/about/</loc>
 </url>
 <url>
+<loc>https://bternarytau.github.io/archive/</loc>
+</url>
+<url>
 <loc>https://bternarytau.github.io/miscellaneous/simdemocracy/tau-analytical-union/</loc>
 </url>
 <url>
@@ -188,9 +191,6 @@
 </url>
 <url>
 <loc>https://bternarytau.github.io/miscellaneous/</loc>
-</url>
-<url>
-<loc>https://bternarytau.github.io/archive/</loc>
 </url>
 <url>
 <loc>https://bternarytau.github.io/</loc>
@@ -215,6 +215,9 @@
 </url>
 <url>
 <loc>https://bternarytau.github.io/miscellaneous/voting-theory/sequential-proportional-score-voting</loc>
+</url>
+<url>
+<loc>https://bternarytau.github.io/miscellaneous/voting-theory/sequential-threshold-average-score-voting</loc>
 </url>
 <url>
 <loc>https://bternarytau.github.io/miscellaneous/superintelligence-reference-page</loc>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112986341-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112986341-1');
+</script>
+
+			<title>Sequential threshold average score voting</title>
+			<link rel="manifest" href="/manifest.json">
+			<link rel="stylesheet" media="(max-width: 499px)" href="/assets/css/max-499px.css">
+			<link rel="stylesheet" media="(min-width: 500px)" href="/assets/css/min-500px.css">
+			
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.10/dist/katex.css" integrity="sha384-1gzTdjHZLufp5FQLVWOUgR2+OzKVh+lZdxrcJLH6LbOWTS5zZ4hjjGyfSXQzQRnA" crossorigin="anonymous">
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=rMlbJkPXO7">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=rMlbJkPXO7">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg?v=rMlbJkPXO7" color="#00aba9">
+			<link rel="shortcut icon" href="/favicon.ico?v=rMlbJkPXO7">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="theme-color" content="#f7f7f7"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Sequential threshold average score voting | Technically Exists</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Sequential threshold average score voting" />
+<meta name="author" content="BTernaryTau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sequential threshold average score voting is a rated party-agnostic proportional method inspired by sequential proportional score voting." />
+<meta property="og:description" content="Sequential threshold average score voting is a rated party-agnostic proportional method inspired by sequential proportional score voting." />
+<link rel="canonical" href="https://bternarytau.github.io/miscellaneous/voting-theory/sequential-threshold-average-score-voting" />
+<meta property="og:url" content="https://bternarytau.github.io/miscellaneous/voting-theory/sequential-threshold-average-score-voting" />
+<meta property="og:site_name" content="Technically Exists" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sequential threshold average score voting" />
+<script type="application/ld+json">
+{"headline":"Sequential threshold average score voting","description":"Sequential threshold average score voting is a rated party-agnostic proportional method inspired by sequential proportional score voting.","author":{"@type":"Person","name":"BTernaryTau"},"@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bternarytau.github.io/assets/logo.png"},"name":"BTernaryTau"},"url":"https://bternarytau.github.io/miscellaneous/voting-theory/sequential-threshold-average-score-voting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about/">About</a></li>
+	        		<li><a href="/archive/">Archive</a></li>
+					<li><a href="/miscellaneous/">Miscellaneous</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			<h1 id="technically-exists">Technically Exists</h1>
+<h2 id="sequential-threshold-average-score-voting">Sequential threshold average score voting</h2>
+<h3 id="introduction">Introduction</h3>
+
+<p>Sequential threshold average score voting (STAS voting) is a rated party-agnostic proportional method inspired by <a href="/miscellaneous/voting-theory/sequential-proportional-score-voting">sequential proportional score voting</a> (SPSV).</p>
+
+<h3 id="description">Description</h3>
+
+<p>Voters cast ballots by rating all candidates on a scale of 0 to <em>k</em> for some positive integer <em>k</em>, where a blank rating is interpreted as a 0. Each ballot starts off with a weight of 1. Candidates are elected sequentially using the following process, which continues until all seats are filled:</p>
+
+<ol>
+  <li>Of the currently unelected candidates, the candidate with the greatest sum of weighted scores is elected.</li>
+  <li>Each ballot has its weight set to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mi>k</mi></mfrac><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></msubsup><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msub><mi>m</mi><mi>i</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{k} \sum_{i=1}^k \frac{1}{1 + m_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4341079999999997em;vertical-align:-0.44509999999999994em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9890079999999999em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>, where <em>m<sub>i</sub></em> is the number of already-elected candidates given a rating of at least <em>i</em> by that ballot.</li>
+</ol>
+
+<p>This can be thought of as considering every possible approval threshold and, for each one, converting the score ballot into an approval ballot using that threshold. The new weight assigned to the score ballot is then simply the average of the weights that <a href="https://en.wikipedia.org/wiki/Sequential_proportional_approval_voting">sequential proportional approval voting</a> (SPAV) would assign to these approval ballots. Hence, the reweighting process can be described as taking the average over the weights for different approval thresholds, or the “threshold average” for short.</p>
+
+<p>Note that the approval ballots generated during this process are exactly the approval ballots produced by the <a href="https://electowiki.org/wiki/Kotze-Pereira_transformation">Kotze-Pereira transformation</a>.</p>
+
+<h3 id="analysis">Analysis</h3>
+
+<p>With the above reweighting formula, STAS voting is equivalent to <a href="https://en.wikipedia.org/wiki/D%27Hondt_method">D’Hondt</a> when voters vote perfectly along party lines. However, if the formula <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mi>k</mi></mfrac><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></msubsup><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mn>2</mn><msub><mi>m</mi><mi>i</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{k} \sum_{i=1}^k \frac{1}{1 + 2m_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4341079999999997em;vertical-align:-0.44509999999999994em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9890079999999999em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> is used instead, then under such circumstances it becomes equivalent to <a href="https://en.wikipedia.org/wiki/Webster/Sainte-Lagu%C3%AB_method">Webster/Sainte-Laguë</a>.</p>
+
+<p>STAS voting is similar to <a href="https://electowiki.org/wiki/Reweighted_Range_Voting">reweighted range voting</a> (RRV) in that it is a Thiele-type proportional method that assigns a single weight per round to each ballot. However, STAS voting tends to deweight ballots to a lesser extent in cases where a candidate given a low rating is elected. Similarly, STAS voting will often deweight scores less than SPSV does. Below is a table that demonstrates this effect. <a href="/2020/10/27/the-motivation-behind-spsv-part-5#section-b-comparison-with-rrv">An explanation of the scenario being depicted can be found here.</a></p>
+
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Candidate</th>
+        <th>Method</th>
+        <th>N/A</th>
+        <th>C</th>
+		<th>D</th>
+		<th>E</th>
+		<th>F</th>
+		<th>G</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A</td>
+        <td>RRV</td>
+        <td>5</td>
+        <td>4.17</td>
+		<td>3.57</td>
+		<td>3.13</td>
+		<td>2.78</td>
+		<td>2.5</td>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>SPSV</td>
+        <td>5</td>
+        <td>4.5</td>
+		<td>4.33</td>
+		<td>4.25</td>
+		<td>4.2</td>
+		<td>4.17</td>
+      </tr>
+	  <tr>
+        <td>A</td>
+        <td>STASV</td>
+        <td>5</td>
+        <td>4.5</td>
+		<td>4.33</td>
+		<td>4.25</td>
+		<td>4.2</td>
+		<td>4.17</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>RRV</td>
+        <td>1</td>
+        <td>0.83</td>
+		<td>0.71</td>
+		<td>0.63</td>
+		<td>0.56</td>
+		<td>0.5</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>SPSV</td>
+        <td>1</td>
+        <td>0.5</td>
+		<td>0.33</td>
+		<td>0.25</td>
+		<td>0.2</td>
+		<td>0.17</td>
+      </tr>
+	  <tr>
+        <td>B</td>
+        <td>STASV</td>
+        <td>1</td>
+        <td>0.9</td>
+		<td>0.87</td>
+		<td>0.85</td>
+		<td>0.84</td>
+		<td>0.83</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>When voters <a href="https://electowiki.org/wiki/Tactical_voting#Definitions">min-max vote</a>, STAS voting reduces to SPAV. Equivalently, SPAV and STAS voting with a scale of 0 to 1 are mathematically identical and give the same results.</p>
+
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="https://github.com/BTernaryTau">github.com/BTernaryTau</a></li>
+					<li><a href="/archive/atom.xml">RSS Feed</a></li>
+				</ul>
+			</footer>
+			<script src="/service-worker-registration.js"></script>
+		</body>
+	</html>
