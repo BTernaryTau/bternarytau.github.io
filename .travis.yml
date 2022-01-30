@@ -1,7 +1,7 @@
 language: ruby
 # only run CI-builds on release branch
 if: branch = release
-rvm: 2.6.6
+rvm: 3.0.3
 # set execution permission on our build script
 before_script: chmod +x ./script/cibuild
 # path to our build script
