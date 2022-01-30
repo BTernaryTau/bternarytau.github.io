@@ -4,7 +4,7 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<lastBuildDate>2022-01-29T17:01:40+00:00</lastBuildDate>
+	<lastBuildDate>2022-01-30T01:07:50+00:00</lastBuildDate>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
@@ -572,7 +572,7 @@
 
 &lt;p&gt;Now that you’ve seen the voter distribution, we’re going to look at what the winners look like for each of these possible electorates. We’ll start with a method we covered a while back, D’Hondt. Since D’Hondt uses single-mark ballots, each group will simply vote for a candidate from their faction. The distribution of winners looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/1-dhondt.png&quot; alt=&quot;D'Hondt plot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/1-dhondt.png&quot; alt=&quot;D&apos;Hondt plot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here, the colors represent how many candidates were elected from each faction. In the top-left, all elected candidates were from the cyan faction, so the area is colored cyan. Below that, we see a greenish-aqua color. This represents the election of two cyan candidates and one yellow candidate. If we then move to the right, we see a gray area that represents the election of one candidate from each group.&lt;/p&gt;
 
