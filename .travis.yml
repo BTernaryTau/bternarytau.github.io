@@ -2,6 +2,8 @@ language: ruby
 # only run CI-builds on release branch
 if: branch = release
 rvm: 3.0.3
+# update bundler to match local version
+before_install: gem update bundler 2.3.6
 # set execution permission on our build script
 before_script: chmod +x ./script/cibuild
 # path to our build script
