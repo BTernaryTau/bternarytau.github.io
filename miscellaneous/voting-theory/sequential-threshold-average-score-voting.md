@@ -1,13 +1,13 @@
 ---
 layout: default
 title: "Sequential threshold average score voting"
-description: "Sequential threshold average score voting is a rated party-agnostic proportional method inspired by sequential proportional score voting."
+description: "Sequential threshold average score voting is a rated party-agnostic multi-winner method inspired by sequential proportional score voting."
 ---
 # {{ site.title }}
 ## {{ page.title }}
 ### Introduction
 
-Sequential threshold average score voting (STAS voting) is a rated party-agnostic proportional method inspired by [sequential proportional score voting](/miscellaneous/voting-theory/sequential-proportional-score-voting) (SPSV).
+Sequential threshold average score voting (STAS voting) is a rated party-agnostic multi-winner method inspired by [sequential proportional score voting](/miscellaneous/voting-theory/sequential-proportional-score-voting) (SPSV).
 
 ### Description
 
@@ -22,9 +22,11 @@ Note that the approval ballots generated during this process are exactly the app
 
 ### Analysis
 
+STAS voting passes [Warren Smith's color proportionality criterion](https://rangevoting.org/PuzzQWEAns15.html), but it does not pass the [hare quota criterion](https://electowiki.org/wiki/Proportional_representation#Hare_Quota_Criterion) as is demonstrated in [this example](https://www.votingtheory.org/forum/topic/183/new-thiele-type-proportional-voting-method/4). This makes its status as a proportional method debatable at best, and may represent a fundamental limitation of Thiele-type proportionality.
+
 With the above reweighting formula, STAS voting is equivalent to [D'Hondt](https://en.wikipedia.org/wiki/D%27Hondt_method) when voters vote perfectly along party lines. However, if the formula $$\frac{1}{k} \sum_{i=1}^k \frac{1}{1 + 2m_i}$$ is used instead, then under such circumstances it becomes equivalent to [Webster/Sainte-Laguë](https://en.wikipedia.org/wiki/Webster/Sainte-Lagu%C3%AB_method).
 
-STAS voting is similar to [reweighted range voting](https://electowiki.org/wiki/Reweighted_Range_Voting) (RRV) in that it is a Thiele-type proportional method that assigns a single weight per round to each ballot. However, STAS voting tends to deweight ballots to a lesser extent in cases where a candidate given a low rating is elected. Similarly, STAS voting will often deweight scores less than SPSV does. Below is a table that demonstrates this effect. [An explanation of the scenario being depicted can be found here.]({% post_url 2020-10-27-the-motivation-behind-spsv-part-5 %}#section-b-comparison-with-rrv)
+STAS voting is similar to [reweighted range voting](https://electowiki.org/wiki/Reweighted_Range_Voting) (RRV) in that it is an extension of SPAV to score ballots that assigns a single weight per round to each ballot. However, STAS voting tends to deweight ballots to a lesser extent in cases where a candidate given a low rating is elected. Similarly, STAS voting will often deweight scores less than SPSV does. Below is a table that demonstrates this effect. [An explanation of the scenario being depicted can be found here.]({% post_url 2020-10-27-the-motivation-behind-spsv-part-5 %}#section-b-comparison-with-rrv)
 
 <div style="overflow-x:auto;">
   <table>
