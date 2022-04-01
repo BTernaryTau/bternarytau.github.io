@@ -4,12 +4,51 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<lastBuildDate>2022-04-01T20:52:01+00:00</lastBuildDate>
+	<lastBuildDate>2022-04-01T20:54:39+00:00</lastBuildDate>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
 	</author>
 
+	
+		<entry>
+			<title>Why I like STAR voting: BRANDING</title>
+			<link href="http://bternarytau.github.io/2022/04/01/why-i-like-star-voting-branding"/>
+			<pubDate>2022-04-01T00:00:00+00:00</pubDate>
+			<id>http://bternarytau.github.io/2022/04/01/why-i-like-star-voting-branding</id>
+			<content type="html">&lt;p&gt;I’ve discussed how STAR voting is simple, how its ballot design is superb, and how it leads to better pre-election polling. But in this post I will cover what is by far the most important aspect of this bright idea: BRANDING.&lt;/p&gt;
+
+&lt;p&gt;Once upon a time, there was a voting method called score-runoff voting. It was a pretty good voting method, all things considered. It produced very accurate results when tested, and its hybrid nature seemed like it might have the potential to unite the voting reform movement behind it. But there was one major problem: its name sucked.&lt;/p&gt;
+
+&lt;p&gt;To be fair, this is true for most voting methods. But it doesn’t have to be. Using the revolutionary technique of BRANDING, the uninspiring score-runoff voting method became the illustrious STAR voting method that you know and love. BRANDING stands for Beguiling Relatable Advertisement Notably Demands Increases in Noticed Greatness, and that’s exactly how it works. The name of the voting method itself becomes a persuasive advertisement that relates the method to the great things that voters already know about, and in doing so, it highlights those positive traits and focuses the attention on them.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;Think this isn’t such a big deal? Well, just look at the names of voting methods that didn’t have the BRANDING technique applied to them. I mean, come on. First-past-the-post? More like first pass, gets roast(ed)! The Borda count? More like, the boredom mounts!&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Compare this to STAR voting. Stars illuminate the truth for us. They remind of us of our collective potential; that if we work together, we can achieve anything, even galactic domination! Oh, and they remind us of how we all have a shot at becoming… a TikTok star or something. Hmm. Or I suppose they can be patriotic. Stars and stripes, baby!&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok, sorry, got a little off track there. Anyway, the name STAR voting doesn’t just create positive associations with other concepts, it also highlights the positive features inherent to STAR voting itself. Tired of electing politicians who are full of nothing but hot air? With STAR voting, they won’t be anymore (though for better or worse they may end up being full of hot plasma). Want a voting method that won’t be repealed immediately after implementation? Well, just as stars can last for billions of years, so too can STAR voting stand the test of time.&lt;/p&gt;
+
+&lt;p&gt;These associations can also help voters to remember how the voting method works. STAR reminds voters that the method works by having them give star ratings to the candidates. And just like the 5-pointed star, each candidate can be given a rating of up to 5 points. Stars are independent bodies&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, and likewise, the ratings given to each of the candidates are completely independent of each other.&lt;/p&gt;
+
+&lt;p&gt;If all of this still isn’t enough to convince you of the power of BRANDING, I don’t know what will. But assuming you have been convinced, you are now finally capable of appreciating the true glory of STAR voting. Go forth, and share that glory with the world!&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;At least until the Borda count’s &lt;a href=&quot;https://en.wikipedia.org/wiki/Borda_count#Potential_for_tactical_manipulation&quot;&gt;vulnerabilities&lt;/a&gt; to &lt;a href=&quot;https://electowiki.org/wiki/Dark_horse_plus_3_rivals&quot;&gt;strategy&lt;/a&gt; lead to an excitingly disastrous election, at which point voters may find themselves longing for a return to mounting boredom. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;To anyone reading this who doesn’t live in the United States: my apologies for the Americentrism. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Binary and multiple star systems don’t count. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>Why I like STAR voting: pre-election polls</title>
