@@ -19,4 +19,3 @@ author: BTernaryTau
 publisher: BTernaryTau
 logo: /assets/logo.png
 exclude: [script, vendor]
-incremental: true
