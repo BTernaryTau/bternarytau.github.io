@@ -6,7 +6,7 @@ set -e
 # Install Node.js
 pacman -S --noconfirm nodejs npm
 
-# Jekyll Deploy Action uses the build directory rather than the _site directory
+# Jekyll Deploy Action uses the build directory as the target for jekyll build
 mkdir build
 
 # Clone remote repo into the build directory
