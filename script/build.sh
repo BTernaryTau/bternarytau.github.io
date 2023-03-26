@@ -3,15 +3,6 @@
 # Enable error reporting to the console
 set -e
 
-# Install Node.js
-pacman -S --noconfirm nodejs npm
-
-# Install bundler
-gem install bundler -v 2.3.6
-
-# Install gems
-bundle install
-
 # Cleanup "_site"
 rm -rf _site
 mkdir _site
