@@ -4,7 +4,7 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<lastBuildDate>2023-03-23T00:13:51-04:00</lastBuildDate>
+	<lastBuildDate>2023-03-26T16:08:46+00:00</lastBuildDate>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
@@ -14,7 +14,7 @@
 		<entry>
 			<title>Why I like STAR voting: BRANDING</title>
 			<link href="http://bternarytau.github.io/2022/04/01/why-i-like-star-voting-branding"/>
-			<pubDate>2022-04-01T00:00:00-04:00</pubDate>
+			<pubDate>2022-04-01T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2022/04/01/why-i-like-star-voting-branding</id>
 			<content type="html">&lt;p&gt;I’ve discussed how STAR voting is simple, how its ballot design is superb, and how it leads to better pre-election polling. But in this post I will cover what is by far the most important aspect of this bright idea: BRANDING.&lt;/p&gt;
 
@@ -53,7 +53,7 @@
 		<entry>
 			<title>Why I like STAR voting: pre-election polls</title>
 			<link href="http://bternarytau.github.io/2021/06/29/why-i-like-star-voting-pre-election-polls"/>
-			<pubDate>2021-06-29T00:00:00-04:00</pubDate>
+			<pubDate>2021-06-29T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2021/06/29/why-i-like-star-voting-pre-election-polls</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;This blog post is the third in a series of posts about STAR voting. If you haven’t read the previous entries, I recommend you start with &lt;a href=&quot;/2021/04/25/why-i-like-star-voting-simplicity-and-familiarity&quot;&gt;the first entry&lt;/a&gt; before reading this one.&lt;/em&gt;&lt;/p&gt;
 
@@ -179,7 +179,7 @@
 		<entry>
 			<title>Why I like STAR voting: the 5-star ballot</title>
 			<link href="http://bternarytau.github.io/2021/06/06/why-i-like-star-voting-the-5-star-ballot"/>
-			<pubDate>2021-06-06T00:00:00-04:00</pubDate>
+			<pubDate>2021-06-06T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2021/06/06/why-i-like-star-voting-the-5-star-ballot</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;This blog post is the second in a series of posts about STAR voting. If you haven’t read &lt;a href=&quot;/2021/04/25/why-i-like-star-voting-simplicity-and-familiarity&quot;&gt;the previous entry&lt;/a&gt;, I recommend you do so before starting this one.&lt;/em&gt;&lt;/p&gt;
 
@@ -231,7 +231,7 @@
 		<entry>
 			<title>Why I like STAR voting: simplicity and familiarity</title>
 			<link href="http://bternarytau.github.io/2021/04/25/why-i-like-star-voting-simplicity-and-familiarity"/>
-			<pubDate>2021-04-25T00:00:00-04:00</pubDate>
+			<pubDate>2021-04-25T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2021/04/25/why-i-like-star-voting-simplicity-and-familiarity</id>
 			<content type="html">&lt;p&gt;I am a big supporter of STAR voting as a practical reform for single-winner elections in the United States. Under STAR voting, voters rate each candidate on a scale from 0 to 5, the two candidates with the highest total scores become finalists, and whichever finalist is rated higher on the most ballots wins. This is where the full name—Score Then Automatic Runoff—comes from; the first round of tallying chooses the finalists based on their score totals, and then the second round of tallying is an automatic runoff with each ballot counting for the finalist that voter preferred (or counting as an abstention if the voter liked both finalists equally).&lt;/p&gt;
 
@@ -266,7 +266,7 @@
 		<entry>
 			<title>Combining anarcho-primitivism and transhumanism</title>
 			<link href="http://bternarytau.github.io/2021/04/01/combining-anarcho-primitivism-and-transhumanism"/>
-			<pubDate>2021-04-01T00:00:00-04:00</pubDate>
+			<pubDate>2021-04-01T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2021/04/01/combining-anarcho-primitivism-and-transhumanism</id>
 			<content type="html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Anarcho-primitivism&quot;&gt;Anarcho-primitivism&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Transhumanism&quot;&gt;transhumanism&lt;/a&gt; are two ideologies that place a lot of importance on technology, but they do so in completely opposite ways. This makes the task of combining them into a cohesive ideology very difficult, but that hasn’t stopped people from trying. While &lt;a href=&quot;https://youtube.com/watch?v=P3LXkN6FwOo&quot;&gt;previous attempts&lt;/a&gt; have had many desirable features, there is still plenty of room for improvement. As such, I wish to propose a new combination of the two which I believe makes many of the available improvements.&lt;/p&gt;
 
@@ -289,7 +289,7 @@
 		<entry>
 			<title>On dealbreaker voting criteria</title>
 			<link href="http://bternarytau.github.io/2021/03/07/on-dealbreaker-voting-criteria"/>
-			<pubDate>2021-03-07T00:00:00-05:00</pubDate>
+			<pubDate>2021-03-07T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2021/03/07/on-dealbreaker-voting-criteria</id>
 			<content type="html">&lt;p&gt;In &lt;a href=&quot;/2021/01/24/social-choice-theory-paradigms&quot;&gt;my previous post&lt;/a&gt;, I argued that probabilistic analysis was superior to pass/fail analysis as an approach to social choice theory. As a quick recap, pass/fail analysis tries to identify desirable criteria, then figure out which methods pass them and which methods don’t. Probabilistic analysis instead tries to identify how often failures of these criteria occur and how severe those failures are.&lt;/p&gt;
 
@@ -312,7 +312,7 @@
 		<entry>
 			<title>Social choice theory paradigms</title>
 			<link href="http://bternarytau.github.io/2021/01/24/social-choice-theory-paradigms"/>
-			<pubDate>2021-01-24T00:00:00-05:00</pubDate>
+			<pubDate>2021-01-24T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2021/01/24/social-choice-theory-paradigms</id>
 			<content type="html">&lt;p&gt;Within social choice theory, there are two major approaches to evaluating voting methods: pass/fail analysis and probabilistic analysis. Pass/fail analysis primarily consists of defining mathematical criteria that seem desirable to have, then proving which methods pass them and which methods fail them. It also has other aspects like proving that certain sets of criteria cannot all be satisfied by the same voting method; this is where the famous &lt;a href=&quot;https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem&quot;&gt;Arrow’s impossibility theorem&lt;/a&gt; comes from. On the other hand, probabilistic analysis does away with this and instead assesses voting method performance using simulations and, where possible, data from real-world elections. This approach has its downsides, but overall I think it is by far the superior evaluation method.&lt;/p&gt;
 
@@ -407,7 +407,7 @@
 		<entry>
 			<title>The motivation behind SPSV, part 5</title>
 			<link href="http://bternarytau.github.io/2020/10/27/the-motivation-behind-spsv-part-5"/>
-			<pubDate>2020-10-27T00:00:00-04:00</pubDate>
+			<pubDate>2020-10-27T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/10/27/the-motivation-behind-spsv-part-5</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;This blog post has been adapted from &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/&quot;&gt;a series of posts&lt;/a&gt; written for &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/&quot;&gt;r/SimDemocracy&lt;/a&gt;. If you haven’t read the previous entries, please start with &lt;a href=&quot;/2020/10/23/the-motivation-behind-spsv-part-1&quot;&gt;part 1&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
@@ -646,7 +646,7 @@
 		<entry>
 			<title>The motivation behind SPSV, part 4</title>
 			<link href="http://bternarytau.github.io/2020/10/26/the-motivation-behind-spsv-part-4"/>
-			<pubDate>2020-10-26T00:00:00-04:00</pubDate>
+			<pubDate>2020-10-26T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/10/26/the-motivation-behind-spsv-part-4</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;This blog post has been adapted from &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/&quot;&gt;a series of posts&lt;/a&gt; written for &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/&quot;&gt;r/SimDemocracy&lt;/a&gt;. If you haven’t read the previous entries, please start with &lt;a href=&quot;/2020/10/23/the-motivation-behind-spsv-part-1&quot;&gt;part 1&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
@@ -762,7 +762,7 @@
 		<entry>
 			<title>The motivation behind SPSV, part 3</title>
 			<link href="http://bternarytau.github.io/2020/10/25/the-motivation-behind-spsv-part-3"/>
-			<pubDate>2020-10-25T00:00:00-04:00</pubDate>
+			<pubDate>2020-10-25T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/10/25/the-motivation-behind-spsv-part-3</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;This blog post has been adapted from &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/&quot;&gt;a series of posts&lt;/a&gt; written for &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/&quot;&gt;r/SimDemocracy&lt;/a&gt;. If you haven’t read the previous entries, please start with &lt;a href=&quot;/2020/10/23/the-motivation-behind-spsv-part-1&quot;&gt;part 1&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
@@ -885,7 +885,7 @@
 		<entry>
 			<title>The motivation behind SPSV, part 2</title>
 			<link href="http://bternarytau.github.io/2020/10/24/the-motivation-behind-spsv-part-2"/>
-			<pubDate>2020-10-24T00:00:00-04:00</pubDate>
+			<pubDate>2020-10-24T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/10/24/the-motivation-behind-spsv-part-2</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;This blog post has been adapted from &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/&quot;&gt;a series of posts&lt;/a&gt; written for &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/&quot;&gt;r/SimDemocracy&lt;/a&gt;. If you haven’t read &lt;a href=&quot;/2020/10/23/the-motivation-behind-spsv-part-1&quot;&gt;the previous entry&lt;/a&gt;, please do so.&lt;/em&gt;&lt;/p&gt;
 
@@ -987,7 +987,7 @@
 		<entry>
 			<title>The motivation behind SPSV, part 1</title>
 			<link href="http://bternarytau.github.io/2020/10/23/the-motivation-behind-spsv-part-1"/>
-			<pubDate>2020-10-23T00:00:00-04:00</pubDate>
+			<pubDate>2020-10-23T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/10/23/the-motivation-behind-spsv-part-1</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;This blog post has been adapted from &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/&quot;&gt;a series of posts&lt;/a&gt; written for &lt;a href=&quot;https://www.reddit.com/r/SimDemocracy/&quot;&gt;r/SimDemocracy&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
@@ -1010,7 +1010,7 @@
 		<entry>
 			<title>The NPVIC, RCV-1, and Maine</title>
 			<link href="http://bternarytau.github.io/2020/08/10/the-npvic-rcv1-and-maine"/>
-			<pubDate>2020-08-10T00:00:00-04:00</pubDate>
+			<pubDate>2020-08-10T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/08/10/the-npvic-rcv1-and-maine</id>
 			<content type="html">&lt;p&gt;The &lt;a href=&quot;https://www.nationalpopularvote.com/&quot;&gt;National Popular Vote Interstate Compact&lt;/a&gt; (NPVIC) aims to subvert the Electoral College and elect the president of the U.S. by popular vote. It would accomplish this by having the states that signed on give their electoral votes to whichever candidate won the popular vote. However, the way it defines the popular vote assumes that all states will use single-choice plurality voting in their presidential elections. This is a problem, because &lt;a href=&quot;https://bangordailynews.com/2020/07/15/politics/maine-to-use-ranked-choice-voting-in-presidential-election-after-gop-veto-effort-fails/&quot;&gt;Maine has switched its presidential elections&lt;/a&gt; to use single-winner ranked choice voting (RCV-1), also known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Instant-runoff_voting&quot;&gt;instant runoff voting&lt;/a&gt;.&lt;/p&gt;
 
@@ -1037,7 +1037,7 @@
 		<entry>
 			<title>Quadratic voting and types of one person, one vote</title>
 			<link href="http://bternarytau.github.io/2020/08/09/quadratic-voting-and-types-of-one-person-one-vote"/>
-			<pubDate>2020-08-09T00:00:00-04:00</pubDate>
+			<pubDate>2020-08-09T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/08/09/quadratic-voting-and-types-of-one-person-one-vote</id>
 			<content type="html">&lt;p&gt;In a &lt;a href=&quot;/2020/02/16/the-meaning-of-one-person-one-vote&quot;&gt;previous post&lt;/a&gt;, I laid out a hierarchy of three different possible meanings of one person, one vote (OPOV). The 1st level of OPOV required that each voter have exactly one ballot. The 2nd level required that each ballot have the same weight. Finally, the 3rd level required each possible ballot to be perfectly cancelled out by another possible ballot. I also created a combination Euler/pyramid diagram to demonstrate the relationship visually:&lt;/p&gt;
 
@@ -1083,7 +1083,7 @@
 		<entry>
 			<title>Soul harvester</title>
 			<link href="http://bternarytau.github.io/2020/07/14/soul-harvester"/>
-			<pubDate>2020-07-14T00:00:00-04:00</pubDate>
+			<pubDate>2020-07-14T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/07/14/soul-harvester</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;Epistemic status: fiction&lt;/em&gt;&lt;/p&gt;
 
@@ -1110,7 +1110,7 @@
 		<entry>
 			<title>Why 1 is not prime</title>
 			<link href="http://bternarytau.github.io/2020/07/05/why-1-is-not-prime"/>
-			<pubDate>2020-07-05T00:00:00-04:00</pubDate>
+			<pubDate>2020-07-05T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/07/05/why-1-is-not-prime</id>
 			<content type="html">&lt;p&gt;Modern mathematicians have come to the consensus that the number 1 is not a prime number. However, many people still believe that 1 is in fact prime. This belief is justified by definitions like&lt;/p&gt;
 
@@ -1164,7 +1164,7 @@
 		<entry>
 			<title>Thanos is a straw centrist</title>
 			<link href="http://bternarytau.github.io/2020/04/01/thanos-is-a-straw-centrist"/>
-			<pubDate>2020-04-01T00:00:00-04:00</pubDate>
+			<pubDate>2020-04-01T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/04/01/thanos-is-a-straw-centrist</id>
 			<content type="html">&lt;p&gt;A straw centrist is a person who always takes the middle position on issues. For example, if you asked them if we should kill all the men or not, they would say that we should kill half of the men. If you asked them if we should kill all the women or not, they would say that we should kill half of the women. And if you asked them if we should kill all the children or not, they would say that we should kill half of the children.&lt;/p&gt;
 
@@ -1177,7 +1177,7 @@
 		<entry>
 			<title>The meaning of one person, one vote</title>
 			<link href="http://bternarytau.github.io/2020/02/16/the-meaning-of-one-person-one-vote"/>
-			<pubDate>2020-02-16T00:00:00-05:00</pubDate>
+			<pubDate>2020-02-16T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2020/02/16/the-meaning-of-one-person-one-vote</id>
 			<content type="html">&lt;p&gt;The concept of one person, one vote is often brought up in discussions of voting methods and electoral systems. In the United States, it’s commonly associated with a Supreme Court decision that &lt;a href=&quot;https://www.law.cornell.edu/wex/one-person_one-vote_rule&quot;&gt;required states to use districts with approximately equal populations&lt;/a&gt;. However, the general idea that everyone’s vote should be equal has been brought up as a &lt;a href=&quot;https://www.pressherald.com/2018/05/30/commentary-one-person-one-vote-at-risk-if-ranked-choice-voting-approved/&quot;&gt;way&lt;/a&gt; to &lt;a href=&quot;https://www.reddit.com/r/ukpolitics/comments/a5t0co/comment/ebozc6n/&quot;&gt;challenge&lt;/a&gt; alternative voting methods like approval voting and instant-runoff voting (abbreviated IRV, and also called ranked-choice voting), despite the fact that votes cast under these methods &lt;a href=&quot;https://ivn.us/2018/12/04/ranked-choice-voting-survives-one-person-one-vote-challenge/&quot;&gt;are not&lt;/a&gt; any &lt;a href=&quot;https://www.electionscience.org/voting-methods/ten-critiques-and-defenses-on-approval-voting/&quot;&gt;less equal&lt;/a&gt; than the single-choice plurality method used in most U.S. elections. To make this even more complicated, this concept has also been used to argue in favor of replacing plurality voting with alternative methods. The Equal Vote Coalition’s &lt;a href=&quot;https://www.equal.vote/theequalvote&quot;&gt;equality criterion&lt;/a&gt; is a good example of this.&lt;/p&gt;
 
@@ -1230,7 +1230,7 @@
 		<entry>
 			<title>On normative ethical theories</title>
 			<link href="http://bternarytau.github.io/2019/04/01/on-normative-ethical-theories"/>
-			<pubDate>2019-04-01T00:00:00-04:00</pubDate>
+			<pubDate>2019-04-01T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2019/04/01/on-normative-ethical-theories</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;Inspired by &lt;a href=&quot;https://twitter.com/scedastic/status/1036625675866791939&quot;&gt;this tweet&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
@@ -1251,7 +1251,7 @@
 		<entry>
 			<title>The world's problems</title>
 			<link href="http://bternarytau.github.io/2018/12/31/the-worlds-problems"/>
-			<pubDate>2018-12-31T00:00:00-05:00</pubDate>
+			<pubDate>2018-12-31T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/12/31/the-worlds-problems</id>
 			<content type="html">&lt;p&gt;There are a lot of problems out there. Some of these problems are small, like whether you should get a new phone or not. Other problems are big, like how to solve climate change. But of these problems, which ones are the most important? I don’t know, of course, but I’m going to hazard a guess at them anyway.&lt;/p&gt;
 
@@ -1302,7 +1302,7 @@
 		<entry>
 			<title>Ranked choice voting is worth supporting</title>
 			<link href="http://bternarytau.github.io/2018/11/26/ranked-choice-voting-is-worth-supporting"/>
-			<pubDate>2018-11-26T00:00:00-05:00</pubDate>
+			<pubDate>2018-11-26T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/11/26/ranked-choice-voting-is-worth-supporting</id>
 			<content type="html">&lt;p&gt;&lt;a href=&quot;https://ballotpedia.org/Ranked-choice_voting_(RCV)&quot;&gt;Ranked choice voting (RCV)&lt;/a&gt; has &lt;a href=&quot;https://www.fairvote.org/rcv#where_is_ranked_choice_voting_used&quot;&gt;a&lt;/a&gt; &lt;a href=&quot;http://www.rcvmaine.com/&quot;&gt;lot&lt;/a&gt; &lt;a href=&quot;https://www.voterchoicema.org/about_rcv&quot;&gt;of&lt;/a&gt; &lt;a href=&quot;https://act.represent.us/sign/ranked-choice-voting/&quot;&gt;supporters&lt;/a&gt; in the U.S. voting reform movement. However, the single-winner version, which also goes by the name instant-runoff voting (IRV), does have some detractors, particularly among those who support rated voting methods instead. Most still agree that RCV is an improvement over the single-choice voting method&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; used in almost every U.S. election, but a few dispute even this. While I believe that RCV is likely not the best single-winner method, I also believe that it is an improvement over single-choice voting. As such, I think you should support RCV even if you agree with many of the arguments made against it.&lt;/p&gt;
 
@@ -1387,7 +1387,7 @@
 		<entry>
 			<title>STAR voting in an interstate compact</title>
 			<link href="http://bternarytau.github.io/2018/10/14/star-voting-in-an-interstate-compact"/>
-			<pubDate>2018-10-14T00:00:00-04:00</pubDate>
+			<pubDate>2018-10-14T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/10/14/star-voting-in-an-interstate-compact</id>
 			<content type="html">&lt;p&gt;Jameson Quinn &lt;a href=&quot;https://wiki.electorama.com/wiki/3-2-1_voting#For_US_presidential_elections&quot;&gt;lays out a proposal&lt;/a&gt; for an interstate compact that links the result of the US presidential election to the national popular vote, similar to the &lt;a href=&quot;https://www.nationalpopularvote.com/&quot;&gt;National Popular Vote Interstate Compact&lt;/a&gt;. However, unlike the NPVIC, this compact is designed to support not just &lt;a href=&quot;https://en.wikipedia.org/wiki/Plurality_voting&quot;&gt;plurality voting&lt;/a&gt;, but other voting methods as well. Specifically, &lt;a href=&quot;https://en.wikipedia.org/wiki/Approval_voting&quot;&gt;approval&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Score_voting&quot;&gt;score&lt;/a&gt;, and &lt;a href=&quot;https://wiki.electorama.com/wiki/3-2-1_voting&quot;&gt;3-2-1&lt;/a&gt; are all compatible.&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Two notable methods are missing from this list: &lt;a href=&quot;https://en.wikipedia.org/wiki/Instant-runoff_voting&quot;&gt;instant-runoff voting&lt;/a&gt;, supported by &lt;a href=&quot;https://www.fairvote.org/&quot;&gt;FairVote&lt;/a&gt; (though under the name ranked choice voting), and &lt;a href=&quot;https://en.wikipedia.org/wiki/STAR_voting&quot;&gt;STAR voting&lt;/a&gt;, supported by &lt;a href=&quot;https://www.equal.vote/&quot;&gt;The Equal Vote Coalition&lt;/a&gt;.&lt;/p&gt;
 
@@ -1556,7 +1556,7 @@
 		<entry>
 			<title>Should you pursue common or rare achievements?</title>
 			<link href="http://bternarytau.github.io/2018/07/21/should-you-pursue-common-or-rare-achievements"/>
-			<pubDate>2018-07-21T00:00:00-04:00</pubDate>
+			<pubDate>2018-07-21T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/07/21/should-you-pursue-common-or-rare-achievements</id>
 			<content type="html">&lt;p&gt;Recently I’ve been considering what video game achievements are most worth aiming for. Specifically, the question is whether I should go after common achievements or rare achievements. I’d been targeting rare achievements, but it occurred to me that I might be better off going after common ones instead.&lt;/p&gt;
 
@@ -1577,7 +1577,7 @@
 		<entry>
 			<title>Why discuss superintelligence?</title>
 			<link href="http://bternarytau.github.io/2018/07/01/why-discuss-superintelligence"/>
-			<pubDate>2018-07-01T00:00:00-04:00</pubDate>
+			<pubDate>2018-07-01T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/07/01/why-discuss-superintelligence</id>
 			<content type="html">&lt;p&gt;My site now contains a miscellaneous section with exactly one page, the &lt;a href=&quot;/miscellaneous/superintelligence-reference-page&quot;&gt;Superintelligence reference page&lt;/a&gt;. I’ve &lt;a href=&quot;/2018/03/02/how-intelligent-are-we&quot;&gt;briefly brought up superintelligence&lt;/a&gt; in the past, but I’ve never discussed it in detail. However, given that others have already written so much about it, I feel like it makes more sense to collect the resources I think do a good job of explaining it. Therefore, if you have no idea what superintelligence is or why you should care about it, I’d recommend starting with some of the links in the &lt;a href=&quot;/miscellaneous/superintelligence-reference-page#introductions&quot;&gt;Introductions section&lt;/a&gt; before reading on.&lt;/p&gt;
 
@@ -1594,7 +1594,7 @@
 		<entry>
 			<title>My thoughts on Microsoft acquiring GitHub</title>
 			<link href="http://bternarytau.github.io/2018/06/04/my-thoughts-on-microsoft-acquiring-github"/>
-			<pubDate>2018-06-04T00:00:00-04:00</pubDate>
+			<pubDate>2018-06-04T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/06/04/my-thoughts-on-microsoft-acquiring-github</id>
 			<content type="html">&lt;p&gt;Today it was announced that &lt;a href=&quot;https://www.theverge.com/2018/6/4/17422788/microsoft-github-acquisition-official-deal&quot;&gt;Microsoft is acquiring GitHub&lt;/a&gt;. The responses to this event have been mixed, with some people expressing optimism and others fear. I have two lines of thought regarding this subject.&lt;/p&gt;
 
@@ -1607,7 +1607,7 @@
 		<entry>
 			<title>Outlining the opposite of a singleton</title>
 			<link href="http://bternarytau.github.io/2018/06/01/outlining-the-opposite-of-a-singleton"/>
-			<pubDate>2018-06-01T00:00:00-04:00</pubDate>
+			<pubDate>2018-06-01T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/06/01/outlining-the-opposite-of-a-singleton</id>
 			<content type="html">&lt;p&gt;In &lt;a href=&quot;/2018/02/09/singletons-and-universal-inevitable-threats&quot;&gt;one of my previous posts&lt;/a&gt;, I discussed the concept of a singleton as defined by Nick Bostrom. Now I’d like to consider what the rough opposite of a singleton would look like, based on what has been written by others on the subject.&lt;/p&gt;
 
@@ -1664,7 +1664,7 @@
 		<entry>
 			<title>Freedom of speech is good</title>
 			<link href="http://bternarytau.github.io/2018/05/20/freedom-of-speech-is-good"/>
-			<pubDate>2018-05-20T00:00:00-04:00</pubDate>
+			<pubDate>2018-05-20T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/05/20/freedom-of-speech-is-good</id>
 			<content type="html">&lt;p&gt;In my &lt;a href=&quot;/2018/04/28/freedom-of-speech-is-bad&quot;&gt;previous post&lt;/a&gt;, I laid out what I consider to be the strongest argument against freedom of speech. Now I will cover what I believe to be the flaw in that argument.&lt;/p&gt;
 
@@ -1683,7 +1683,7 @@
 		<entry>
 			<title>Freedom of speech is bad</title>
 			<link href="http://bternarytau.github.io/2018/04/28/freedom-of-speech-is-bad"/>
-			<pubDate>2018-04-28T00:00:00-04:00</pubDate>
+			<pubDate>2018-04-28T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/04/28/freedom-of-speech-is-bad</id>
 			<content type="html">&lt;p&gt;I consider freedom of speech to be one of the most important foundations of today’s society. However, in this post I’d like to present what I believe is the strongest argument against free speech, then follow it up with the reason I think said argument is wrong in a later post.&lt;/p&gt;
 
@@ -1718,7 +1718,7 @@
 		<entry>
 			<title>Comic Sans is a great font</title>
 			<link href="http://bternarytau.github.io/2018/04/01/comic-sans-is-a-great-font"/>
-			<pubDate>2018-04-01T00:00:00-04:00</pubDate>
+			<pubDate>2018-04-01T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/04/01/comic-sans-is-a-great-font</id>
 			<content type="html">&lt;p&gt;Everyone loves to hate on Comic Sans. Even those who know nothing about typography will spend the time to go on long rants about how awful it is. But the truth of the matter is entirely different from what common knowledge suggests. In reality, Comic Sans is a great font.&lt;/p&gt;
 
@@ -1743,7 +1743,7 @@
 		<entry>
 			<title>How to win The Game</title>
 			<link href="http://bternarytau.github.io/2018/03/14/how-to-win-the-game"/>
-			<pubDate>2018-03-14T00:00:00-04:00</pubDate>
+			<pubDate>2018-03-14T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/03/14/how-to-win-the-game</id>
 			<content type="html">&lt;p&gt;For anyone who has no idea what the title is referring to, &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Game_(mind_game)&quot;&gt;The Game&lt;/a&gt; is a mental game with three simple rules.&lt;/p&gt;
 
@@ -1784,7 +1784,7 @@
 		<entry>
 			<title>Arguing over definitions</title>
 			<link href="http://bternarytau.github.io/2018/03/08/arguing-over-definitions"/>
-			<pubDate>2018-03-08T00:00:00-05:00</pubDate>
+			<pubDate>2018-03-08T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/03/08/arguing-over-definitions</id>
 			<content type="html">&lt;p&gt;I recently got into an argument involving topics like whether water was wet and whether hotdogs were sandwiches. What all the topics had in common was that they were not arguments over facts but rather arguments over definitions. This means there is nothing in observable reality that can be pointed to in order to resolve them. What’s worse is that many arguments will fall into this category by default.&lt;/p&gt;
 
@@ -1803,7 +1803,7 @@
 		<entry>
 			<title>How intelligent are we?</title>
 			<link href="http://bternarytau.github.io/2018/03/02/how-intelligent-are-we"/>
-			<pubDate>2018-03-02T00:00:00-05:00</pubDate>
+			<pubDate>2018-03-02T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/03/02/how-intelligent-are-we</id>
 			<content type="html">&lt;p&gt;Humans are generally thought of as the most intelligent beings to exist, as we have discovered nothing that appears to be more intelligent than us. But how intelligent are we compared to the theoretically attainable maximum? I believe that we are far less intelligent than is physically possible. This is because we possess roughly the minimum level of intelligence necessary to create a technological civilization.&lt;/p&gt;
 
@@ -1822,7 +1822,7 @@
 		<entry>
 			<title>Singletons and universal inevitable threats</title>
 			<link href="http://bternarytau.github.io/2018/02/09/singletons-and-universal-inevitable-threats"/>
-			<pubDate>2018-02-09T00:00:00-05:00</pubDate>
+			<pubDate>2018-02-09T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/02/09/singletons-and-universal-inevitable-threats</id>
 			<content type="html">&lt;p&gt;One concept I find particularly fascinating is that of the &lt;a href=&quot;https://nickbostrom.com/fut/singleton.html&quot;&gt;singleton&lt;/a&gt;. As defined by Nick Bostrom, a singleton is “a world order in which there is a single decision-making agency at the highest level”. He states that such an agency would have “the ability to prevent any threats (internal or external) to its own existence and supremacy”. However, it is not at all obvious to me that this is true. To crystallize my intuition I would like to introduce my own concept: the universal inevitable threat.&lt;/p&gt;
 
@@ -1850,7 +1850,7 @@ False vacuum decay and any similar physics disasters that occur naturally would 
 		<entry>
 			<title>Colonizing Mars does not mean abandoning Earth</title>
 			<link href="http://bternarytau.github.io/2018/02/04/colonizing-mars-does-not-mean-abandoning-earth"/>
-			<pubDate>2018-02-04T00:00:00-05:00</pubDate>
+			<pubDate>2018-02-04T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/02/04/colonizing-mars-does-not-mean-abandoning-earth</id>
 			<content type="html">&lt;p&gt;Colonizing Mars is often talked about in the context of preventing the extinction of humanity. This has led to the unfortunate misconception that colonization results in the abandonment of Earth. I’d like to take the time to explain why this doesn’t happen.&lt;/p&gt;
 
@@ -1871,7 +1871,7 @@ False vacuum decay and any similar physics disasters that occur naturally would 
 		<entry>
 			<title>Can boycotts be solved?</title>
 			<link href="http://bternarytau.github.io/2018/02/01/can-boycotts-be-solved"/>
-			<pubDate>2018-02-01T00:00:00-05:00</pubDate>
+			<pubDate>2018-02-01T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/02/01/can-boycotts-be-solved</id>
 			<content type="html">&lt;p&gt;In my &lt;a href=&quot;/2018/01/26/video-game-boycotts&quot;&gt;last post&lt;/a&gt;, I talked about why individuals’ incentives will prevent video game boycotts from succeeding. Now I’d like to discuss potential solutions (or at least vague outlines for potential solutions) to this problem.&lt;/p&gt;
 
@@ -1914,7 +1914,7 @@ False vacuum decay and any similar physics disasters that occur naturally would 
 		<entry>
 			<title>Video game boycotts</title>
 			<link href="http://bternarytau.github.io/2018/01/26/video-game-boycotts"/>
-			<pubDate>2018-01-26T00:00:00-05:00</pubDate>
+			<pubDate>2018-01-26T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/01/26/video-game-boycotts</id>
 			<content type="html">&lt;p&gt;Recently, many people have been upset by the direction some video games have been taking in regard to certain ideas like loot boxes. One proposed solution is to boycott the offending games. However, there is a fundamental problem with boycotting that makes this very difficult to pull off.&lt;/p&gt;
 
@@ -1949,7 +1949,7 @@ False vacuum decay and any similar physics disasters that occur naturally would 
 		<entry>
 			<title>This now exists</title>
 			<link href="http://bternarytau.github.io/2018/01/23/this-now-exists"/>
-			<pubDate>2018-01-23T00:00:00-05:00</pubDate>
+			<pubDate>2018-01-23T00:00:00+00:00</pubDate>
 			<id>http://bternarytau.github.io/2018/01/23/this-now-exists</id>
 			<content type="html">&lt;p&gt;Well, I guess this site exists now. I wonder if it will die before anyone else sees it.&lt;/p&gt;
 </content>
