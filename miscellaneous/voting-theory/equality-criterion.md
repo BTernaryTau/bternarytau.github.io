@@ -1,12 +1,12 @@
 ---
 layout: default
 title: "Equality criterion"
-description: "The equality criterion requires that every vote must have an opposite vote which cancels it out."
+description: "The equality criterion requires that every vote must have an equal and opposite vote."
 ---
 # {{ site.title }}
 ## {{ page.title }}
 
-The equality criterion requires that every vote must have an opposite vote which cancels it out. Specifically, for every valid ballot there must exist some other ballot that represents the opposite set of preferences, and adding these two ballots to an election must never change the result.
+The equality criterion requires that every vote must have an equal and opposite vote. Specifically, for every valid ballot there must exist some other ballot that represents the opposite set of preferences, and adding these two ballots to an election must never change the result.
 
 More formally, a voting method $$m$$ passes the equality criterion if for every ballot $$b$$, both of the following hold:
 
