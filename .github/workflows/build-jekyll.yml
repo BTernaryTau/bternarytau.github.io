@@ -28,4 +28,4 @@ jobs:
       - shell: bash
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./script/build.sh
+        run: chmod +x ./script/build.sh && ./script/build.sh
