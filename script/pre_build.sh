@@ -10,4 +10,4 @@ pacman -S --noconfirm nodejs npm
 mkdir build
 
 # Clone remote repo into the build directory
-git clone https://${ACTOR}:${TOKEN}@github.com/${REPOSITORY}.git --branch gh-pages build
+git clone https://${ACTOR}:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git --branch gh-pages build
