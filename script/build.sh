@@ -3,6 +3,9 @@
 # Enable error reporting to the console
 set -e
 
+# Install gems
+bundle install
+
 # Cleanup "_site"
 rm -rf _site
 mkdir _site
