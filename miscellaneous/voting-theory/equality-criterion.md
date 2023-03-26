@@ -17,4 +17,4 @@ Note that some restrictions on the domain of $$m$$ are left implied.
 
 This criterion is intended to be a formalization of the [equal vote criterion](https://electowiki.org/wiki/Equal_Vote_Criterion), which is sometimes called Frohnmayer balance in reference to its creator, Mark Frohnmayer.
 
-The equality criterion implies the cancellation criterion, the [anonymity criterion](/miscellaneous/voting-theory/anonymity-criterion), and the [identical input options criterion](/miscellaneous/voting-theory/identical-input-options-criterion).
+The equality criterion implies the [cancellation criterion](/miscellaneous/voting-theory/cancellation-criterion), the [anonymity criterion](/miscellaneous/voting-theory/anonymity-criterion), and the [identical input options criterion](/miscellaneous/voting-theory/identical-input-options-criterion).
