@@ -1,4 +1,4 @@
-name: Build and Deploy to Github Pages
+name: Build and deploy to GitHub Pages
 
 on:
   push:
@@ -24,17 +24,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      # Use GitHub Deploy Action to build and deploy to Github
-      - uses: jeffreytse/jekyll-deploy-action@v0.4.0
-        with:
-          provider: 'github'
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ''            # Default is current repository
-          branch: 'gh-pages'        # Default is gh-pages for github provider
-          jekyll_src: './'          # Default is root directory
-          jekyll_cfg: '_config.yml' # Default is _config.yml
-          jekyll_baseurl: ''        # Default is according to _config.yml
-          bundler_ver: '>=0'        # Default is latest bundler version
-          cname: ''                 # Default is to not use a cname
-          actor: ''                 # Default is the GITHUB_ACTOR
-          pre_build_commands: 'chmod +x ./script/pre_build.sh && ./script/pre_build.sh'
+      # Run custom build script
+      - shell: bash
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./script/build.sh
