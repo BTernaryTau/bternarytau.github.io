@@ -62,6 +62,25 @@
 			<h1>Technically Exists</h1>
 <!-- This loops through the paginated posts -->
 
+	<h2><a href="/2020/10/26/the-motivation-behind-spsv-part-4">The motivation behind SPSV, part 4</a></h2>
+	<p class="author">
+		<span class="date">2020-10-26</span>
+	</p>
+	<div class="content">
+		<p><em>This blog post has been adapted from <a href="https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/">a series of posts</a> written for <a href="https://www.reddit.com/r/SimDemocracy/">r/SimDemocracy</a>. If you haven’t read the previous entries, please start with <a href="/2020/10/23/the-motivation-behind-spsv-part-1">part 1</a>.</em></p>
+
+<p>In the last post, we considered how to improve upon the strange behavior that D’Hondt has when dealing with voters that have preferences which don’t match up with party lines. We went over how SPAV modifies the approach that D’Hondt used by reweighting individual ballots instead of a party’s full set of votes, and how this allows it to handle more complex voter groups in a sensible manner. This gave voters more freedom to express their preferences, but they still had to either fully support or not at all support each candidate.</p>
+
+<p>Can SPAV be adapted to use 0-<em>n</em> rated ballots instead of approval ballots? As it turns out, this is fairly straightforward to do. Instead of using the formula 1/(1 + <em>m</em>), we can use 1/(1 + <em>s</em>/<em>n</em>), where <em>s</em> is the sum of all the scores given to candidates who have already been elected. This method is known as <a href="https://electowiki.org/wiki/Reweighted_Range_Voting">Reweighted Range Voting</a> (RRV), where range voting is used as a synonym for score voting.</p>
+
+
+		
+		
+		
+			<p><a href="/2020/10/26/the-motivation-behind-spsv-part-4" aria-label="Read the rest of The motivation behind SPSV, part 4" rel="nofollow">Read more</a></p>
+		
+	</div>
+
 	<h2><a href="/2020/10/25/the-motivation-behind-spsv-part-3">The motivation behind SPSV, part 3</a></h2>
 	<p class="author">
 		<span class="date">2020-10-25</span>
@@ -133,23 +152,6 @@
 		
 		
 			<p><a href="/2020/08/10/the-npvic-rcv1-and-maine" aria-label="Read the rest of The NPVIC, RCV-1, and Maine" rel="nofollow">Read more</a></p>
-		
-	</div>
-
-	<h2><a href="/2020/08/09/quadratic-voting-and-types-of-one-person-one-vote">Quadratic voting and types of one person, one vote</a></h2>
-	<p class="author">
-		<span class="date">2020-08-09</span>
-	</p>
-	<div class="content">
-		<p>In a <a href="/2020/02/16/the-meaning-of-one-person-one-vote">previous post</a>, I laid out a hierarchy of three different possible meanings of one person, one vote (OPOV). The 1st level of OPOV required that each voter have exactly one ballot. The 2nd level required that each ballot have the same weight. Finally, the 3rd level required each possible ballot to be perfectly cancelled out by another possible ballot. I also created a combination Euler/pyramid diagram to demonstrate the relationship visually:</p>
-
-<p><img src="/assets/OPOV.png" alt="One person, one vote diagram" /></p>
-
-
-		
-		
-		
-			<p><a href="/2020/08/09/quadratic-voting-and-types-of-one-person-one-vote" aria-label="Read the rest of Quadratic voting and types of one person, one vote" rel="nofollow">Read more</a></p>
 		
 	</div>
 
