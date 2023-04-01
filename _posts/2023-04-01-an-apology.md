@@ -1,0 +1,22 @@
+---
+layout: post
+title: "An apology"
+date: 2023-04-01
+---
+I'm writing this post today to apologize for my past behavior. Ever since this blog existed, I've published an April Fools' Day post each year about some topic or other that wasn't meant to be taken seriously. However, it has been brought to my attention that not only do these posts fail to be humorous, they also degrade the seriousness of both the topics they cover and the blogosphere as a whole, in a way that can be quite dangerous.
+
+Take, for example, [On normative ethical theories]({% post_url 2019-04-01-on-normative-ethical-theories %}). This post touches on a very serious philosophical topic, but its content is one gag applied repeatedly to different ethical theories to supposedly convert them into the dangerous position known as utilitarianism. In reality, this gag effectively ignored all but one aspect of these ethical theories in order to hide their obvious superiority behind silly revisions, thus promoting the insidious utilitarian position in their place.
+
+<!--break-->
+
+While this was the most egregious example, it is not the only one. [Comic Sans is a great font]({% post_url 2018-04-01-comic-sans-is-a-great-font %}) uplifts a horrible scourge of a font using faulty argumentation and attacks on respectable groups. It paints its recognizability as a strength rather than the source of its infamy, it tries to trick people into using it for formal documentation by bringing up a flawed understanding of countersignaling, and it suggests that hard-working graphic designers are really snobbish elites who hate any design work not done by them, regardless of how good it is. The last of these in particular is a major accusation that should not be made even in jest.
+
+[Thanos is a straw centrist]({% post_url 2020-04-01-thanos-is-a-straw-centrist %}) is another example of the dangers posed by these posts. It implies that centrism is simply a straw man position held only by comic book villains. However, centrists are real, and in the face of rising extremist threats to democracy, supporting the status quo is entirely unacceptable. These centrists need to realize that by not choosing a side, they are really supporting the downfall of our democratic system of governance.
+
+The post [Combining anarcho-primitivism and transhumanism]({% post_url 2021-04-01-combining-anarcho-primitivism-and-transhumanism %}) is perhaps the most unique example, because it establishes a new ideology that is half-based on reasonable principles. Unfortunately, the other half is based off of transhumanism, a radical ideology that seeks to ingrain technology into every aspect of human existence. It completely lacks respect for nature and its bountiful gifts, as well as basic human dignity. Furthermore, by extending the reach of technology and thus electronic surveillance, it threatens to eliminate all remaining privacy and empower totalitarian governments. Instead of stepping deeper into the technological hellscape of today, we need to turn back the clock and revert to a simpler way of life.
+
+Finally, we have [Why I like STAR voting: BRANDING]({% post_url 2022-04-01-why-i-like-star-voting-branding %}). This post is not especially bad in and of itself[^1], but in context it is one of the more damaging posts. See, this post was released in the middle of my series on, well, why I like STAR voting. Improving the voting methods we use [is one of the top 5 most important problems]({% post_url 2018-12-31-the-worlds-problems %}), so we cannot afford any humor when it comes to this topic. But even worse, this post presents itself as part of the STAR voting series, and thus directly undermines the rest of the posts in that series.
+
+By writing all of these posts, I decreased the perceived seriousness of the blogosphere as a whole, hurting the reputation of a valuable medium. Given that there was essentially no upside to writing these unfunny posts, I clearly owe an apology to all of my fellow bloggers. But I also owe an apology to all of my readers who were subjected to these awful posts. And finally, I owe an apology to society as a whole for downplaying serious threats for the sake of my attempts at humor. I hope that I can do better in the future.
+
+[^1]: Some of the jokes are quite awful though. Like, was "The Borda count? More like, the boredom mounts!" really the best I had? And the BRANDING acronym is pretty pathetic too.
