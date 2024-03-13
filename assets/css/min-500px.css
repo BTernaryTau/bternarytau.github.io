@@ -2,7 +2,7 @@ html {
   background: #f7f7f7; }
 
 body {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
   padding-top: 24px;
   padding-right: 24px;
@@ -13,7 +13,7 @@ nav ul {
   padding: 0px;
   list-style: none;
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: bold;
   line-height: 1.15em; }
   nav ul li {
@@ -30,42 +30,45 @@ a {
 
 h1 {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 3em; }
+  font-size: 3.5em; }
 
 h2 {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 2.5em; }
+  font-size: 2.9em; }
   h2 a {
     color: #000; }
 
 h3 {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 1.5em; }
+  font-size: 2.4em; }
 
 h4 {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 1.25em; }
+  font-size: 1.8em; }
 
 p {
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1.4em;
   color: #333; }
+  p .katex {
+    font-size: 1.03em;
+    color: #333; }
 
 div.pagination-prev {
   margin-bottom: 20px;
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1.4em;
   color: #333;
   float: left; }
 div.pagination-next {
   margin-bottom: 20px;
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1.4em;
   color: #333;
   float: right; }
 div.footnotes {
   border-top: 1px solid #aaaaaa;
-  font-size: 0.9em; }
+  font-size: 1em; }
   div.footnotes ol {
     margin-top: 24px;
     margin-bottom: 24px;
@@ -87,7 +90,7 @@ footer {
       margin-right: 20px; }
 
 ul {
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1.4em;
   color: #333; }
   ul ul {
@@ -106,7 +109,7 @@ img {
   margin-left: auto;
   margin-right: auto; }
   img.cap-width {
-    max-width: 500px; }
+    max-width: 600px; }
 
 hr {
   border: 0;
@@ -115,9 +118,14 @@ hr {
   margin: 0 0 20px; }
 
 ol {
-  font-size: 1.25em;
+  margin: 0 32px;
+  padding: 0 32px;
+  font-size: 1.5em;
   line-height: 1.4em;
   color: #333; }
+  ol .katex {
+    font-size: 1.03em;
+    color: #333; }
 
 blockquote {
   border-left: 4px solid #ccc;
@@ -138,15 +146,22 @@ table {
   width: 100%; }
 
 th, td {
-  font-size: 1.25em;
+  font-size: 1.5em;
   border: 1px solid black;
   padding: 10px; }
 
 code {
-  font-size: 1.25em;
+  font-size: 1.4em;
   line-height: 1.3em; }
 
 pre.highlight {
   word-wrap: normal;
   overflow-x: auto;
   white-space: pre; }
+
+.katex-display {
+  font-size: 1.27em;
+  color: #333; }
+
+.text {
+  font-family: 'Serif'; }

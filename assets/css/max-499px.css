@@ -50,21 +50,17 @@ p {
 
 div.pagination-prev {
   margin-bottom: 20px;
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: .8em;
-  font-weight: bold;
+  font-size: 1.1em;
   color: #333;
   float: left; }
 div.pagination-next {
   margin-bottom: 20px;
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: .8em;
-  font-weight: bold;
+  font-size: 1.1em;
   color: #333;
   float: right; }
 div.footnotes {
   border-top: 1px solid #aaaaaa;
-  font-size: 0.9em; }
+  font-size: 1em; }
   div.footnotes ol {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -87,7 +83,7 @@ footer {
 
 ul {
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 10px;
   font-size: 1.1em;
   line-height: 1.6em;
   color: #333; }
@@ -113,7 +109,7 @@ hr {
 
 ol {
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 10px;
   font-size: 1.1em;
   line-height: 1.6em;
   color: #333; }
@@ -121,7 +117,8 @@ ol {
 blockquote {
   border-left: 4px solid #ccc;
   margin: 0 2px;
-  padding: 0 16px; }
+  padding-left: 16px;
+  padding-right: 10px; }
 
 sup, sub {
   vertical-align: baseline;
@@ -149,3 +146,11 @@ pre.highlight {
   word-wrap: normal;
   overflow-x: auto;
   white-space: pre; }
+
+.katex-display {
+  font-size: 1.1em;
+  color: #333; }
+
+.text {
+  font-family: 'Serif';
+  font-size: 0.82em; }
