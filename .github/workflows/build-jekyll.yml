@@ -9,16 +9,16 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '12.x'
+          node-version: '20.11.1'
 
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0.3'
           bundler-cache: true
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           # The checkout action doesn't provide a way to get all commit history for a single branch
           # So we use the magic number 2147483647 here which means infinite depth for git fetch
