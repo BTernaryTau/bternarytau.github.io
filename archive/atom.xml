@@ -4,12 +4,103 @@
 	<title>Technically Exists</title>
 	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
 	<link href="http://bternarytau.github.io/archive"/>
-	<lastBuildDate>2024-03-13T22:29:25+00:00</lastBuildDate>
+	<lastBuildDate>2024-04-01T06:18:12+00:00</lastBuildDate>
 	<id>http://bternarytau.github.io/archive</id>
 	<author>
 		<name>BTernaryTau</name>
 	</author>
 
+	
+		<entry>
+			<title>Looking back</title>
+			<link href="http://bternarytau.github.io/2024/04/01/looking-back"/>
+			<pubDate>2024-04-01T00:00:00+00:00</pubDate>
+			<id>http://bternarytau.github.io/2024/04/01/looking-back</id>
+			<content type="html">&lt;p&gt;&lt;a href=&quot;/archive/&quot;&gt;Over the past 7 years I’ve written 39 posts on this blog&lt;/a&gt;, not including this one. Some of them I’m really proud of. Others, not so much. I figured it might be nice to give readers some insight into how I view my previous work, so I’ve split my posts into three categories, along with a brief justification for each post’s categorization.&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;This now exists: Meh. Would’ve been nicer if Video game boycotts was my first post, but it’s not like this one is particularly bad.&lt;/p&gt;
+
+&lt;p&gt;Video game boycotts: Based. My urge to write up this post (and the next) was what motivated me to create this blog, and I’m very happy with how well it’s held up.&lt;/p&gt;
+
+&lt;p&gt;Can boycotts be solved?: Based. I think I do a good job of covering a couple non-obvious options, and would be really interested to see if someone could get something based on the Kickstarter-like boycott company to work.&lt;/p&gt;
+
+&lt;p&gt;Colonizing Mars does not mean abandoning Earth: Meh. There’s nothing really wrong with this post, but it was written back when I thought colonizing multiple planets was one of the better approaches to managing existential risk, whereas I now believe it does nothing to help with what is by far the largest such risk.&lt;/p&gt;
+
+&lt;p&gt;Singletons and universal inevitable threats: Meh. I think the concept is worth having, but the name is a bit of a mouthful, and the motivating factor was arguably just a nitpick.&lt;/p&gt;
+
+&lt;p&gt;How intelligent are we?: Cringe. I think this just ended up as a restatement of some arguments made in &lt;em&gt;Superintelligence: Paths, Dangers, Strategies&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Arguing over definitions: Meh. I kind of want to write about a related topic, but this post doesn’t seem good enough to bother building off of.&lt;/p&gt;
+
+&lt;p&gt;How to win The Game: Based. I am very proud of outsmarting The Game’s inventor, and I highly recommend reading this post if you know what The Game is and aren’t satisfied by &lt;a href=&quot;https://xkcd.com/391/&quot;&gt;xkcd 391&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Comic Sans is a great font: Cringe. Comic Sans is awful and I don’t know what I was thinking.&lt;/p&gt;
+
+&lt;p&gt;Freedom of speech is bad: Cringe. I had this concept of splitting up arguments for and against certain ideas into two separate posts, and it didn’t really make sense.&lt;/p&gt;
+
+&lt;p&gt;Freedom of speech is good: Cringe. I can’t be too upset with my past self for experimenting like this, but ultimately it made these posts awkward, which is a shame because they were some of the first to actually see engagement.&lt;/p&gt;
+
+&lt;p&gt;Outlining the opposite of a singleton: Meh. I originally planned to follow up with a post giving examples of replicator worlds but never did, and without any examples, this post is just oddly abstract.&lt;/p&gt;
+
+&lt;p&gt;My thoughts on Microsoft acquiring GitHub: Based. As far as I know, no one seems to think that GitHub is worse than before the acquisition, and I still dislike the consolidation of market power that these deals tend to lead to.&lt;/p&gt;
+
+&lt;p&gt;Why discuss superintelligence?: Based. This post mostly just existed to introduce the &lt;a href=&quot;/miscellaneous/superintelligence-reference-page&quot;&gt;Superintelligence reference page&lt;/a&gt;, which I should probably start updating again now that LLMs are taking off.&lt;/p&gt;
+
+&lt;p&gt;Should you pursue common or rare achievements?: Based. This post is kind of silly and very much based on personal preference, but the reasoning holds up well in my opinion.&lt;/p&gt;
+
+&lt;p&gt;STAR voting in an interstate compact: Meh. This is a fairly nice proposal, but it does make some awkward compromises, and it’s not really relevant to actual reform efforts.&lt;/p&gt;
+
+&lt;p&gt;Ranked choice voting is worth supporting: Cringe. I really should have written about STV here, defending IRV is a lot harder since it still struggles with the core problem of vote-splitting.&lt;/p&gt;
+
+&lt;p&gt;The world’s problems: Based. The post ranks the problems that I considered most important which is kind of cringe, but I think this is outweighed by how well it identified important problems, even though their relative importance might be a bit off.&lt;/p&gt;
+
+&lt;p&gt;On normative ethical theories: Cringe. The core premise of this post is wrong since the &lt;a href=&quot;https://en.wikipedia.org/wiki/Von_Neumann%E2%80%93Morgenstern_utility_theorem&quot;&gt;von Neumann-Morgenstern utility theorem&lt;/a&gt; requires utility to be bounded while utilitarianism requires unbounded utilities.&lt;/p&gt;
+
+&lt;p&gt;The meaning of one person, one vote: Based. People sometimes talk past each other when it comes to one person, one vote, and I think this post did a good idea of clarifying the different interpretations being used.&lt;/p&gt;
+
+&lt;p&gt;Thanos is a straw centrist: Meh. I probably could’ve put more effort into this one, but I did enjoy drawing a link between straw centrism and sortition-powered mass murder.&lt;/p&gt;
+
+&lt;p&gt;Why 1 is not prime: Based. I remember being really frustrated when various sources explaining why 1 isn’t prime would just mention the &lt;a href=&quot;https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic&quot;&gt;Fundamental Theorem of Arithmetic&lt;/a&gt; and call it a day (as if you couldn’t alter the theorem more easily than the definition of primes), so I am really happy to have written up several more examples where 1 doesn’t follow the pattern for primes.&lt;/p&gt;
+
+&lt;p&gt;Soul harvester: Meh. This is another experimental post and one which I’m fond of, but it once again ends up feeling awkward, like I should have just written a normal short story instead.&lt;/p&gt;
+
+&lt;p&gt;Quadratic voting and types of one person, one vote: Based. This post does a good job of introducing formalizations for the concepts being discussed, and it demonstrates the differences between these concepts in a pleasing way by making successive modifications to quadratic voting.&lt;/p&gt;
+
+&lt;p&gt;The NPVIC, RCV-1, and Maine: Based. The NPVIC advocates and the RCV advocates tend to get along well, so it’s worth highlighting that they really should have a more concrete plan.&lt;/p&gt;
+
+&lt;p&gt;The motivation behind SPSV, part 1: Meh. This is a very brief introduction to the difference between bloc voting methods and proportional voting methods and doesn’t really stand on its own, but it’s alright as the first post in a series.&lt;/p&gt;
+
+&lt;p&gt;The motivation behind SPSV, part 2: Based. This post actually deals with a specific voting method, allowing it to be more fleshed out.&lt;/p&gt;
+
+&lt;p&gt;The motivation behind SPSV, part 3: Meh. This post introduces a party-agnostic proportional voting method and does a good job of comparing it to the voting method from the previous post, but it doesn’t actually give an example of how this new method generalizes better.&lt;/p&gt;
+
+&lt;p&gt;The motivation behind SPSV, part 4: Based. This post does a good job explaining the reweighting formula for RRV.&lt;/p&gt;
+
+&lt;p&gt;The motivation behind SPSV, part 5: Based. This is the most detailed post in the series and it benefits from this, covering everything from the KP transform to ternary plots for proportional voting methods.&lt;/p&gt;
+
+&lt;p&gt;Social choice theory paradigms: Based. A short but effective defense of favoring probabilistic analysis over pass/fail analysis.&lt;/p&gt;
+
+&lt;p&gt;On dealbreaker voting criteria: Based. I think there’s a need to think a lot more carefully about when and how to emphasize certain criteria in the course of advocacy in order to avoid being hypocritical, and this post does a good job getting at that.&lt;/p&gt;
+
+&lt;p&gt;Combining anarcho-primitivism and transhumanism: Based. I am very proud of combining two ideologies generally considered to be opposites into a coherent and even somewhat desirable alternative.&lt;/p&gt;
+
+&lt;p&gt;Why I like STAR voting: simplicity and familiarity: Based. This post makes the case that STAR voting isn’t all that complex, and I think it succeeds at this.&lt;/p&gt;
+
+&lt;p&gt;Why I like STAR voting: the 5-star ballot: Based. I am a huge fan of rated ballots, and I think I did a good job of making a case for them as part of the case for STAR voting that could also be viewed as an argument independent of any particular rated voting method.&lt;/p&gt;
+
+&lt;p&gt;Why I like STAR voting: pre-election polls: Based. The Center for Election Science does a good job of covering the advantages of approval polls, but the Equal Vote Coalition generally neglects the potential advantages of STAR polls, and this post helps to fill in that gap.&lt;/p&gt;
+
+&lt;p&gt;Why I like STAR voting: BRANDING: Cringe. This post suffers from a huge amount of awkwardness, and does a disservice to the topic of STAR’s branding.&lt;/p&gt;
+
+&lt;p&gt;Why I like STAR voting: winner selection: Based. This is the core reason why STAR voting is a good voting method, and this post does an excellent job of covering STAR voting’s accuracy in depth while also mentioning the majoritarian perspective.&lt;/p&gt;
+
+&lt;p&gt;An apology: Cringe. Some of these posts may have deserved apologies, but most of them did not, and many of the apologies are made for the wrong reasons.&lt;/p&gt;
+
+&lt;p&gt;In total, I’ve written 8 cringe posts, 10 meh posts, and 21 based posts, or 22 if you include this one. It seems like the average quality of my posts has improved over time; the first half of my posts includes 8 based posts and 6 cringe posts, while the second half includes 14 based posts and only 2 cringe posts. Hopefully I can continue to improve and bring you higher-quality content.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>An apology</title>

@@ -62,6 +62,29 @@
 			<h1>Technically Exists</h1>
 <!-- This loops through the paginated posts -->
 
+	<h2><a href="/2020/10/27/the-motivation-behind-spsv-part-5">The motivation behind SPSV, part 5</a></h2>
+	<p class="author">
+		<span class="date">2020-10-27</span>
+	</p>
+	<div class="content">
+		<p><em>This blog post has been adapted from <a href="https://www.reddit.com/r/SimDemocracy/comments/ieogtk/the_motivation_behind_spsv_series/">a series of posts</a> written for <a href="https://www.reddit.com/r/SimDemocracy/">r/SimDemocracy</a>. If you haven’t read the previous entries, please start with <a href="/2020/10/23/the-motivation-behind-spsv-part-1">part 1</a>.</em></p>
+
+<p>In the last post, we went over how RRV extends SPAV to work with 0-<em>n</em> rated ballots. I mentioned that SPSV also extends SPAV to work with such ballots, but that it does so using a different method. In this post, I want to start off by explaining how this method works and why I find it superior to RRV’s approach. After this, we can move on to the full explanation of the motivation behind SPSV and to comparisons with other proportional methods.</p>
+
+<h3 id="section-a-the-kotze-pereira-transformation">Section A: The Kotze-Pereira transformation</h3>
+
+<p>The extension method that SPSV uses is called the Kotze-Pereira transformation, or KP transform for short. The basic idea behind the KP transform is that it’s possible to use approval ballots as building blocks for creating a score ballot. As an example, let’s use a 0-3 rated ballot that rates candidate A 0, candidate B 1, candidate C 2, and candidate D 3. We can construct this ballot out of 3 approval ballots by having the first ballot approve B, C, and D, the second approve C and D, and the third approve only D. That way, each candidate’s score equals the number of approvals they have.</p>
+
+<p>This isn’t our only option though. We could also use 1 ballot that approves B and D, and 2 ballots that approve C and D. This is a problem because not only do we want to construct score ballots from approval ballots, we also want to decompose score ballots into approval ballots. Thus, we need a means of choosing a unique set of approval ballots for each score ballot.</p>
+
+
+		
+		
+		
+			<p><a href="/2020/10/27/the-motivation-behind-spsv-part-5" aria-label="Read the rest of The motivation behind SPSV, part 5" rel="nofollow">Read more</a></p>
+		
+	</div>
+
 	<h2><a href="/2020/10/26/the-motivation-behind-spsv-part-4">The motivation behind SPSV, part 4</a></h2>
 	<p class="author">
 		<span class="date">2020-10-26</span>
@@ -137,21 +160,6 @@
 		
 		
 			<p><a href="/2020/10/23/the-motivation-behind-spsv-part-1" aria-label="Read the rest of The motivation behind SPSV, part 1" rel="nofollow">Read more</a></p>
-		
-	</div>
-
-	<h2><a href="/2020/08/10/the-npvic-rcv1-and-maine">The NPVIC, RCV-1, and Maine</a></h2>
-	<p class="author">
-		<span class="date">2020-08-10</span>
-	</p>
-	<div class="content">
-		<p>The <a href="https://www.nationalpopularvote.com/">National Popular Vote Interstate Compact</a> (NPVIC) aims to subvert the Electoral College and elect the president of the U.S. by popular vote. It would accomplish this by having the states that signed on give their electoral votes to whichever candidate won the popular vote. However, the way it defines the popular vote assumes that all states will use single-choice plurality voting in their presidential elections. This is a problem, because <a href="https://bangordailynews.com/2020/07/15/politics/maine-to-use-ranked-choice-voting-in-presidential-election-after-gop-veto-effort-fails/">Maine has switched its presidential elections</a> to use single-winner ranked choice voting (RCV-1), also known as <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">instant runoff voting</a>.</p>
-
-
-		
-		
-		
-			<p><a href="/2020/08/10/the-npvic-rcv1-and-maine" aria-label="Read the rest of The NPVIC, RCV-1, and Maine" rel="nofollow">Read more</a></p>
 		
 	</div>
 
