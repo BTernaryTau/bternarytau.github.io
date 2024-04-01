@@ -4,23 +4,24 @@ layout: null
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-	<title>Technically Exists</title>
-	<link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
-	<link href="http://bternarytau.github.io/archive"/>
-	<lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
-	<id>http://bternarytau.github.io/archive</id>
-	<author>
-		<name>BTernaryTau</name>
-	</author>
+    <title>Technically Exists</title>
+    <link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
+    <link href="http://bternarytau.github.io/archive"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>http://bternarytau.github.io/archive</id>
+    <author>
+        <name>BTernaryTau</name>
+    </author>
 
-	{% for post in site.posts %}
-		<entry>
-			<title>{{ post.title }}</title>
-			<link href="http://bternarytau.github.io{{ post.url }}"/>
-			<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-			<id>http://bternarytau.github.io{{ post.id }}</id>
-			<content type="html">{{ post.content | xml_escape }}</content>
-		</entry>
-	{% endfor %}
+    {% for post in site.posts %}
+        <entry>
+            <title>{{ post.title }}</title>
+            <link href="http://bternarytau.github.io{{ post.url }}"/>
+            <published>{{ post.date | date_to_xmlschema }}</published>
+            <updated>{{ post.date | date_to_xmlschema }}</updated>
+            <id>http://bternarytau.github.io{{ post.id }}</id>
+            <content type="html">{{ post.content | xml_escape }}</content>
+        </entry>
+    {% endfor %}
 
 </feed>
