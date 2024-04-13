@@ -1,21 +1,25 @@
 name: BTernaryTau
 title: Technically Exists
 description: A blog about mathematics, computer science, social choice theory, futurism, video games, and more
-markdown: kramdown
-kramdown:
-    math_engine: katex
-    math_engine_opts: {}
 excerpt_separator: "<!--break-->"
 permalink: "/:year/:month/:day/:title"
 paginate: 5
 paginate_path: "/page:num/"
 url: "https://bternarytau.github.io"
 plugins:
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
 host: 0.0.0.0
 author: BTernaryTau
 publisher: BTernaryTau
 logo: /assets/logo.png
-exclude: [script, vendor]
+exclude: [script]
+markdown: kramdown
+kramdown:
+  math_engine: katex
+  math_engine_opts:
+    macros:
+      "\\gs": "\\:[<]\\:"
+      "\\gf": "\\:[>]\\:"
+      "\\eqv": "\\:[=]\\:"
