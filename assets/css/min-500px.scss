@@ -59,9 +59,9 @@ p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
-	.katex {
+    .katex {
         font-size: 1.03em;
-	    color: #333;
+        color: #333;
     }
 }
 div {
@@ -145,9 +145,9 @@ ol {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
-	.katex {
+    .katex {
         font-size: 1.03em;
-	    color: #333;
+        color: #333;
     }
 }
 blockquote {
@@ -184,7 +184,9 @@ pre.highlight {
 }
 .katex-display {
     font-size: 1.27em;
-	color: #333;
+    color: #333;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 .text {
     font-family: 'Serif';
