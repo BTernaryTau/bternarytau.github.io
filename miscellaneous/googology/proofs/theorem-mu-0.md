@@ -121,7 +121,7 @@ $$
 \end{align*}
 $$
 
-Induction step for $$n \ge 1$$:
+Induction step:
 
 $$
 \begin{align*}
