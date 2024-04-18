@@ -137,3 +137,7 @@ $$
 ### Proof of Theorem $$\mu$$-0
 
 By Proposition $$\mu$$-0, it cannot be the case that $$n\mu! \gs n^*$$. By Proposition $$\mu$$-1, it cannot be the case that $$n\mu! \gf n^*$$. Therefore, $$n\mu! \eqv n^*$$.
+
+### Referenced results
+
+Knuth Arrow Theorem: Theorem 3.1 in [Knuth's iterated powers](https://www.sciencedirect.com/science/article/pii/0001870879900525)
