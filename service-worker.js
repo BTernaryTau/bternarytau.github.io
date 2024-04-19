@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20240418223246';
+const version = '20240419052012';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
@@ -75,6 +75,8 @@ var urlsToCache = [
 		'/miscellaneous/voting-theory/superintelligence-voting',
 	
 		'/miscellaneous/googology/proofs/theorem-mu-0',
+	
+		'/miscellaneous/googology/proofs/theorem-mu-1',
 	
 		'/miscellaneous/voting-theory/unified-levels-of-support',
 	
