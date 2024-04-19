@@ -46,8 +46,12 @@ $$
 \end{array}
 $$
 
-### Comparison with the mixed factorial
+### Comparison to the mixed factorial
 
 I came up with the mu factorial before I was aware of the mixed factorial, but the name "mu factorial" came after I researched other factorial variants and learned about the very similar mixed factorial. I tried to choose the details of the mu factorial to be as natural as possible in the context of googology. The base case $$0\mu! = 0$$ was chosen so that the value of $$n\mu!$$ would be generated from the previous value, the $$n$$th hyper operator, and $$n$$ itself. I also chose to have the previous value serve as the hyperexponent since this generally leads to larger values compared to using it as the base.
 
-Notably, these design choices don't really affect the growth rate since both factorial variants diagonalize over the hyper operators. In fact, it can be shown that [the mu factorial grows at the same rate as the mixed factorial](/miscellaneous/googology/proofs/theorem-mu-0).
+Notably, these design choices don't really affect the growth rate since both factorial variants diagonalize over the hyper operators. In fact, it can be shown that the mu factorial [grows at the same rate as the mixed factorial](/miscellaneous/googology/proofs/theorem-mu-0).
+
+### Comparison to other functions
+
+The mu factorial [grows at the same rate as the Ackermann function](/miscellaneous/googology/proofs/theorem-mu-1).
