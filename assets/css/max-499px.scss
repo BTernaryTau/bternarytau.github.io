@@ -170,6 +170,8 @@ pre.highlight {
     white-space: pre;
 }
 .katex-display {
+    padding-top: 1px;
+    padding-bottom: 1px;
     font-size: 1.1em;
     color: #333;
     overflow-x: auto;
