@@ -20,7 +20,7 @@ Base case:
 
 $$
 \begin{align*}
-(4 - 1)\mu! &= 3\mu!\\
+(4 - 1)\mu! &= 3\mu! \\
 &= (3 \uparrow (2 \cdot (1 + 0))) \\
 &= 9 \\
 &> 8 \\
@@ -125,7 +125,7 @@ Induction step:
 
 $$
 \begin{align*}
-(n + 1)\mu! &= (n + 1) \uparrow^{n - 1} (n\mu!)\\
+(n + 1)\mu! &= (n + 1) \uparrow^{n - 1} (n\mu!) \\
 &< (n + 1) \uparrow^{n - 1} (n + 2)^* &&\text{by the induction hypothesis} \\
 &< (n + 2)^* \uparrow^{n - 1} (n + 2)^* \\
 &= (n + 2)^* \uparrow^n 2 \\

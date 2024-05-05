@@ -26,7 +26,7 @@ Base case:
 $$
 \begin{align*}
 f_1(n) &= 2 \cdot n \\
-&= 2 [1 + 1] n\\
+&= 2 [1 + 1] n \\
 \end{align*}
 $$
 
@@ -51,7 +51,7 @@ $$
 \begin{align*}
 f_0(n) + 1 &= (n + 1) + 1 \\
 &= 2 + n \\
-&= 2 [0 + 1] n\\
+&= 2 [0 + 1] n \\
 \end{align*}
 $$
 
@@ -62,7 +62,7 @@ $$
 f_\alpha(0) + 1 &= f_{\alpha - 1}^0(0) + 1 \\
 &= 0 + 1 \\
 &= 1 \\
-&\ge 2 [\alpha + 1] 0\\
+&\ge 2 [\alpha + 1] 0 \\
 \end{align*}
 $$
 
@@ -71,7 +71,7 @@ Cases where $$n \ge 1$$ and $$1 \le \alpha < \omega$$:
 $$
 \begin{align*}
 f_\alpha(n) + 1 &> f_\alpha(n) \\
-&\ge 2 [\alpha + 1] n &&\text{by Proposition } \omega\text{-0} \\ \\
+&\ge 2 [\alpha + 1] n &&\text{by Proposition } \omega\text{-0} \\
 \end{align*}
 $$
 

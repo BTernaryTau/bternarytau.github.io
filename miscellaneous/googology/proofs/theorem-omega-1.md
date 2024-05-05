@@ -128,7 +128,7 @@ $$
 \begin{align*}
 2 \cdot f_0(n) &= 2 \cdot (n + 1) \\
 &= 2 + (2 \cdot n) \\
-&= 2 [0 + 1] (2 \cdot n)\\
+&= 2 [0 + 1] (2 \cdot n) \\
 \end{align*}
 $$
 
