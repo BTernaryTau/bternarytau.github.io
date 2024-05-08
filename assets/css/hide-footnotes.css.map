@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["hide-footnotes.scss"],"names":[],"mappings":"AACE;EACE;;;AAIF;EACE","sourcesContent":["div {\n  &.footnotes {\n    display:none;\n  }\n}\nsup {\n  a {\n    display:none;\n  }\n}\n"],"file":"hide-footnotes.css"}

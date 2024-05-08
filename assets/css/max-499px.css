@@ -1,105 +1,131 @@
 html {
-  background: #f7f7f7; }
+  background: #f7f7f7;
+}
 
 body {
   max-width: 800px;
   margin: auto;
-  padding: 16px; }
+  padding: 16px;
+}
 
 nav ul {
   padding: 0px;
   list-style: none;
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  font-family: "Helvetica", "Arial", "Sans-Serif";
   font-size: 1.25em;
   font-weight: bold;
-  line-height: 1.6em; }
-  nav ul li {
-    display: inline;
-    margin-right: 20px; }
-  nav ul a {
-    color: #000; }
+  line-height: 1.6em;
+}
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+nav ul a {
+  color: #000;
+}
 
 a {
   text-decoration: none;
-  color: #00b; }
-  a:hover {
-    text-decoration: underline; }
+  color: #00b;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 h1 {
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 2.25em; }
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 2.25em;
+}
 
 h2 {
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 1.75em; }
-  h2 a {
-    color: #000; }
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1.75em;
+}
+h2 a {
+  color: #000;
+}
 
 h3 {
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 1.25em; }
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1.25em;
+}
 
 h4 {
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 1.15em; }
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1.15em;
+}
 
 p {
   font-size: 1.1em;
   line-height: 1.6em;
-  color: #333; }
+  color: #333;
+}
 
 div.pagination-prev {
   margin-bottom: 20px;
   font-size: 1.1em;
   color: #333;
-  float: left; }
+  float: left;
+}
 div.pagination-next {
   margin-bottom: 20px;
   font-size: 1.1em;
   color: #333;
-  float: right; }
+  float: right;
+}
 div.footnotes {
   border-top: 1px solid #aaaaaa;
-  font-size: 1em; }
-  div.footnotes ol {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 20px; }
-    div.footnotes ol p {
-      font-size: 1em; }
+  font-size: 1em;
+}
+div.footnotes ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+div.footnotes ol p {
+  font-size: 1em;
+}
 
 footer {
   border-top: 1px solid #aaaaaa;
-  font-size: .72em;
-  clear: both; }
-  footer ul {
-    padding: 0px;
-    list-style: none;
-    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-    font-weight: bold; }
-    footer ul li {
-      display: inline;
-      margin-right: 20px; }
+  font-size: 0.72em;
+  clear: both;
+}
+footer ul {
+  padding: 0px;
+  list-style: none;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-weight: bold;
+}
+footer ul li {
+  display: inline;
+  margin-right: 20px;
+}
 
 ul {
   padding-left: 20px;
   padding-right: 10px;
   font-size: 1.1em;
   line-height: 1.6em;
-  color: #333; }
-  ul ul {
-    font-size: 1em; }
-  ul.posts {
-    padding: 0px; }
-    ul.posts li {
-      list-style: none; }
+  color: #333;
+}
+ul ul {
+  font-size: 1em;
+}
+ul.posts {
+  padding: 0px;
+}
+ul.posts li {
+  list-style: none;
+}
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 hr {
   height: 1px;
@@ -108,14 +134,16 @@ hr {
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 ol {
   padding-left: 20px;
   padding-right: 10px;
   font-size: 1.1em;
   line-height: 1.6em;
-  color: #333; }
+  color: #333;
+}
 
 blockquote {
   border-left: 4px solid #ccc;
@@ -124,36 +152,43 @@ blockquote {
   margin-right: 2px;
   margin-bottom: 0px;
   padding-left: 16px;
-  padding-right: 10px; }
+  padding-right: 10px;
+}
 
 sup, sub {
   vertical-align: baseline;
   position: relative;
-  top: -0.4em; }
+  top: -0.4em;
+}
 
 sub {
-  top: 0.4em; }
+  top: 0.4em;
+}
 
 table {
   max-width: 100%;
   border: 1px solid black;
   border-collapse: collapse;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 th, td {
   border: 1px solid black;
   padding: 10px;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+}
 
 code {
   font-size: 1.1em;
-  line-height: 1.4em; }
+  line-height: 1.4em;
+}
 
 pre.highlight {
   overflow-x: auto;
   word-wrap: normal;
-  white-space: pre; }
+  white-space: pre;
+}
 
 .katex-display {
   padding-top: 1px;
@@ -161,8 +196,12 @@ pre.highlight {
   font-size: 1.1em;
   color: #333;
   overflow-x: auto;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+}
 
 .text {
-  font-family: 'Serif';
-  font-size: 0.82em; }
+  font-family: "Serif";
+  font-size: 0.82em;
+}
+
+/*# sourceMappingURL=max-499px.css.map */

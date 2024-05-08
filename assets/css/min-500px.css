@@ -1,5 +1,6 @@
 html {
-  background: #f7f7f7; }
+  background: #f7f7f7;
+}
 
 body {
   max-width: 1000px;
@@ -7,112 +8,139 @@ body {
   padding-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 16px; }
+  padding-bottom: 16px;
+}
 
 nav ul {
   padding: 0px;
   list-style: none;
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  font-family: "Helvetica", "Arial", "Sans-Serif";
   font-size: 1.5em;
   font-weight: bold;
-  line-height: 1.15em; }
-  nav ul li {
-    display: inline;
-    margin-right: 20px; }
-  nav ul a {
-    color: #000; }
+  line-height: 1.15em;
+}
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+nav ul a {
+  color: #000;
+}
 
 a {
   text-decoration: none;
-  color: #00b; }
-  a:hover {
-    text-decoration: underline; }
+  color: #00b;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 h1 {
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 3.5em; }
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 3.5em;
+}
 
 h2 {
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 2.9em; }
-  h2 a {
-    color: #000; }
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 2.9em;
+}
+h2 a {
+  color: #000;
+}
 
 h3 {
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 2.4em; }
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 2.4em;
+}
 
 h4 {
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 1.8em; }
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1.8em;
+}
 
 p {
   font-size: 1.5em;
   line-height: 1.4em;
-  color: #333; }
-  p .katex {
-    font-size: 1.03em;
-    color: #333; }
+  color: #333;
+}
+p .katex {
+  font-size: 1.03em;
+  color: #333;
+}
 
 div.pagination-prev {
   margin-bottom: 20px;
   font-size: 1.5em;
   line-height: 1.4em;
   color: #333;
-  float: left; }
+  float: left;
+}
 div.pagination-next {
   margin-bottom: 20px;
   font-size: 1.5em;
   line-height: 1.4em;
   color: #333;
-  float: right; }
+  float: right;
+}
 div.footnotes {
   border-top: 1px solid #aaaaaa;
-  font-size: 1em; }
-  div.footnotes ol {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    padding-left: 24px; }
-    div.footnotes ol p {
-      font-size: 1em; }
+  font-size: 1em;
+}
+div.footnotes ol {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+div.footnotes ol p {
+  font-size: 1em;
+}
 
 footer {
   border-top: 1px solid #aaaaaa;
-  font-size: .64em;
-  clear: both; }
-  footer ul {
-    padding: 0px;
-    list-style: none;
-    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-    font-weight: bold; }
-    footer ul li {
-      display: inline;
-      margin-right: 20px; }
+  font-size: 0.64em;
+  clear: both;
+}
+footer ul {
+  padding: 0px;
+  list-style: none;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-weight: bold;
+}
+footer ul li {
+  display: inline;
+  margin-right: 20px;
+}
 
 ul {
   font-size: 1.5em;
   line-height: 1.4em;
-  color: #333; }
-  ul ul {
-    font-size: 1em; }
-  ul.posts {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-    font-size: 1.5em;
-    line-height: 1.15em; }
-    ul.posts li {
-      list-style: none; }
+  color: #333;
+}
+ul ul {
+  font-size: 1em;
+}
+ul.posts {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  line-height: 1.15em;
+}
+ul.posts li {
+  list-style: none;
+}
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
-  margin-right: auto; }
-  img.cap-width {
-    max-width: 600px; }
+  margin-right: auto;
+}
+img.cap-width {
+  max-width: 600px;
+}
 
 hr {
   height: 1px;
@@ -121,7 +149,8 @@ hr {
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 ol {
   margin-top: 0px;
@@ -134,10 +163,12 @@ ol {
   padding-bottom: 0px;
   font-size: 1.5em;
   line-height: 1.4em;
-  color: #333; }
-  ol .katex {
-    font-size: 1.03em;
-    color: #333; }
+  color: #333;
+}
+ol .katex {
+  font-size: 1.03em;
+  color: #333;
+}
 
 blockquote {
   border-left: 4px solid #ccc;
@@ -148,36 +179,43 @@ blockquote {
   padding-top: 0px;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+}
 
 sup, sub {
   vertical-align: baseline;
   position: relative;
-  top: -0.4em; }
+  top: -0.4em;
+}
 
 sub {
-  top: 0.4em; }
+  top: 0.4em;
+}
 
 table {
   max-width: 100%;
   border: 1px solid black;
   border-collapse: collapse;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 th, td {
   border: 1px solid black;
   padding: 10px;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 code {
   font-size: 1.4em;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+}
 
 pre.highlight {
   overflow-x: auto;
   word-wrap: normal;
-  white-space: pre; }
+  white-space: pre;
+}
 
 .katex-display {
   padding-top: 1px;
@@ -185,7 +223,11 @@ pre.highlight {
   font-size: 1.27em;
   color: #333;
   overflow-x: auto;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+}
 
 .text {
-  font-family: 'Serif'; }
+  font-family: "Serif";
+}
+
+/*# sourceMappingURL=min-500px.css.map */
