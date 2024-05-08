@@ -90,7 +90,7 @@ ul {
   ul ul {
     font-size: 1em; }
   ul.posts {
-    padding: 0; }
+    padding: 0px; }
     ul.posts li {
       list-style: none; }
 
@@ -102,10 +102,13 @@ img {
   margin-right: auto; }
 
 hr {
-  border: 0;
-  background: #aaa;
   height: 1px;
-  margin: 0 0 20px; }
+  background: #aaa;
+  border: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px; }
 
 ol {
   padding-left: 20px;
@@ -116,7 +119,10 @@ ol {
 
 blockquote {
   border-left: 4px solid #ccc;
-  margin: 0 2px;
+  margin-top: 0px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 0px;
   padding-left: 16px;
   padding-right: 10px; }
 
@@ -129,24 +135,24 @@ sub {
   top: 0.4em; }
 
 table {
+  max-width: 100%;
   border: 1px solid black;
   border-collapse: collapse;
-  max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
 
 th, td {
-  font-size: 1.1em;
   border: 1px solid black;
-  padding: 10px; }
+  padding: 10px;
+  font-size: 1.1em; }
 
 code {
   font-size: 1.1em;
   line-height: 1.4em; }
 
 pre.highlight {
-  word-wrap: normal;
   overflow-x: auto;
+  word-wrap: normal;
   white-space: pre; }
 
 .katex-display {

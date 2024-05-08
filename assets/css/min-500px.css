@@ -5,8 +5,8 @@ body {
   max-width: 1000px;
   margin: auto;
   padding-top: 24px;
-  padding-right: 24px;
   padding-left: 24px;
+  padding-right: 24px;
   padding-bottom: 16px; }
 
 nav ul {
@@ -96,7 +96,10 @@ ul {
   ul ul {
     font-size: 1em; }
   ul.posts {
-    margin: 20px auto 40px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
     font-size: 1.5em;
     line-height: 1.15em; }
     ul.posts li {
@@ -112,14 +115,23 @@ img {
     max-width: 600px; }
 
 hr {
-  border: 0;
-  background: #aaa;
   height: 1px;
-  margin: 0 0 20px; }
+  background: #aaa;
+  border: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px; }
 
 ol {
-  margin: 0 32px;
-  padding: 0 32px;
+  margin-top: 0px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 0px;
   font-size: 1.5em;
   line-height: 1.4em;
   color: #333; }
@@ -129,8 +141,14 @@ ol {
 
 blockquote {
   border-left: 4px solid #ccc;
-  margin: 0 32px;
-  padding: 0 16px; }
+  margin-top: 0px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 0px; }
 
 sup, sub {
   vertical-align: baseline;
@@ -141,24 +159,24 @@ sub {
   top: 0.4em; }
 
 table {
+  max-width: 100%;
   border: 1px solid black;
   border-collapse: collapse;
-  max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
 
 th, td {
-  font-size: 1.5em;
   border: 1px solid black;
-  padding: 10px; }
+  padding: 10px;
+  font-size: 1.5em; }
 
 code {
   font-size: 1.4em;
   line-height: 1.3em; }
 
 pre.highlight {
-  word-wrap: normal;
   overflow-x: auto;
+  word-wrap: normal;
   white-space: pre; }
 
 .katex-display {
