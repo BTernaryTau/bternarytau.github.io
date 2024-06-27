@@ -32,7 +32,7 @@ description: "A catalog of simulations that test the behavior of voting methods 
 * James Green-Armytage, T. Nicolaus Tideman, and Rafael Cosman's [frequency of utility maximization and one-sided manipulability simulations](https://link.springer.com/article/10.1007/s00355-015-0909-0)
 * Mostapha Diss and Ahmed Doghmi's [Condorcet committee efficiency, prior successor paradox, and leaving member paradox simulations](https://www.researchgate.net/publication/318007397_Multi-Winner_Scoring_Election_Methods_Condorcet_Consistency_and_Paradoxes)
 * Keith Edmonds's [proportional cardinal voting method variance simulations](https://forum.electionscience.org/t/wolf-committee-results/519) ([backup link](https://github.com/endolith/Keith_Edmonds_vote_sim))
-* Dave Gallets's [FPTP, IRV, and STAR simulations](http://sites.gallets.org/election-sim/irv-vs-star/)
+* Dave Gallets's [FPTP, IRV, and STAR simulations](https://web.archive.org/web/20210513091039/http://sites.gallets.org/election-sim/irv-vs-star/)
 * Tim Schmitz's [directional worst-case utility simulations](https://quantimschmitz.com/2020/04/03/is-ranked-choice-voting-the-hero-we-need/)
 * Richard B. Darlington's [spatial minimax disagreement simulations](https://arxiv.org/abs/1807.01366)
 * Richard Fobes's [ranked ballot pseudo clone independence and pseudo IIA failure simulations](https://www.reddit.com/r/EndFPTP/comments/ns8cri/clone_independence_ci_and_independence_of/)
@@ -65,5 +65,5 @@ description: "A catalog of simulations that test the behavior of voting methods 
 * Ka-Ping Yee's [Voteline simulator](http://zesty.ca/voting/voteline/)
 * Nicky Case's [To Build a Better Ballot simulator](https://ncase.me/ballot/)
 * The [Smart Voting Simulator](https://www.smartvotesim.com/) built off of To Build a Better Ballot
-* Dave Gallets's [interactive election simulator](http://sites.gallets.org/election-sim/)
 * Warren Porter's text-based [STAR, score, approval,](https://wjporter.com/misc/apprtest.htm) and [instant runoff](https://wjporter.com/misc/irvtest.htm) simulations
+* Julian Schrittwieser's [interactive Yee diagram](https://www.furidamu.org/blog/2020/08/23/interactive-voting-system-simulator)
