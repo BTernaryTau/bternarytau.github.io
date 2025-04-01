@@ -4,12 +4,24 @@
     <title>Technically Exists</title>
     <link href="http://bternarytau.github.io/archive/atom.xml" rel="self"/>
     <link href="http://bternarytau.github.io/archive"/>
-    <updated>2024-09-25T15:52:02+00:00</updated>
+    <updated>2025-04-01T04:40:43+00:00</updated>
     <id>http://bternarytau.github.io/archive</id>
     <author>
         <name>BTernaryTau</name>
     </author>
 
+    
+        <entry>
+            <title>Time is valuable</title>
+            <link href="http://bternarytau.github.io/2025/04/01/time-is-valuable"/>
+            <published>2025-04-01T00:00:00+00:00</published>
+            <updated>2025-04-01T00:00:00+00:00</updated>
+            <id>http://bternarytau.github.io/2025/04/01/time-is-valuable</id>
+            <content type="html">&lt;p&gt;Time is valuable. We all know this. And since the technology required to instantaneously consume blog posts has yet to be invented, you must spend some of your valuable time in order to read this blog. As such, it is important that I get to my points quickly and keep my posts as short as reasonably possible.&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading!&lt;/p&gt;
+</content>
+        </entry>
     
         <entry>
             <title>Cooperation in the one-shot prisoner's dilemma</title>

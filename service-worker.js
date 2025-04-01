@@ -1,5 +1,5 @@
 // Update the service worker every time Jekyll processes the site
-const version = '20240925155202';
+const version = '20250401044043';
 
 var CACHE_NAME = 'technically-exists-cache-v' + version;
 var urlsToCache = [
@@ -30,21 +30,21 @@ var urlsToCache = [
 	
 		'/miscellaneous/voting-theory/identical-input-options-criterion',
 	
-		'/miscellaneous/simdemocracy/tau-analytical-union/',
+		'/archive/',
 	
-		'/miscellaneous/simdemocracy/',
-	
-		'/miscellaneous/voting-theory/',
+		'/about/',
 	
 		'/miscellaneous/googology/proofs/',
 	
 		'/miscellaneous/googology/',
 	
+		'/miscellaneous/voting-theory/',
+	
+		'/miscellaneous/simdemocracy/tau-analytical-union/',
+	
+		'/miscellaneous/simdemocracy/',
+	
 		'/miscellaneous/',
-	
-		'/archive/',
-	
-		'/about/',
 	
 		'/',
 	
@@ -104,6 +104,8 @@ var urlsToCache = [
 	
 	
 	
+		'/2025/04/01/time-is-valuable',
+	
 		'/2024/04/14/cooperation-in-the-one-shot-prisoners-dilemma',
 	
 		'/2024/04/01/looking-back',
@@ -111,8 +113,6 @@ var urlsToCache = [
 		'/2023/04/01/an-apology',
 	
 		'/2023/03/30/why-i-like-star-voting-winner-selection',
-	
-		'/2022/04/01/why-i-like-star-voting-branding',
 	
 	
 	
