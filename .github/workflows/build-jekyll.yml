@@ -18,7 +18,7 @@ jobs:
           ruby-version: 'ruby'
           bundler-cache: true
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # The checkout action doesn't provide a way to get all commit history for a single branch
           # So we use the magic number 2147483647 here which means infinite depth for git fetch
